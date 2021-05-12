@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Frontend Mentor | 3-column preview card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <div class="card-container row">
+    <section class="card col card--orange">
+      <img class="card__logo" src="images/icon-sedans.svg" alt="">
+      <div class="card__text">
+          <h3 class="card__heading">Sedans</h3>
+          <p class="card__info">Choose a sedan for its affordability and excellent fuel economy. Ideal for cruising in the city 
+            or on your next road trip.
+          </p>
+      </div>
+      <a href="#" class="card__btn card__btn--orange">Learn More</a>
+    </section>
+    <section class="card col card--cyan-md">
+      <img src="images/icon-suvs.svg" alt="" class="card__logo">
+      <div class="card__text">
+        <h3 class="card__heading">SUVs</h3>
+        <p class="card__info">Take an SUV for its spacious interior, power, and versatility. Perfect for your next family vacation 
+          and off-road adventures.</p>
+      </div>
+      <a href="#" class="card__btn card__btn--cyan-md">Learn More</a>
+    </section>
+    <section class="card col card--cyan-lg">
+      <img src="images/icon-luxury.svg" alt="" class="card__logo">
+      <div class="card__text">
+        <h3 class="card__heading">Luxury</h3>
+        <p class="card__info">Cruise in the best car brands without the bloated prices. Enjoy the enhanced comfort of a luxury 
+          rental and arrive in style.</p>
+      </div>
+      <a href="#" class="card__btn card__btn--cyan-lg">Learn More</a>
+    </section>
+  </div>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Svatopluk Puterka</a>.
+  </div>
+</body>
+</html>
