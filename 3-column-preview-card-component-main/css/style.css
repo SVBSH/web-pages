@@ -12,6 +12,11 @@
     --fnt-fml-display: 'Big Shoulders Display', cursive;
 }
 
+::selection {
+    color: rgb(63, 126, 209);
+    background: rgb(63, 126, 209);;
+}
+
 *,
 *::berfore,
 *::after {
@@ -42,9 +47,9 @@ body {
 }
 
 .card-container {
-    margin: 2rem auto;
-    /* min-width: 700px; */
-    max-width: 70%;
+    margin: 5rem auto;
+    width: min(250px, 70%);
+    /* max-width: 70%; */
 }
 
 .card:first-of-type {
@@ -121,11 +126,33 @@ body {
 }
 
 
-@media (min-width: 700px) {
+.card__btn--orange:hover {
+    box-shadow: inset 0 0 0 1px var(--clr-light-gray);
+    background: var(--clr-bright-orange);
+    color: var(--clr-light-gray);
+}
+
+.card__btn--cyan-md:hover {
+    box-shadow: inset 0 0 0 1px var(--clr-light-gray);
+    color: var(--clr-light-gray);
+    background-color: var(--clr-dark-cyan-md); 
+}
+
+.card__btn--cyan-lg:hover {
+    box-shadow: inset 0 0 0 1px var(--clr-light-gray);
+    color: var(--clr-light-gray);
+    background-color: var(--clr-dark-cyan-lg); 
+}
+
+@media (min-width: 600px) {
     .card-container {
-        min-width: 100px;
-        max-width: 80%;
-        height: 100vh;
+        width: min(250px, 70%);
+    }
+}
+
+@media (min-width: 800px) {
+    .card-container {
+        width: min(900px, 70%);
     }
 
     .card {
