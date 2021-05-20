@@ -124,6 +124,9 @@ body {
     margin-bottom: 1em;
 }
 
+.benefit__info {
+    line-height: 1.7;
+}
 
 .sec-2 {
     text-align: left;
@@ -132,6 +135,7 @@ body {
 
 .sec-2__info {
     font-family: var(--fnt-open-sans);
+    line-height: 1.5;
 }
 
 .sec-2__btn {
@@ -240,6 +244,18 @@ body {
     border-radius: .75rem;
 }
 
+.registration__info {
+    margin-top: 1rem;
+}
+
+.registration__address {
+    margin-top: 2rem;
+    width: 90%;
+    padding: 1em 2em;
+    border-radius: 1rem;
+    border: none;
+    outline: none;
+}
 
 .footer__logo {
     display: block;
