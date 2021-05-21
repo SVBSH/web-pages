@@ -313,11 +313,23 @@ body {
     margin: 4rem 0 2rem 0;
 }
 
+
+
 .btn-social {
-    height: 25px;
-    width: 25px;
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background-color: white;
+    box-shadow: 0 0 0 1px;
 }
 
 .btn-social + .btn-social {
-    margin-left: 1rem;
+    margin-left: .75rem;
+}
+
+.fst {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
 }
