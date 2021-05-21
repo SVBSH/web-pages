@@ -314,7 +314,7 @@ body {
     margin: 4rem 0 2rem 0;
 }
 
-.footer__networks * + * {
+.network__link + .network__link {
     margin-left: 1rem;
 }
 
