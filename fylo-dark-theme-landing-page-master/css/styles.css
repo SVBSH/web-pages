@@ -288,6 +288,10 @@ body {
     display: block;
 }
 
+.content__text {
+    margin-top: 1rem;
+}
+
 .footer__nav {
     text-align: left;
     padding: 0;
@@ -303,4 +307,17 @@ body {
     margin-top: 1em;
     display: inline-block;
     color: hsl(0, 0%, 100%);
+}
+
+.footer__networks {
+    margin: 4rem 0 2rem 0;
+}
+
+.btn-social {
+    height: 25px;
+    width: 25px;
+}
+
+.btn-social + .btn-social {
+    margin-left: 1rem;
 }
