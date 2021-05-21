@@ -1,3 +1,4 @@
+
 :root {
     --fnt-open-sans: 'Open Sans', sans-serif;
     --fnt-raleway: 'Raleway', sans-serif;
@@ -91,16 +92,18 @@ body {
 .main__heading {
     font-family: var(--fnt-raleway);
     font-weight: var(--fw-lg);
+    line-height: 1.1;
 }
 
 .main__text{
     margin: 1rem 0 2.5rem 0;
+    line-height: 1.5;
 }
 
 .main__btn {
     display: inline-block;
     padding: 1em 5em;
-    background-image: linear-gradient(to right, hsl(176, 68%, 64%), hsl(198, 60%, 50%));
+    background-image: linear-gradient(to right, hsl(176, 68%, 64%) 10%, hsl(198, 60%, 50%) 90%);
     border-radius: 25px;
 }
 
@@ -150,6 +153,10 @@ body {
     color: hsl(176, 68%, 64%);
 } 
 
+.sec-2__btn .sec-2__link:hover {
+    text-decoration: underline;
+}
+
 .sec-2__btn::after {
     content: '';
     background-image: url("images/icon-arrow.svg");
@@ -167,12 +174,24 @@ body {
 
 .card,
 .sec-3__review {
+    position: relative;
     border-radius: 3px;
     text-align: left;
     background-color: hsl(219, 30%, 18%);
     line-height: 1.8;
     margin: 2rem 0;
-    padding: 1rem 1rem;
+    padding: 2rem 1rem;
+}
+
+.sec-3__review--fst::before {
+    content: '';
+    position: absolute;
+    display: block;
+    background-image: url("../images/bg-quotes.png");
+    width: 55px;
+    height: 45px;
+    top: -45px;
+    left: 0;
 }
 
 .review__author {
@@ -248,13 +267,21 @@ body {
     margin-top: 1rem;
 }
 
+.registration__btn,
 .registration__address {
     margin-top: 2rem;
     width: 90%;
     padding: 1em 2em;
-    border-radius: 1rem;
+    border-radius: 1.75rem;
     border: none;
     outline: none;
+}
+
+.registration__btn {
+    font-family: var(--fnt-raleway);
+    font-weight: var(--fw-lg);
+    background-image: linear-gradient(to right, hsl(176, 68%, 64%) 10%, hsl(198, 60%, 50%) 80%);
+    color: hsl(0, 0%, 100%);
 }
 
 .footer__logo {
@@ -276,5 +303,4 @@ body {
     margin-top: 1em;
     display: inline-block;
     color: hsl(0, 0%, 100%);
-    /* display: inline-block; */
 }
