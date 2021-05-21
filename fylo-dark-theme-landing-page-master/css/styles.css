@@ -35,8 +35,9 @@ img {
 
 .row {
     display: flex;
+
     gap: 2.5rem;
-    flex-direction: column;
+    flex-direction: row;
 }
 
 .col {
@@ -63,7 +64,8 @@ body {
                          "logo navbar";
     background-color: hsl(217, 28%, 15%);
     align-items: center;
-    gap: 10%;    
+    gap: 30%;
+    /* gap: calc(10% + 20vw);     */
 }
 
 
@@ -72,6 +74,7 @@ body {
 }
 
 .nav__list {
+    padding-left: 0;
     grid-area: navbar;
     display: flex;
     justify-content: space-between;
@@ -114,7 +117,15 @@ body {
     font-weight: var(--fw-lg);
 }
 
+.sec-1 {
+    display: flex;
+    gap: 10rem;
+    align-items: baseline;
+    flex-wrap: wrap;
+}
+
 .benefit {
+    margin: 0 auto;
     margin-top: 7rem;
 }
 
@@ -129,7 +140,9 @@ body {
 }
 
 .benefit__info {
+    margin: 0 auto;
     line-height: 1.7;
+    max-width: 32ch;
 }
 
 .sec-2 {
@@ -194,6 +207,8 @@ body {
     top: -45px;
     left: 0;
 }
+
+
 
 .review__author {
     display: grid;
