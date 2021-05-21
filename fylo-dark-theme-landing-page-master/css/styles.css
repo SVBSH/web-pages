@@ -37,7 +37,7 @@ img {
     display: flex;
 
     gap: 2.5rem;
-    flex-direction: row;
+    flex-direction: column;
 }
 
 .col {
@@ -54,6 +54,13 @@ body {
     background-color: hsl(217, 28%, 15%);
 
 }
+
+.sec-1 *,
+.sec-2 *,
+.sec-3 * {
+    margin: 0 auto;
+}
+
 
 .nav {
     margin: 1.25em auto;
@@ -119,7 +126,7 @@ body {
 
 .sec-1 {
     display: flex;
-    gap: 10rem;
+    column-gap: 5rem;
     align-items: baseline;
     flex-wrap: wrap;
 }
