@@ -25,6 +25,7 @@ footer,
 }
 
 a {
+    color: white;
     text-decoration: none;
 }
 
@@ -313,7 +314,9 @@ body {
     margin: 4rem 0 2rem 0;
 }
 
-
+.footer__networks * + * {
+    margin-left: 1rem;
+}
 
 .btn-social {
     display: inline-block;
@@ -322,8 +325,4 @@ body {
     border-radius: 50%;
     background-color: white;
     box-shadow: 0 0 0 1px;
-}
-
-.btn-social + .btn-social {
-    margin-left: .75rem;
 }
