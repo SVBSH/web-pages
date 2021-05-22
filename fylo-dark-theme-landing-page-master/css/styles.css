@@ -100,6 +100,11 @@ body {
     margin: 2rem 0;
 }
 
+.main__info {
+    margin: 0 auto;
+    width: min(80%, 420px);
+}
+
 .main__heading {
     font-family: var(--fnt-raleway);
     font-weight: var(--fw-lg);
@@ -125,10 +130,11 @@ body {
 }
 
 .sec-1 {
-    display: flex;
-    column-gap: 5rem;
-    align-items: baseline;
-    flex-wrap: wrap;
+    margin: 0 auto;
+    display: grid;
+    max-width: min(80%, 700px);
+    justify-content: center;
+    grid-template-rows: repeat(4, 1fr);
 }
 
 .benefit {
@@ -139,6 +145,10 @@ body {
 .sec-2__img,
 .benefit__img {
     margin-bottom: 1.5em;
+}
+
+.sec-2__img {
+    display: block;
 }
 
 .benefit__heading,
@@ -189,7 +199,6 @@ body {
 }
 
 .sec-3 {
-    /* width: 95%; */
     margin-top: 10rem;
 }
 
@@ -347,4 +356,92 @@ body {
     border-radius: 50%;
     background-color: white;
     box-shadow: 0 0 0 1px;
+}
+
+
+@media screen and (min-width: 700px) {
+
+    .sec-1 {
+        /* gap: 10%; */
+        grid-template-columns: repeat(2, minmax(400px, 1fr));
+        grid-template-rows: repeat(2, 1fr);
+    }
+
+    .review__author {
+        /* background-color: red; */
+        grid-template-columns: 1fr 2fr;
+    }
+
+    .sec-3 {
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+    }
+    
+
+    .sec-3 * {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .benefit {
+        flex-wrap: nowrap;
+    }
+
+    .sec-2 {
+        max-width: 80%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .sec-2__img {
+        display: inline-block;
+    }
+
+    .sec-2__text {
+        max-width: 80%;
+        margin: 0 auto;
+    }
+
+    .sec-2 img {
+        margin: 0 auto;
+    }
+
+    .footer__content {
+        display: grid;
+        grid-template-rows: repeat(3, minmax(100px, 1fr));
+        grid-template-columns: repeat(2, minmax(100px, 1fr));
+        grid-template-areas: "infoOne infoTwo"
+                             "navOne  navTwo"
+                             "media  media";
+        gap: 3rem;
+    }
+
+    .footer__nav {
+        margin: 0;
+    }
+
+    .content__text--location {
+        grid-area: infoOne;
+    }
+
+    .content__text--phone {
+        grid-area: infoTwo;
+    }    
+
+    .footer__nav-1 {
+        grid-area: navOne;
+    }
+
+    .footer__nav-2 {
+        grid-area: navTwo;
+    }
+
+    .footer__networks {
+        margin: 0;
+        grid-area: media;
+    }
 }
