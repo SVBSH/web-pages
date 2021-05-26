@@ -135,7 +135,7 @@ body {
 
     .main {
         gap: 2rem;
-        grid-template-columns: repeat(auto-fill, minmax(max-width, 1fr));
+        grid-template-columns: repeat(auto-fill, 1fr);
         grid-template-rows: repeat(auto-fill, 1fr);
     }    
 
