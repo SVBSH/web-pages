@@ -69,8 +69,7 @@ body {
 }
 
 .main-grid {
-    display: flex;
-    flex-direction: column;
+    display: grid;
     gap: 1rem;
 }
 
@@ -113,7 +112,7 @@ body {
 .sec-2 {
     position: relative;
     padding: 1rem 1rem;
-    padding-bottom: 2rem;
+    padding-bottom: 1rem;
     border-radius: 7px;
 }
 
@@ -175,22 +174,26 @@ body {
 
 @media screen and (min-width: 400px) {
     body {
-        background-color: var(--clr-neutral-400);
-        background-image: url("../images/bg-desktop.png");
-        background-position: bottom;
-        background-size: 100% 50%;  
+        background: no-repeat bottom / 100% 50% url("../images/bg-desktop.png"), var(--clr-neutral-400);
     }
 }
 
 @media screen and (min-width: 800px) {
 
     .main-grid {
-        flex-direction: row;
+        grid-template-columns: 5fr 6fr;
+        grid-template-areas: "logo other other";
+        grid-auto-flow: column;
         gap: 1rem;
     }
 
+    .sec-1 {
+        grid-area: logo;
+    }
+
     .sec-2 {
-        width: 500px;
+        grid-area: other;
+        align-self: end;
     }
 
     .gb-left {
