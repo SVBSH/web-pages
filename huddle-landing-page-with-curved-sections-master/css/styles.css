@@ -1,0 +1,32 @@
+:root {
+/* Colors */
+    /* Primary */
+    --clr-primary-pink: hsl(322, 100%, 66%);
+    --clr-primary-pink-light: hsl(321, 100%, 78%);
+    --clr-primary-red: hsl(0, 100%, 63%);
+    /* Neutral */
+    --clr-neutral-cyan-dark: hsl(192, 100%, 9%);
+    --clr-neutral-blue-dark: hsl(207, 100%, 98%);
+/* Font families */
+    --ff-poppins: 'Poppins', sans-serif;
+    --ff-open-sans: 'Open Sans', sans-serif;
+/* Font weights */
+    --fw-sm: 400;
+    --fw-md: 600;
+    --fw-lg: 700;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+}
+
+body {
+
+}
