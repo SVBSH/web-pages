@@ -347,7 +347,7 @@ body {
 }
 
 
-@media (min-width: 400px) {
+@media (min-width: 800px) {
     .stats {
         margin: 0 auto;
         flex-direction: row;
