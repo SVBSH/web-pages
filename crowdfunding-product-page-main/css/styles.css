@@ -1,0 +1,311 @@
+:root {
+  --clr-primary-cyan-moderate: hsl(176, 50%, 47%);
+  --clr-primary-cyan-dark: hsl(176, 72%, 28%);
+  --clr-neutral-black: hsl(0, 0%, 0%);
+  --clr-neutral-gray-dark: hsl(0, 0%, 48%);
+  --fs-initial: 1rem;
+  --ff: font-family: "Commissioner", sans-serif;
+  --fw-sm: 400;
+  --fw-md: 500;
+  --fw-lg: 700;
+  --line-height-text: 1.5 ;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5 {
+  color: black;
+  margin: 0;
+}
+
+body {
+  color: var(--clr-neutral-gray-dark);
+  margin: 0;
+  font-family: var(--ff);
+  font-size: var(--fz-initial);
+  background-color: #F2F2F2;
+  background-image: url("../images/image-hero-mobile.jpg");
+  background-repeat: no-repeat;
+  background-size: auto 300px;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.col {
+  width: 100%;
+}
+
+.container {
+  width: 85%;
+  margin: 0 auto;
+}
+
+.inner__container {
+  width: 85%;
+  margin: 0 auto;
+}
+
+.btn {
+  display: inline-block;
+  font-weight: var(--fw-lg);
+  padding: 1em 1.75em;
+  border-radius: 1.5rem;
+  background-color: var(--clr-primary-cyan-moderate);
+  color: white;
+  text-decoration: none;
+}
+
+.main__text,
+.project__text,
+.reward__text {
+  line-height: var(--line-height-text);
+}
+
+.close-icon {
+  background-color: transparent;
+  display: none;
+}
+
+.nav-is-open .menu__nav {
+  visibility: visible;
+  opacity: 1;
+}
+.nav-is-open .menu__select {
+  display: none;
+}
+.nav-is-open .close-icon {
+  display: inline-block;
+}
+
+.menu {
+  width: 90%;
+  margin: 1rem auto;
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+.menu__img {
+  background-color: transparent;
+}
+.menu__list {
+  display: none;
+}
+.menu__item {
+  padding: 1em 2em;
+}
+.menu__link {
+  display: inline-block;
+  text-decoration: none;
+}
+.menu__nav {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s linear;
+  background-color: #fff;
+  position: absolute;
+  z-index: 1;
+  border-radius: 30px;
+  box-shadow: 0 0 1px 0px rgba(151, 151, 145, 0.22);
+  margin: 0 auto;
+  width: min(450px, 95%);
+  top: 4rem;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+}
+.menu__link {
+  display: block;
+  font-family: var(--ff);
+  font-weight: var(--fw-lg);
+  text-decoration: none;
+  padding: 1em 2em;
+  color: #000000;
+}
+.menu__link:nth-of-type(2) {
+  border-top: 1px solid #f2f2f2;
+  border-bottom: 1px solid #f2f2f2;
+}
+.menu__link:hover {
+  background-color: #53535F;
+  border-radius: 30px;
+  color: white;
+}
+
+.main,
+.stat,
+.project {
+  background-color: #fff;
+  margin: 2rem auto;
+  padding: 2em 1.75em;
+  border-radius: 10px;
+  max-width: 600px;
+  margin-bottom: 0.5rem;
+}
+
+.main {
+  margin-top: 12rem;
+  transition: margin-top 0.25s linear;
+  position: relative;
+  background-color: white;
+  text-align: center;
+}
+.main__info {
+  margin-bottom: 2em;
+}
+.main__heading {
+  color: black;
+  font-weight: var(--fw-lg);
+  margin: 1rem auto;
+}
+.main__buttons {
+  display: flex;
+  font-display: row;
+  justify-content: space-between;
+}
+.main__bookmark .bookmark__img {
+  background-color: white;
+}
+.main__btn {
+  border-radius: 38px;
+  width: 75%;
+}
+.main::before {
+  --logo-width: 56px;
+  content: "";
+  position: absolute;
+  top: calc(-1 * (var(--logo-width) / 2));
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: var(--logo-width);
+  height: var(--logo-width);
+  background-image: url("../images/logo-mastercraft.svg");
+  background-repeat: no-repeat;
+}
+
+.new {
+  display: grid;
+  grid-auto-flow: row;
+}
+
+.stat__info {
+  margin-bottom: 0.5em;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.stat__info:nth-of-type(-n+2)::after {
+  --border-width: 20%;
+  content: "";
+  position: absolute;
+  display: block;
+  bottom: 0;
+  left: calc(var(--border-width) * 2);
+  width: var(--border-width);
+  height: 1px;
+  background-color: var(--clr-neutral-gray-dark);
+  opacity: 0.4;
+}
+.stat__heading {
+  margin-bottom: 0;
+}
+.stat__text {
+  margin-top: 0.5em;
+}
+.stat__progress {
+  margin: 0 auto;
+  height: 12.5px;
+  border-radius: 8px;
+  background-color: #E6E6E6;
+}
+.stat__load {
+  display: block;
+  width: 75%;
+  height: inherit;
+  border-radius: inherit;
+  background-color: var(--clr-primary-cyan-moderate);
+}
+
+.project__text {
+  line-height: 1.5;
+}
+.project__reward {
+  margin-top: 1.25rem;
+  border: 1px solid var(--clr-neutral-gray-dark);
+  border-radius: 10px;
+  padding: 1em 1em;
+}
+.project__reward .reward__remainder {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+.project__reward .reward__row {
+  display: grid;
+  gap: 0.5rem;
+}
+.project__reward .reward__heading {
+  font-size: inherit;
+}
+.project__reward .reward__cost {
+  font-weight: var(--fw-md);
+  color: var(--clr-primary-cyan-moderate);
+  margin: 0;
+  margin-top: 0.45em;
+}
+.project__reward .cost__remainder {
+  display: inline-block;
+  font-weight: var(--fw-lg);
+  color: black;
+  font-size: 2rem;
+}
+.project__reward .cost__ {
+  display: inline-block;
+}
+.project__reward--grey {
+  opacity: 0.4;
+}
+
+@media (min-width: 385.01px) {
+  body {
+    background-image: url("../images/image-hero-desktop.jpg");
+    background-size: contain;
+  }
+
+  .main__btn {
+    width: 50%;
+  }
+  .main__btn--left {
+    margin: 0;
+    border-radius: 0;
+  }
+  .main__bookmark {
+    background-color: var(--clr-neutral-black);
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+  }
+  .main .circ {
+    width: 56px;
+    height: 56px;
+    background-color: red;
+    border-bottom-left-radius: 30px;
+  }
+}/*# sourceMappingURL=styles.css.map */
