@@ -9,7 +9,7 @@
     --clr-neutral-pale-blue: hsl(207, 100%, 98%);
 /* Font families */
     --ff-poppins: 'Poppins', sans-serif; /* headings */
-    --ff-open-sans: 'Open Sans', sans-serif;
+    --ff-open-sans: 'Open Sans', sans-serif; /* paragraphs */
 /* Font size */
     /* --fnt-size: 0.6875rem; */
     --fnt-size: 0.7875rem;
@@ -17,6 +17,9 @@
     --fw-sm: 400;
     --fw-md: 600;
     --fw-lg: 700;
+
+/* Background images */
+    --bg-image-footer: url("../images/bg-footer-top-mobile.svg");
 }
 
 *,
@@ -58,7 +61,7 @@ img {
 }
 
 .main__title {
-    font-size: 1.75rem;
+    font-size: clamp(1.8rem, 2.5vw, 2.8rem);
 }
 
 .stats {
@@ -147,6 +150,7 @@ img {
 body {
     font-family: var(--ff-open-sans);
     font-size: var(--fnt-size);
+    font-size: clamp(1.125rem, 1.2vw, 2rem);
     font-weight: var(--fw-sm);
     color: var(--clr-neutral-cyan-dark);
     padding: 0;
@@ -154,19 +158,22 @@ body {
 }
 
 .main-nav {
-    display: grid;
-    gap: 30vw;
-    grid-template-columns: 1fr 1fr;
-    margin-top: 1rem;
-    margin-bottom: 2rem;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
+    margin-top: 1rem;
+    margin-bottom: 2rem; 
 }
+
 
 .main-nav__logo {
     display: block;
+    height: 20px;
 }
 
 .main-nav__btn {
+    background-color: #fff;
+    font-size: 1.1rem;
     display: block;
     color: var(--clr-primary-pink);
     justify-self: end;
@@ -188,7 +195,8 @@ body {
 }
 
 .main__text {
-    max-width: 38ch;
+    max-width: clamp(38ch, 50ch, 60ch);
+    font-size: clamp(1.125rem, 1vw, 1.8rem);
     margin: 0 auto;
     margin-top: 1em;
     margin-bottom: 3em;
@@ -213,12 +221,8 @@ body {
 }
 
 .stat__text {
-    font-size: 1.32em;
+    /* font-size: 1.32em; */
     opacity: .7;
-}
-    
-
-.sec-flex {
 }
 
 .sec__img {
@@ -245,6 +249,9 @@ body {
 }
 
 .sec__text {
+    margin: 0 auto;
+    font-size: clamp(0.825rem, 1vw, 1.8rem);
+    max-width: clamp(38ch, 50ch, 60ch);
 }
 
 .sec--wave::after {
@@ -273,7 +280,7 @@ body {
 .sec-footer::before {
     top: -5rem;
     left: 0;
-    background-image: url("../images/bg-footer-top-mobile.svg");
+    background-image: var(--bg-image-footer);
 }
 
 .sec--wave {
@@ -348,6 +355,11 @@ body {
 
 
 @media (min-width: 800px) {
+
+    :root {
+        --bg-image-footer: url("../images/bg-footer-top-desktop.svg");
+    }
+
     .stats {
         margin: 0 auto;
         flex-direction: row;
@@ -358,7 +370,16 @@ body {
     }
 
     body {
-        font-size: 1.125rem;
+    }
+
+    .sec-flex {
+        flex: 50%;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .sec-flex > * {
+        width: 50%;
     }
 
     .sec-footer {

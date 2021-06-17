@@ -36,7 +36,8 @@
         alt="main navigation logo"
         class="main-nav__logo"
       />
-      <a href="#" class="main-nav__btn">Try it free</a>
+      <!-- <a href="#" class="main-nav__btn">Try it free</a> -->
+      <button class="main-nav__btn">Try it Free</button>
     </header>
 
     <section class="hero container">
@@ -66,7 +67,7 @@
     <main class="main">
       <section class="sec sec--wave">
         <div class="sec-flex container">
-          <div class="sec__info">
+          <div class="sec__info col">
             <h2 class="sec__heading">Grow Together</h2>
             <p class="sec__text">
               Generate meaningful discussions with your audience and build a
@@ -74,17 +75,22 @@
               miss out on with a feedback form.
             </p>
           </div>
-          <img
+          <!-- <img
             src="images/illustration-grow-together.svg"
             alt=""
-            class="sec__img"
-          />
+            class="sec__img col"
+          /> -->
+          <picture>
+            <source media="(min-width: 950px)" srcset="images/logo.svg">
+            <!-- <source media="(min-width: 465px)" srcset="img_car.jpg"> -->
+            <img src="images/illustration-grow-together.svg">
+          </picture>
         </div>
       </section>
 
       <section class="sec">
         <div class="sec-flex container">
-          <div class="sec__info">
+          <div class="sec__info col">
             <h2 class="sec__heading">Flowing Conversations</h2>
             <p class="sec__text">
               Generate meaningful discussions with your audience and build a
@@ -96,14 +102,14 @@
           <img
             src="images/illustration-flowing-conversation.svg"
             alt=""
-            class="sec__img"
+            class="sec__img col"
           />
         </div>
       </section>
 
       <section class="sec sec--wave">
         <div class="sec-flex container">
-          <div class="sec__info">
+          <div class="sec__info col">
             <h2 class="sec__heading">Your Users</h2>
             <p class="sec__text">
               It takes no time at all to integrate Huddle with your app's
@@ -114,7 +120,7 @@
           <img
             src="images/illustration-your-users.svg"
             alt=""
-            class="sec__img"
+            class="sec__img col"
           />
         </div>
       </section>
