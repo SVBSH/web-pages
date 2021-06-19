@@ -10,6 +10,7 @@ mainNav.addEventListener("click", _ => {
     let menu = document.querySelector(".menu");
     menu.classList.toggle("nav-is-open");
     console.log("click")
+
     let main = document.querySelector(".main");
     if (main.style.marginTop === "17rem") {
         main.style.marginTop = "13rem";   
