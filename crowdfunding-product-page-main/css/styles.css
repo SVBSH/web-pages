@@ -30,7 +30,7 @@ body {
   background-color: #F2F2F2;
   background-image: url("../images/image-hero-mobile.jpg");
   background-repeat: no-repeat;
-  background-size: auto 300px;
+  background-size: auto clamp(300px, 20vw, 400px);
 }
 
 img {
@@ -141,10 +141,8 @@ img {
   border-top: 1px solid #f2f2f2;
   border-bottom: 1px solid #f2f2f2;
 }
-.menu__link:hover {
-  background-color: #53535F;
-  border-radius: 30px;
-  color: white;
+.menu--btn {
+  cursor: pointer;
 }
 
 .main,
@@ -178,12 +176,12 @@ img {
   font-display: row;
   justify-content: space-between;
 }
-.main__bookmark .bookmark__img {
-  background-color: white;
-}
 .main__btn {
   border-radius: 38px;
   width: 75%;
+}
+.main__btn--left {
+  display: none;
 }
 .main::before {
   --logo-width: 56px;
@@ -204,8 +202,11 @@ img {
   grid-auto-flow: row;
 }
 
+.stat {
+  display: flex;
+  flex-direction: column;
+}
 .stat__info {
-  margin-bottom: 0.5em;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -225,6 +226,7 @@ img {
 }
 .stat__heading {
   margin-bottom: 0;
+  font-size: clamp(1.5rem, 2vw, 2rem);
 }
 .stat__text {
   margin-top: 0.5em;
@@ -285,14 +287,55 @@ img {
 
 @media (min-width: 385.01px) {
   body {
+    background-image: none;
     background-image: url("../images/image-hero-desktop.jpg");
+    background-size: auto clamp(300px, 20vw, 400px);
+  }
+}
+@media (min-width: 385.01px) {
+  body {
     background-size: contain;
+  }
+}
+@media (min-width: 450px) {
+  .menu {
+    align-content: space-between;
+  }
+  .menu--btn {
+    display: none;
+  }
+  .menu__nav {
+    background-color: transparent;
+    position: static;
+    visibility: visible;
+    opacity: 1;
+    flex-direction: row;
+  }
+  .menu__link {
+    padding: 0.5em 0.75em;
+  }
+
+  .stat {
+    flex-direction: row;
+    justify-content: space-between;
+    justify-items: space-around;
+  }
+  .stat__info {
+    width: 100%;
+  }
+  .stat__info:nth-of-type(-n+2)::after {
+    display: none;
+  }
+  .stat__info:nth-of-type(2) {
+    border-left: 1px solid var(--clr-neutral-gray-dark);
+    border-right: 1px solid var(--clr-neutral-gray-dark);
   }
 
   .main__btn {
     width: 50%;
   }
   .main__btn--left {
+    display: inline-block;
     margin: 0;
     border-radius: 0;
   }
@@ -301,11 +344,5 @@ img {
     display: grid;
     grid-auto-flow: column;
     align-items: center;
-  }
-  .main .circ {
-    width: 56px;
-    height: 56px;
-    background-color: red;
-    border-bottom-left-radius: 30px;
   }
 }/*# sourceMappingURL=styles.css.map */
