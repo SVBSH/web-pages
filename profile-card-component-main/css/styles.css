@@ -35,7 +35,10 @@ img {
 
 body {
     background-color: var(--clr-primary-cyan);
-    background: url("../images/bg-pattern-top.svg"), url("../images/bg-pattern-bottom.svg"),hsl(185, 75%, 39%);
+    background: right 51vw bottom 20vh /100% url("../images/bg-pattern-top.svg") no-repeat, 
+                left 45vw top 50vh / 100% url("../images/bg-pattern-bottom.svg") no-repeat,
+                hsl(185, 75%, 39%);
+    
     min-height: 100vh;
     display: grid;
     place-items: center;
