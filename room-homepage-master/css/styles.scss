@@ -1,0 +1,178 @@
+:root {
+// Colors
+  --clr-primary-100: hsl(0, 0%, 100%);
+  --clr-primary-200: hsl(0, 0%, 63%);
+  --clr-primary-300: hsl(0, 0%, 27%);
+  --clr-primary-400: hsl(0, 0%, 0%);
+// Font Family
+  --ff: 'Spartan', sans-serif;
+// Font Weights
+  --fw-sm: 500;  
+  --fw-md: 600;
+  --fw-lg: 700;
+// Line Height
+  --lh-md: 1.6;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  // background-color: black;
+}
+
+.snd, 
+.third {
+  display: none;
+}
+
+body {
+  font-family: var(--ff);
+  font-size: 12px;
+
+  margin: 0;
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-areas: 
+    "head"
+    "main"
+    "footer";
+  // grid-template-areas: "header header main"
+  //                      "header header main"
+  //                      "footerImageFst footertext footerImageSnd";
+}
+
+header {
+  margin: 0;
+  position: relative;
+  height: 50vh;
+  grid-area: head;
+
+  .main-nav {
+    position: absolute;
+    display: flex;
+    width: 90%;
+    left: 0;
+    right: 0;
+    margin: 3rem auto;
+
+    &__hamburger {
+      background-color: transparent;
+    }
+
+    &__logo {
+      background-color: transparent;
+      margin: 0 auto;
+    }
+
+    .nav__list {
+      display: none;
+    }
+
+    .nav__item {
+
+    }
+  }
+
+  .hero {
+    display: block;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .angles {
+    display: flex;
+    background-color: var(--clr-primary-400);
+    flex-direction: row;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+    .angle {
+      padding: 1em 1em;
+    }
+  }
+
+}
+
+.info {
+  
+}
+
+.main__body,
+.about__body {
+  line-height: var(--lh-md);
+  color: var(--clr-primary-200);
+}
+
+.info {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.main {
+  grid-area: main;
+
+  &__headline {
+    margin-top: 4rem;
+  }
+
+  &__body {
+
+  }
+
+  .arrow {
+    padding: .5em .5em;
+    display: inline-block;
+  }
+
+
+  .shop-now {
+    margin: 3.5rem 0 3rem 0;
+    display: flex;
+    align-items: center;
+  }
+
+  &__btn {
+    margin: 0;
+    // padding: .5em .5em;
+    font-size: .80rem;
+    letter-spacing: 6px;
+
+    font-family: inherit;
+    text-transform: uppercase;
+    display: inline-block;
+    border: none;
+    background-color: transparent;
+    text-decoration: none;
+  }
+  
+  .arrow {
+    margin-left: .9rem;
+  }
+
+}
+
+.about {
+  grid-area: footer;
+
+  &__img {
+    display: block;
+    margin: 3rem 0;
+
+    &--grey {
+      margin-bottom: 0;
+    }
+  }
+
+  &__body {
+    line-height: var(--lh-md);
+  }
+
+}
+
