@@ -199,7 +199,6 @@ header {
 
   &__item {
     height: 0%;
-    background-size: cover;
     opacity: 0;
     transition: opacity 500ms ease-out;
 
@@ -210,14 +209,17 @@ header {
 
     &:nth-of-type(1) {
       background: center center url("../images/mobile-image-hero-1.jpg") no-repeat;
+      background-size: 100% 100%;
     }
 
     &:nth-of-type(2) {
       background: center center url("../images/mobile-image-hero-2.jpg") no-repeat;
+      background-size: 100% 100%;
     }
 
     &:nth-of-type(3) {
       background: center center url("../images/mobile-image-hero-3.jpg") no-repeat;
+      background-size: 100% 100%;
     }
   }
 
