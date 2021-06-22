@@ -32,11 +32,15 @@ img {
 }
 
 .main__offer {
-  display: none;
+  transition: opacity 1s ease-out;
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
 }
 
 .active {
-  display: block;
+  opacity: 1;
+  height: auto;
 }
 
 body {
