@@ -1,16 +1,16 @@
 :root {
-// Colors
+  // Colors
   --clr-primary-100: hsl(0, 0%, 100%);
   --clr-primary-200: hsl(0, 0%, 63%);
   --clr-primary-300: hsl(0, 0%, 27%);
   --clr-primary-400: hsl(0, 0%, 0%);
-// Font Family
-  --ff: 'Spartan', sans-serif;
-// Font Weights
-  --fw-sm: 500;  
+  // Font Family
+  --ff: "Spartan", sans-serif;
+  // Font Weights
+  --fw-sm: 500;
   --fw-md: 600;
   --fw-lg: 700;
-// Line Height
+  // Line Height
   --lh-md: 1.6;
 }
 
@@ -20,15 +20,30 @@
   box-sizing: border-box;
 }
 
+button {
+  border: 0;
+  margin: 0;
+  cursor: pointer;
+}
+
 img {
   max-width: 100%;
   height: auto;
-  // background-color: black;
 }
 
-.snd, 
-.third {
-  display: none;
+.main__offer {
+  // clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+  // transition: clip-path 1s ease-out;
+  transition: opacity 1s ease-out;
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+
+  &--active {
+    // clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    opacity: 1;
+    height: auto;
+  }
 }
 
 body {
@@ -38,7 +53,7 @@ body {
   margin: 0;
   display: grid;
   grid-auto-flow: row;
-  grid-template-areas: 
+  grid-template-areas:
     "head"
     "main"
     "footer";
@@ -60,8 +75,10 @@ header {
     left: 0;
     right: 0;
     margin: 3rem auto;
+    z-index: 1;
 
     &__hamburger {
+      cursor: pointer;
       background-color: transparent;
     }
 
@@ -75,33 +92,8 @@ header {
     }
 
     .nav__item {
-
     }
   }
-
-  .hero {
-    display: block;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  .angles {
-    display: flex;
-    background-color: var(--clr-primary-400);
-    flex-direction: row;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-
-    .angle {
-      padding: 1em 1em;
-    }
-  }
-
-}
-
-.info {
-  
 }
 
 .main__body,
@@ -110,7 +102,8 @@ header {
   color: var(--clr-primary-200);
 }
 
-.info {
+.about__info,
+.main__offer-container {
   width: 80%;
   margin: 0 auto;
 }
@@ -118,19 +111,15 @@ header {
 .main {
   grid-area: main;
 
+  &__content {
+  }
+
   &__headline {
     margin-top: 4rem;
   }
 
   &__body {
-
   }
-
-  .arrow {
-    padding: .5em .5em;
-    display: inline-block;
-  }
-
 
   .shop-now {
     margin: 3.5rem 0 3rem 0;
@@ -139,9 +128,9 @@ header {
   }
 
   &__btn {
-    margin: 0;
-    // padding: .5em .5em;
-    font-size: .80rem;
+    position: relative;
+    margin-top: 3em;
+    font-size: 0.8rem;
     letter-spacing: 6px;
 
     font-family: inherit;
@@ -150,12 +139,19 @@ header {
     border: none;
     background-color: transparent;
     text-decoration: none;
-  }
-  
-  .arrow {
-    margin-left: .9rem;
-  }
 
+    &::after {
+      content: "";
+      position: absolute;
+      width: 40px;
+      height: 12px;
+      top: 0;
+      margin: auto 0;
+      right: -30%;
+      background-image: url("../images/icon-arrow.svg");
+      background-repeat: no-repeat;
+    }
+  }
 }
 
 .about {
@@ -173,6 +169,63 @@ header {
   &__body {
     line-height: var(--lh-md);
   }
-
 }
 
+.galery__btn {
+  padding: 1.5rem 1.5rem;
+
+  &--left {
+    background: center center url("../images/icon-angle-left.svg") no-repeat
+      black;
+  }
+
+  &--right {
+    background: center center url("../images/icon-angle-right.svg") no-repeat
+      black;
+  }
+}
+
+.galery {
+  // background-color: red;
+  height: 100%;
+  position: relative;
+
+  &__list {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+
+  &__item {
+    height: 0%;
+    background-size: cover;
+    opacity: 0;
+    transition: opacity 500ms ease-out;
+
+    &--active {
+      opacity: 1;
+      height: 100%;
+    }
+
+    &:nth-of-type(1) {
+      background: center center url("../images/mobile-image-hero-1.jpg") no-repeat;
+    }
+
+    &:nth-of-type(2) {
+      background: center center url("../images/mobile-image-hero-2.jpg") no-repeat;
+    }
+
+    &:nth-of-type(3) {
+      background: center center url("../images/mobile-image-hero-3.jpg") no-repeat;
+    }
+  }
+
+  &__btn-container {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+}
