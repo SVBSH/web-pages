@@ -16,14 +16,27 @@
   box-sizing: border-box;
 }
 
+.active {
+  display: block;
+}
+
+button {
+  border: 0;
+  margin: 0;
+  cursor: pointer;
+}
+
 img {
   max-width: 100%;
   height: auto;
 }
 
-.snd,
-.third {
+.main__offer {
   display: none;
+}
+
+.active {
+  display: block;
 }
 
 body {
@@ -50,31 +63,28 @@ header .main-nav {
   margin: 3rem auto;
 }
 header .main-nav__hamburger {
+  cursor: pointer;
   background-color: transparent;
 }
 header .main-nav__logo {
   background-color: transparent;
   margin: 0 auto;
 }
-header .main-nav .nav__list {
-  display: none;
-}
-header .hero {
-  display: block;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-header .angles {
+header .main-nav__angles {
   display: flex;
-  background-color: var(--clr-primary-400);
   flex-direction: row;
   position: absolute;
   bottom: 0;
   right: 0;
 }
-header .angles .angle {
-  padding: 1em 1em;
+header .main-nav .nav__list {
+  display: none;
+}
+header .hero {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
+  width: 100%;
 }
 
 .main__body,
@@ -83,7 +93,8 @@ header .angles .angle {
   color: var(--clr-primary-200);
 }
 
-.info {
+.about__info,
+.main__offer-container {
   width: 80%;
   margin: 0 auto;
 }
@@ -94,17 +105,14 @@ header .angles .angle {
 .main__headline {
   margin-top: 4rem;
 }
-.main .arrow {
-  padding: 0.5em 0.5em;
-  display: inline-block;
-}
 .main .shop-now {
   margin: 3.5rem 0 3rem 0;
   display: flex;
   align-items: center;
 }
 .main__btn {
-  margin: 0;
+  position: relative;
+  margin-top: 3em;
   font-size: 0.8rem;
   letter-spacing: 6px;
   font-family: inherit;
@@ -114,8 +122,16 @@ header .angles .angle {
   background-color: transparent;
   text-decoration: none;
 }
-.main .arrow {
-  margin-left: 0.9rem;
+.main__btn::after {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 12px;
+  top: 0;
+  margin: auto 0;
+  right: -30%;
+  background-image: url("../images/icon-arrow.svg");
+  background-repeat: no-repeat;
 }
 
 .about {
@@ -130,4 +146,14 @@ header .angles .angle {
 }
 .about__body {
   line-height: var(--lh-md);
+}
+
+.arrow__btn {
+  padding: 1.5rem 1.5rem;
+}
+.arrow__btn--left {
+  background: center center url("../images/icon-angle-left.svg") no-repeat black;
+}
+.arrow__btn--right {
+  background: center center url("../images/icon-angle-right.svg") no-repeat black;
 }/*# sourceMappingURL=styles.css.map */
