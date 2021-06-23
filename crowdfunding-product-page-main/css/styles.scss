@@ -35,7 +35,7 @@ body {
     background-color: #F2F2F2;
     background-image: url("../images/image-hero-mobile.jpg");
     background-repeat: no-repeat;
-    background-size: auto 300px;
+    background-size: auto clamp(300px, 20vw, 400px);
 }
 
 img {
@@ -129,7 +129,7 @@ img {
         text-decoration: none;
     }
 
-    &__nav {
+    &__nav {  
         visibility: hidden;
         opacity: 0;
         transition: visibility 0s, opacity .5s linear;
@@ -164,12 +164,16 @@ img {
             border-bottom: 1px solid hsl(0, 0%, 95%);
         }
 
-        &:hover {
-            background-color: #53535F;
-            border-radius: 30px;
-            color: white;
-        }
+        // &:hover {
+        //     background-color: #53535F;
+        //     border-radius: 30px;
+        //     color: white;
+        // }
         
+    }
+
+    &--btn {
+        cursor: pointer;
     }
 }
 
@@ -213,15 +217,18 @@ img {
     }
 
     &__bookmark {
-            
         .bookmark__img {
-            background-color: white;
+            // background-color: white;
         }
     }
 
     &__btn {
         border-radius: 38px;
         width: 75%;
+
+        &--left {
+            display: none;
+        }
     }
 
     &::before {
@@ -245,12 +252,19 @@ img {
 }
 
 .stat {
-    
+    display: flex;
+    flex-direction: column;
+    // &__info + &__info {
+    //     margin-top: 1.5rem;
+    // }
+
     &__info {
-        margin-bottom: .5em;
+        // margin-top: 1.5rem;
+        // margin-bottom: .5em;
         position: relative;
         display: flex;
         flex-direction: column;
+        // flex-direction: row;
         text-align: center;
 
         &:nth-of-type(-n+2)::after {
@@ -270,6 +284,7 @@ img {
 
     &__heading {
         margin-bottom: 0;
+        font-size: clamp(1.5rem, 2vw, 2rem);
     }
 
     &__text {
@@ -355,9 +370,59 @@ img {
 }
 
 @media (min-width: 385.01px) {
+
     body {
+        background-image: none;
         background-image: url("../images/image-hero-desktop.jpg");
+        background-size: auto clamp(300px, 20vw, 400px);
+    }
+}
+
+@media (min-width: 385.01px) {
+    body {
         background-size: contain;
+
+    }
+}
+
+@media (min-width: 450px) {
+
+    .menu {
+        align-content: space-between;
+
+        &--btn {
+            display: none;
+        }
+
+        &__nav {
+            background-color: transparent;
+            position: static;
+            visibility: visible;
+            opacity: 1;
+            flex-direction: row;
+        }
+
+        &__link {
+            padding: .5em .75em;
+        }
+    }
+
+    .stat {
+        flex-direction: row;
+        justify-content: space-between;
+        justify-items: space-around;
+
+        &__info {
+            width: 100%;
+            &:nth-of-type(-n+2)::after {
+                display: none;
+            }
+
+            &:nth-of-type(2) {
+                border-left: 1px solid var(--clr-neutral-gray-dark);
+                border-right: 1px solid var(--clr-neutral-gray-dark);
+            }
+        }
     }
 
     .main {
@@ -365,6 +430,7 @@ img {
             width: 50%;
 
             &--left {
+                display: inline-block;
                 margin: 0;
                 border-radius: 0;
             }
@@ -382,13 +448,8 @@ img {
 
         .bookmark__img {
         }
-
-        .circ {
-            width: 56px;
-            height: 56px;
-            background-color: red;
-            border-bottom-left-radius: 30px;
-        }
     }
 }
+
+
 

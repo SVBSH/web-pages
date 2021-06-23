@@ -3,7 +3,6 @@ const buttonLeft = navAngles.querySelector(".galery__btn--left");
 const buttonRight = navAngles.querySelector(".galery__btn--right");
 
 const galery = document.querySelector('.galery__list');
-
 const offers = document.querySelector(".main__offer-container");
 
 const changeOffer = (currentOffer, targetOffer) => {
@@ -24,7 +23,6 @@ navAngles.addEventListener("click", (e) => {
     //     return;
     // }
     // changeOffer(currentOffer, targetOffer);
-    console.log("left");
     const prevOffer = currentOffer.previousElementSibling;
     if (!prevOffer) {
         return;
@@ -38,7 +36,6 @@ navAngles.addEventListener("click", (e) => {
     prevImg.classList.add('galery__item--active');
   // Right arrow
   } else {
-    console.log("right");
     const nextOffer = currentOffer.nextElementSibling;
     if (!nextOffer) {
       return;
