@@ -8,7 +8,7 @@ const offers = document.querySelector(".main__offer-container");
 
 const menuHamburger = document.querySelector('.main-nav__hamburger--open');
 const menuList = document.querySelector('.main-nav__hamburger--closed')
-const menuLogo = document.querySelector('.main-nav__logo');
+
 
 menuHamburger.addEventListener('click', e => {
   const navClose  = document.querySelector('.nav-open');
@@ -19,9 +19,7 @@ menuHamburger.addEventListener('click', e => {
 menuList.addEventListener('click', e => {
   const navOpen = document.querySelector('.nav-closed');
   e.target.parentNode.style.transform = 'translateX(130%)'
-  // e.target.parentNode.style.display = 'none';
 });
-
 
 
 const changeOffer = (currentOffer, targetOffer, currentImg) => {

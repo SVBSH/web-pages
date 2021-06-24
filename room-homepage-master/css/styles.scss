@@ -49,7 +49,7 @@ header {
 
 .main-nav {
   position: absolute;
-  // width: 90%;
+  overflow-x: hidden;
   left: 0;
   right: 0;
   // margin: 3rem auto;
@@ -98,12 +98,13 @@ header {
   display: grid;
   grid-auto-flow: column;
   justify-content: space-between;
-
+  
   position: absolute;
+  z-index: 999;
   top: 0;
   left: 0;
   right: 0;
-
+  
   transform: translateX(130%);
   transition: transform 250ms ease-out;
   background: white;
