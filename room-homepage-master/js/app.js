@@ -3,11 +3,16 @@ const buttonLeft = navAngles.querySelector(".galery__btn--left");
 const buttonRight = navAngles.querySelector(".galery__btn--right");
 
 const galery = document.querySelector('.galery__list');
+
 const offers = document.querySelector(".main__offer-container");
 
-const changeOffer = (currentOffer, targetOffer) => {
+const changeOffer = (currentOffer, targetOffer, currentImg) => {
     currentOffer.classList.remove("main__offer--active");
     targetOffer.classList.add("main__offer--active");
+
+    // const nextImg = currentImage.nextElementSibling;
+    // currentImage.classList.remove('galery__item--active');
+    // nextImg.classList.add('galery__item--active');
 };
 
 
@@ -18,15 +23,11 @@ navAngles.addEventListener("click", (e) => {
   const currentImage = galery.querySelector('.galery__item--active');
   // Left arrow
   if (targetBtn.classList.contains("galery__btn--left")) {
-    // const targetOffer = currentOffer.previousElementSibling;
-    // if (!targetOffer) {
-    //     return;
-    // }
-    // changeOffer(currentOffer, targetOffer);
     const prevOffer = currentOffer.previousElementSibling;
     if (!prevOffer) {
         return;
     }
+    // Change active state main__offer element
     currentOffer.classList.remove("main__offer--active");
     prevOffer.classList.add("main__offer--active");
 
@@ -40,7 +41,7 @@ navAngles.addEventListener("click", (e) => {
     if (!nextOffer) {
       return;
     }
-
+    // Change active state of main__offer element
     currentOffer.classList.remove("main__offer--active");
     nextOffer.classList.add("main__offer--active");
 
