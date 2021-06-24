@@ -3,20 +3,34 @@ const buttonLeft = navAngles.querySelector(".galery__btn--left");
 const buttonRight = navAngles.querySelector(".galery__btn--right");
 
 const galery = document.querySelector('.galery__list');
-
 const offers = document.querySelector(".main__offer-container");
+
+
+const menuHamburger = document.querySelector('.main-nav__hamburger--open');
+const menuList = document.querySelector('.main-nav__hamburger--closed')
+const menuLogo = document.querySelector('.main-nav__logo');
+
+menuHamburger.addEventListener('click', e => {
+  const navClose  = document.querySelector('.nav-open');
+  // e.target.parentNode.style.display = "none";
+  navClose.style.transform = 'translateX(0)';
+}); 
+
+menuList.addEventListener('click', e => {
+  const navOpen = document.querySelector('.nav-closed');
+  e.target.parentNode.style.transform = 'translateX(130%)'
+  // e.target.parentNode.style.display = 'none';
+});
+
+
 
 const changeOffer = (currentOffer, targetOffer, currentImg) => {
     currentOffer.classList.remove("main__offer--active");
     targetOffer.classList.add("main__offer--active");
-
-    // const nextImg = currentImage.nextElementSibling;
-    // currentImage.classList.remove('galery__item--active');
-    // nextImg.classList.add('galery__item--active');
 };
 
 
-navAngles.addEventListener("click", (e) => {
+navAngles.addEventListener("click", e => {
   const targetBtn = e.target.closest(".galery__btn");
   const currentOffer = offers.querySelector(".main__offer.main__offer--active");
 
