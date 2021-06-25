@@ -21,7 +21,9 @@
     }
 
     @media (min-width: 800px) {
+        align-self: center;
         justify-self: center;
         text-align: left;
+        margin: 0;
     }
 }
