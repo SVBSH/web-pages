@@ -1,0 +1,48 @@
+:root {
+  /* Colors */
+  --clr-primary-100: hsl(333, 80%, 67%);
+  --clr-primary-200: hsl(300, 43%, 22%);
+  --clr-secondary-50: hsl(0, 0%, 100%);
+  --clr-secondary-100: hsl(300, 24%, 96%);
+  --clr-secondary-200: hsl(303, 10%, 53%);
+  /* Fonts */
+  --ff: "Spartan", sans-serif;
+  /* Font Weights */
+  --fw-md: 400;
+  --fw-md: 500;
+  --fw-md: 700;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}/*# sourceMappingURL=main.css.map */
