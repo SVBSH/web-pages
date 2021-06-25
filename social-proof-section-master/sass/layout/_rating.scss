@@ -1,0 +1,65 @@
+.rating {
+  grid-area: rating;
+  text-align: center;
+
+  &__card {
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    padding: 1.125em 0.5em;
+    background: var(--clr-secondary-100);
+    border-radius: 10px;
+    margin: 1rem 0;
+
+    @media (min-width: 800px) {
+      flex-direction: row;
+      // justify-content: flex-start;
+      padding: 1.5em 1em;
+    }
+  }
+
+  &__stars {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  &__img {
+    width: 17px;
+    height: 16px;
+    background: url("../../images/icon-star.svg") no-repeat;
+  }
+
+  &__text {
+    color: var(--clr-primary-200);
+    font-weight: var(--fw-lg);
+  }
+
+  @media (min-width: 800px) {
+    align-self: center;
+    // justify-self: ;
+  }
+}
+
+@media (min-width: 800px) {
+  
+  .rating__card:nth-of-type(1) {
+    // background: red;
+    // transform: translateX(0%);
+    margin-left: 0;
+  }
+
+  .rating__card:nth-of-type(2) {
+    // background: blue;
+    // transform: translateX(10%);
+    margin-left: 7.5%;
+
+  }
+
+  .rating__card:nth-of-type(3) {
+    // transform: translateX(20%);
+    margin-left: 15%;
+  }
+}

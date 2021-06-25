@@ -1,0 +1,60 @@
+
+
+.review {
+    grid-area: review;
+
+    &__card-container {
+        background: var(--clr-primary-200);
+        color: var(--clr-secondary-50);
+        font-weight: var(--fw-md);
+        border-radius: 10px;
+        padding: 2.5em 1.75em;
+        margin: 1rem 0;
+    }
+
+    &__card {
+        margin-bottom: 1.75rem;
+    }
+
+    &__author-info {
+        display: flex;
+        // justify-items: baseline;
+        gap: 1.5rem;
+        align-items: center;
+    }
+
+    &__img {
+        --img-size: 60px;
+        width: var(--img-size);
+        height: var(--img-size);
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    &__body {
+
+    }
+
+    &__author {
+        font-weight: var(--fw-lg);
+    }
+    
+    &__text + &__text {
+        margin-top: .25em;
+    }
+
+    &__text {
+
+        &--pink {
+            font-weight: var(--fw-sm);
+            color: var(--clr-primary-100);
+        }
+    }
+
+    @media (min-width: 800px) {
+        display: grid;
+        grid-auto-flow: column;
+        gap: 0 1rem;
+        // flex-direction: row;
+    }
+}
