@@ -4,7 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- displays site properly based on user's device -->
-
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/main.css">
     <link
       rel="icon"
       type="image/png"
@@ -30,10 +36,10 @@
       <header>
         <div class="info">
           <h1 class="title">Social Media Dashboard</h1>
-          <p class="text">Total Followers: 23,004</p>
+          <p class="text text--bold">Total Followers: 23,004</p>
         </div>
         <div class="toggle">
-          <p class="toggle__mode">Dark Mode</p>
+          <p class="toggle__mode text--bold">Dark Mode</p>
           <input type="submit" class="toggle__input" />
         </div>
       </header>
@@ -42,25 +48,34 @@
         <section class="dashboard">
           <ul class="dashboard__card-container">
             <li class="dashboard__card">
-              <div class="">
-                <img src="images/icon-facebook.svg" alt="" class="dashboard__img" />
+              <div class="dashboard__info">
+                <img
+                  src="images/icon-facebook.svg"
+                  alt=""
+                  class="dashboard__img"
+                />
                 <p class="dashboard__name">@nathanf</p>
               </div>
               <h2 class="dashboard__count">1987</h2>
-              <p class="dashboard__followers">Followers</p>
+              <p class="dashboard__followers text--thin">Followers</p>
               <p class="dashboard__text">12 Today</p>
             </li>
+
             <li class="dashboard__card">
-              <div class="">
-                <img src="images/icon-twitter.svg" alt="" class="dashboard__img" />
+              <div class="dashboard__info">
+                <img
+                  src="images/icon-twitter.svg"
+                  alt=""
+                  class="dashboard__img"
+                />
                 <p class="dashboard__name">@nathanf</p>
               </div>
               <h2 class="dashboard__count">1044</h2>
-              <p class="dashboard__followers">Followers</p>
+              <p class="dashboard__followers text--thin">Followers</p>
               <p class="dashboard__text">99 Today</p>
             </li>
             <li class="dashboard__card">
-              <div class="">
+              <div class="dashboard__info">
                 <img
                   src="images/icon-instagram.svg"
                   alt=""
@@ -69,69 +84,81 @@
                 <p class="dashboard__name">@realnathanf</p>
               </div>
               <h2 class="dashboard__count">11k</h2>
-              <p class="dashboard__followers">Followers</p>
+              <p class="dashboard__followers text--thin">Followers</p>
               <p class="dashboard__text">1099 Today</p>
             </li>
             <li class="dashboard__card">
-              <div class="">
-                <img src="images/icon-youtube.svg" alt="" class="dashboard__img" />
+              <div class="dashboard__info">
+                <img
+                  src="images/icon-youtube.svg"
+                  alt=""
+                  class="dashboard__img"
+                />
                 <p class="dashboard__name">Nathan F.</p>
               </div>
               <h2 class="dashboard__count">8239</h2>
-              <p class="dashboard__followers">Subscribers</p>
+              <p class="dashboard__followers text--thin">Subscribers</p>
               <p class="dashboard__text">144 Today</p>
             </li>
           </ul>
         </section>
-        
+
         <section class="overview">
           <h2>Overview - Today</h2>
           <ul class="overview__card-container">
+
             <li class="overview__card">
-              <h1 class="overview__heading">Page Views</h1>
-              <img src="images" alt="" class="overview__img" />
-              <p class="overview__count">87</p>
-              <p class="overview__percentage">3%</p>
+              <h1 class="overview__heading">
+                Page Views
+              </h1>
+              <img src="images/icon-facebook.svg" alt="" class="overview__img" />
+              <p class="overview__count">
+                87
+              </p>
+              <p class="overview__percentage">
+                3%
+              </p>
             </li>
+
             <li class="overview__card">
               <h1 class="overview__heading">Likes</h1>
-              <img src="images" alt="" class="overview__img" />
+              <img src="images/icon-facebook.svg" alt="" class="overview__img" />
               <p class="overview__count">52</p>
               <p class="overview__percentage">2%</p>
             </li>
             <li class="overview__card">
               <h1 class="overview__heading">Likes</h1>
-              <img src="images" alt="" class="overview__img" />
+              <img src="images/icon-instagram.svg" alt="" class="overview__img" />
               <p class="overview__count">5462</p>
               <p class="overview__percentage">2257%</p>
             </li>
             <li class="overview__card">
               <h1 class="overview__heading">Profile Views</h1>
-              <img src="images" alt="" class="overview__img" />
+              <img src="images/icon-instagram.svg" alt="" class="overview__img" />
               <p class="overview__count">52k</p>
               <p class="overview__percentage">1375%</p>
             </li>
             <li class="overview__card">
               <h1 class="overview__heading">Retweets</h1>
-              <img src="images" alt="" class="overview__img" />
+              <img src="images/icon-twitter.svg" alt="" class="overview__img" />
               <p class="overview__count">117</p>
               <p class="overview__percentage">303%</p>
             </li>
             <li class="overview__card">
               <h1 class="overview__heading">Likes</h1>
-              <img src="images" alt="" class="overview__img" />
+              <img src="images/icon-twitter.svg" alt="" class="overview__img" />
               <p class="overview__count">507</p>
               <p class="overview__percentage">553%</p>
             </li>
             <li class="overview__card">
               <h1 class="overview__heading">Likes</h1>
-              <img src="images" alt="" class="overview__img" />
+              <img src="images/icon-youtube.svg" alt="" class="overview__img" />
               <p class="overview__count">107</p>
               <p class="overview__percentage">19%</p>
             </li>
             <li class="overview__card">
               <h1 class="overview__heading">Total Views</h1>
-              <img src="images" alt="" class="overview__img" />
+              <img src="images/icon-youtube.svg" alt="" class="overview__img" />
               <p class="overview__count">1407</p>
               <p class="overview__percentage">12%</p>
             </li>
@@ -146,5 +173,6 @@
         >. Coded by <a href="#">Your Name Here</a>.
       </div>
     </div>
-  </body> <!-- End of Container -->
+  </body>
+  <!-- End of Container -->
 </html>

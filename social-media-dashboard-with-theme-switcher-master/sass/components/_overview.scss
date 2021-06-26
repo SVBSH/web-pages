@@ -1,0 +1,43 @@
+.overview {
+  &__card-container {
+    margin: 0;
+    padding: 0;
+  }
+
+  &__card {
+    padding: 1.5em 2em;
+    display: grid;
+    gap: 1.75rem 0;
+    justify-content: space-between;
+    align-items: baseline;
+    margin: 2rem 0;
+    border-radius: var(--br);
+    background: var(--clr-neutral-light-bg-card);
+  }
+
+  &__heading {
+    font-size: 1rem;
+    grid-row: 1 / 2;
+    color: var(--clr-neutral-text-100);
+  }
+
+  &__img {
+    justify-self: end;
+    align-self: center;
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+  }
+
+  &__count {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+
+    font-size: 2rem;
+  }
+
+  &__percentage {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    color: var(--clr-primary-green);
+  }
+}

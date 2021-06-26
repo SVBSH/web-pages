@@ -1,0 +1,49 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a,
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+body {
+  font-family: var(--ff);
+  color: var(--clr-neutral-text-200);
+  font-size: var(--fz-text);
+  font-weight: var(--fw-700);
+}
+
+

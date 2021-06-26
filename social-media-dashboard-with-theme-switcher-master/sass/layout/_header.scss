@@ -1,0 +1,43 @@
+header {
+  --size: 1.2rem;
+  color: var(--clr-neutral-text-100);
+
+  .info {
+    position: relative;
+
+    .title {
+      color: var(--clr-neutral-text-200);
+      font-size: var(--fz-title);
+      margin-bottom: .2em;
+    }
+
+    .text {
+      margin-bottom: var(--size);
+    }
+
+    ::after {
+      content: '';
+      position: absolute;
+      display: block;
+      bottom: calc(-1 * var(--size));
+      left: 0;
+      right: 0;
+      width: 100%;
+      height: 1px;
+      background-color: var(--clr-neutral-text-100);
+
+    }
+  }
+
+  .toggle {
+    display: flex;
+    justify-content: space-between;
+    margin-top: calc(var(--size) * 2);
+    
+    &__mode {
+    }
+
+    &__input {
+    }
+  }
+}
