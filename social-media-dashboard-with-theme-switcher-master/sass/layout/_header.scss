@@ -32,6 +32,7 @@ header {
   .toggle {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin-top: calc(var(--size) * 2);
     
     &__mode {

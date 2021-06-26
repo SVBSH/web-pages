@@ -28,7 +28,7 @@
   /* Font Setting*/
   --ff: "Inter", sans-serif;
   --fz-text: 0.875rem;
-  --fz-title: 1.3rem;
+  --fz-title: 1.4rem;
   --fw-400: 400;
   --fw-700: 700;
   --br: 4px;
@@ -83,7 +83,7 @@ body {
 }
 
 .container {
-  width: 90%;
+  width: 80%;
   margin: 2rem auto;
 }
 
@@ -120,19 +120,19 @@ header .info ::after {
 header .toggle {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin-top: calc(var(--size) * 2);
 }
 .dashboard__card-container {
-  margin: 2rem 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
   padding: 0;
 }
 .dashboard__card {
-  position: relative;
-  border-top: 4px solid transparent;
   border-radius: var(--br);
   background: var(--clr-neutral-bg-card);
   padding: 2em 2em;
-  margin: 3rem 0;
   text-align: center;
   /* Facebook */
   /* Twitter */
@@ -156,6 +156,9 @@ header .toggle {
   justify-content: center;
   gap: 0.5rem;
 }
+.dashboard__name {
+  color: var(--clr-neutral-text-100);
+}
 .dashboard__count {
   margin-top: 0.75rem;
   font-size: 3rem;
@@ -171,6 +174,11 @@ header .toggle {
 }
 
 .overview__card-container {
+  --repeat: auto-fit;
+  /* Set max columns */
+  display: grid;
+  grid-template-columns: repeat(var(--repeat), minmax(200px, 1fr));
+  gap: 2rem;
   margin: 0;
   padding: 0;
 }
@@ -180,7 +188,6 @@ header .toggle {
   gap: 1.75rem 0;
   justify-content: space-between;
   align-items: baseline;
-  margin: 2rem 0;
   border-radius: var(--br);
   background: var(--clr-neutral-light-bg-card);
 }
@@ -204,4 +211,9 @@ header .toggle {
   grid-column: 2/3;
   grid-row: 2/3;
   color: var(--clr-primary-green);
+}
+@media (min-width: 1100px) {
+  .overview__card-container {
+    --repeat: 4;
+  }
 }/*# sourceMappingURL=main.css.map */

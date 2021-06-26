@@ -1,5 +1,9 @@
 .overview {
   &__card-container {
+    --repeat: auto-fit; /* Set max columns */
+    display: grid;
+    grid-template-columns: repeat(var(--repeat), minmax(200px, 1fr));
+    gap: 2rem;
     margin: 0;
     padding: 0;
   }
@@ -10,7 +14,6 @@
     gap: 1.75rem 0;
     justify-content: space-between;
     align-items: baseline;
-    margin: 2rem 0;
     border-radius: var(--br);
     background: var(--clr-neutral-light-bg-card);
   }
@@ -39,5 +42,11 @@
     grid-column: 2 / 3;
     grid-row: 2 / 3;
     color: var(--clr-primary-green);
+  }
+
+  @media (min-width: 1100px) {
+    &__card-container {
+      --repeat: 4;
+    }
   }
 }

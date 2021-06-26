@@ -1,17 +1,16 @@
 .dashboard {
   &__card-container {
-    margin: 2rem 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
     padding: 0;
   }
 
   &__card {
-    position: relative;
-    border-top: 4px solid transparent;
     border-radius: var(--br);
-    
+
     background: var(--clr-neutral-bg-card);
     padding: 2em 2em;
-    margin: 3rem 0;
     text-align: center;
     /* Facebook */
     &:nth-of-type(1) {
@@ -34,11 +33,15 @@
   &__info {
     display: flex;
     justify-content: center;
-    gap: .5rem;
+    gap: 0.5rem;
+  }
+
+  &__name {
+    color: var(--clr-neutral-text-100);
   }
 
   &__count {
-    margin-top: .75rem;
+    margin-top: 0.75rem;
     font-size: 3rem;
   }
 
@@ -52,5 +55,4 @@
     margin-top: 1.5rem;
     color: var(--clr-primary-green);
   }
-
 }
