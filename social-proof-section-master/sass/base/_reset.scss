@@ -50,15 +50,12 @@ body {
 
 
     @media (min-width: 800px) {
-      // min-height: 100vh;
       margin-top: 6.5rem;
-      grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: 1fr 1fr;
+      grid-template-columns: 1fr 1.5fr;
       grid-template-areas: 
         "main rating"
         "review review";
-      gap: 2rem 0;
-
+      gap: 2rem 4rem;
       background: top left url("../images/bg-pattern-top-desktop.svg") no-repeat;
     }
 }

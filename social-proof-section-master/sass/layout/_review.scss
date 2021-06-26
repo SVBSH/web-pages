@@ -1,11 +1,8 @@
 .review {
   grid-area: review;
-  justify-self: center;
 
   &__card-container {
     max-width: 400px;
-    // height: 300px;
-    // height: 100%;
     margin: 1rem 0;
     padding: 2.5em 1.75em;
     border-radius: 10px;
@@ -16,21 +13,18 @@
 
     &:nth-of-type(1) {
       @media (min-width: 800px) {
-        // margin-top: 0%;
         transform: translateY(0%);
       }
     }
 
     &:nth-of-type(2) {
       @media (min-width: 800px) {
-        // margin-top: 7.5%;
         transform: translateY(7.5%);
       }
     }
 
     &:nth-of-type(3) {
       @media (min-width: 800px) {
-        // margin-top: 15%;
         transform: translateY(15%);
       }
     }
@@ -42,7 +36,6 @@
 
   &__author-info {
     display: flex;
-    // justify-items: baseline;
     gap: 1.5rem;
     align-items: center;
   }
@@ -53,9 +46,6 @@
     height: var(--img-size);
     border-radius: 50%;
     object-fit: cover;
-  }
-
-  &__body {
   }
 
   &__author {
@@ -77,5 +67,10 @@
   @media (min-width: 800px) {
     display: flex;
     gap: 0 2rem;
+    justify-self: center;
+
+    .review__card-container {
+      width: 100%;
+    }
   }
 }
