@@ -10,7 +10,7 @@
 
     padding: 1.125em 0.5em;
     background: var(--clr-secondary-100);
-    border-radius: 10px;
+    border-radius: var(--bdr);
     margin: 1rem 0;
 
     @media (min-width: 800px) {
