@@ -340,12 +340,21 @@ header {
 
   .about-container {
   }
+
 }
 
 @media (min-width: 1000px) {
   body {
     max-width: 95%;
     margin: 0 auto;
+  }
+
+  .main-nav__hamburger {
+    display: none;
+  }
+
+  .nav-open {
+    // z-index: 4;
   }
 
   header {
