@@ -1,0 +1,7 @@
+html[data-theme=light] {
+  --clr-neutral-bg: hsl(0, 0%, 100%);
+  --clr-neutral-bg-top: hsl(225, 100%, 98%);
+  --clr-neutral-bg-card: hsl(227, 47%, 96%);
+  --clr-neutral-text-100: hsl(228, 12%, 44%);
+  --clr-neutral-text-200: hsl(230, 17%, 14%);
+}/*# sourceMappingURL=light.css.map */

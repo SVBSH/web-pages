@@ -1,4 +1,8 @@
 @use './base/root';
+
+@use './themes/dark';
+@use './themes/light';
+
 @use './base/reset';
 @use './base/helpers';
 
@@ -6,4 +10,5 @@
 @use './layout/main';
 
 @use './components/dashboard';
+@use './components/theme-switch';
 @use './components/overview';

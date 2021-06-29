@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -19,7 +19,7 @@
     />
 
     <title>Frontend Mentor | [Challenge Name Here]</title>
-
+    <script defer src="js/app.js"></script>
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
     <style>
       .attribution {
@@ -40,7 +40,10 @@
         </div>
         <div class="toggle">
           <p class="toggle__mode text--bold">Dark Mode</p>
-          <input type="submit" class="toggle__input" />
+          <div class="">
+            <input type="checkbox" id="switch" name="theme" />
+            <label for="switch">Toggle</label>
+          </div>
         </div>
       </header>
 
@@ -174,7 +177,8 @@
           </ul>
         </section>
       </main>
-    </div> <!-- End of Container -->
+    </div>
+    <!-- End of Container -->
     <div class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
