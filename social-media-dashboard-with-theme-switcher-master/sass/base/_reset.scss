@@ -45,6 +45,7 @@ body {
   color: var(--clr-neutral-text-200);
   font-size: var(--fz-text);
   font-weight: var(--fw-700);
+  transition: background-color 250ms linear;
 }
 
 

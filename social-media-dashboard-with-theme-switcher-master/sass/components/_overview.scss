@@ -1,4 +1,9 @@
 .overview {
+
+  &__headline {
+    margin: 2.75rem 0 1rem 0;
+  }
+  
   &__card-container {
     --repeat: auto-fit; /* Set max columns */
     display: grid;
@@ -16,6 +21,11 @@
     align-items: baseline;
     border-radius: var(--br);
     background: var(--clr-neutral-bg-card);
+    transition: background-color 250ms linear;
+
+    &:hover {
+      background: var(--clr-card-hover);
+    }
   }
 
   &__heading {

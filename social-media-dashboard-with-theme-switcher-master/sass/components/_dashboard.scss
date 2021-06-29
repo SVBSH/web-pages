@@ -28,6 +28,11 @@
     &:nth-of-type(4) {
       border-top: 4px solid blue;
     }
+
+    &:hover {
+      background: var(--clr-card-hover);
+      transition: background-color 250ms linear;
+    }
   }
 
   &__info {

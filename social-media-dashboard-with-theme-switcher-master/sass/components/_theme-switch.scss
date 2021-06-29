@@ -13,6 +13,10 @@ input[type=checkbox] {
     float: right;
     border-radius: 100px;
     position: relative;
+
+    &:hover {
+      background: var(--clr-theme-toggle);
+    }
   }
 
   label:after {

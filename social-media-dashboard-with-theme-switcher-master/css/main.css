@@ -24,6 +24,7 @@ html[data-theme=dark] {
   --clr-neutral-bg-card: hsl(228, 28%, 20%);
   --clr-neutral-text-100: hsl(228, 34%, 66%);
   --clr-neutral-text-200: hsl(0, 0%, 100%);
+  --clr-card-hover: hsl(228, 34%, 30%);
 }
 
 html[data-theme=light] {
@@ -32,6 +33,7 @@ html[data-theme=light] {
   --clr-neutral-bg-card: hsl(227, 47%, 96%);
   --clr-neutral-text-100: hsl(228, 12%, 44%);
   --clr-neutral-text-200: hsl(230, 17%, 14%);
+  --clr-card-hover: hsl(228, 12%, 90%);
 }
 
 *,
@@ -81,6 +83,7 @@ body {
   color: var(--clr-neutral-text-200);
   font-size: var(--fz-text);
   font-weight: var(--fw-700);
+  transition: background-color 250ms linear;
 }
 
 .container {
@@ -94,6 +97,8 @@ body {
 
 header {
   --size: 1.2rem;
+  display: flex;
+  flex-direction: column;
   color: var(--clr-neutral-text-100);
 }
 header .info {
@@ -124,6 +129,23 @@ header .toggle {
   align-items: center;
   margin-top: calc(var(--size) * 2);
 }
+@media (min-width: 700px) {
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  header .toggle {
+    margin-top: 0;
+  }
+  header .info .text {
+    margin-top: 0.75em;
+  }
+  header .info ::after {
+    display: none;
+  }
+}
+
 .dashboard__card-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -151,6 +173,10 @@ header .toggle {
 }
 .dashboard__card:nth-of-type(4) {
   border-top: 4px solid blue;
+}
+.dashboard__card:hover {
+  background: var(--clr-card-hover);
+  transition: background-color 250ms linear;
 }
 .dashboard__info {
   display: flex;
@@ -190,6 +216,9 @@ label {
   border-radius: 100px;
   position: relative;
 }
+label:hover {
+  background: var(--clr-theme-toggle);
+}
 
 label:after {
   --size: 20px;
@@ -217,6 +246,9 @@ label:active:after {
   width: 45px;
 }
 
+.overview__headline {
+  margin: 2.75rem 0 1rem 0;
+}
 .overview__card-container {
   --repeat: auto-fit;
   /* Set max columns */
@@ -234,6 +266,10 @@ label:active:after {
   align-items: baseline;
   border-radius: var(--br);
   background: var(--clr-neutral-bg-card);
+  transition: background-color 250ms linear;
+}
+.overview__card:hover {
+  background: var(--clr-card-hover);
 }
 .overview__heading {
   font-size: 1rem;
