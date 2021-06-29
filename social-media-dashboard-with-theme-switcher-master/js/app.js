@@ -1,10 +1,12 @@
 const changeThemeBtn = document.querySelector("#switch");
+var storedTheme = localStorage.getItem('theme');
 
 changeThemeBtn.addEventListener("click", e => {
   const currentTheme = document.documentElement.getAttribute('data-theme');
-  if (currentTheme === "dark") {
-    document.documentElement.setAttribute('data-theme', 'light');
-  } else {
-    document.documentElement.setAttribute('data-theme', 'dark');
-  }
+  var targetTheme = 'light';
+  if (currentTheme === "light") {
+    targetTheme = 'dark';
+  } 
+  document.documentElement.setAttribute('data-theme', targetTheme);
+  localStorage.setItem('theme', targetTheme);
 });
