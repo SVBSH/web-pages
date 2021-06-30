@@ -34,12 +34,22 @@ picture {
 input,
 button,
 textarea,
-select {
+select,
+a {
   font: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
 body {
   font-family: var(--ff-alata);
   font-size: var(--fz);
   line-height: 1.5;
+
+  background: top url('../images/mobile/image-hero.jpg');
+  background-repeat: no-repeat;
+  background-size: contain;
 }

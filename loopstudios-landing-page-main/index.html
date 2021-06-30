@@ -36,11 +36,20 @@
     <div class="container">
       <header>
         <nav class="main-nav">
+          <!-- <a href="#"> -->
           <img
             src="images/logo.svg"
             alt="Loopstudios logo"
             class="main-nav__logo"
           />
+          <!-- </a> -->
+          <div class="">
+            <img
+              src="images/icon-hamburger.svg"
+              alt="Hamburger menu"
+              class="main-nav__hamburger"
+            />
+          </div>
           <ul class="main-nav__list">
             <li class="main-nav__item">
               <a href="#" class="main-nav__item">About</a>
@@ -60,9 +69,18 @@
           </ul>
         </nav>
       </header>
+
       <main class="main">
-        <h1 class="main__headline">Immersive experiences that deliver</h1>
+        <h1 class="main__headline">
+          Immersive<br />experiences<br />that<br />deliver
+        </h1>
+
         <section class="main__product-info">
+          <img
+            class="main__product-img"
+            src="images/mobile/image-interactive.jpg"
+            alt=""
+          />
           <h2 class="main__product-headline">The leader in interactive VR</h2>
           <p class="main__product-text">
             Founded in 2011, Loopstudios has been producing world-class virtual
@@ -71,11 +89,12 @@
             digital experiences that bind to their brand.
           </p>
         </section>
-        <section class="main__products">
-          <div class="products__header">
-            <h2 class="products__headline">Our creations</h2>
-            <button class="products__btn">See all</button>
-          </div>
+
+        <section class="product">
+          <!-- <div class="product__header"> -->
+          <h2 class="product__headline">Our creations</h2>
+          <button class="product__btn">See all</button>
+          <!-- </div> -->
           <div class="product__galery">
             <figure class="product__figure">
               <picture>
@@ -161,20 +180,20 @@
         </section>
       </main>
       <footer>
-        <nav class="nav">
-          <img src="images/logo.svg" alt="" />
+        <nav class="nav full-width">
+          <img class="nav__logo" src="images/logo.svg" alt="" />
           <ul class="nav__list">
-            <li class="nav__item"><a href="#">About</a></li>
-            <li class="nav__item"><a href="#">Careers</a></li>
-            <li class="nav__item"><a href="#">Events</a></li>
-            <li class="nav__item"><a href="#">Products</a></li>
-            <li class="nav__item"><a href="#">Support</a></li>
+            <li class="nav__item"><a class="nav__link" href="#">About</a></li>
+            <li class="nav__item"><a class="nav__link" href="#">Careers</a></li>
+            <li class="nav__item"><a class="nav__link" href="#">Events</a></li>
+            <li class="nav__item"><a class="nav__link" href="#">Products</a></li>
+            <li class="nav__item"><a class="nav__link" href="#">Support</a></li>
           </ul>
           <div class="networks">
-            <img src="images/icon-facebook.svg" alt="" />
-            <img src="images/icon-twitter.svg" alt="" />
-            <img src="images/icon-pinterest.svg" alt="" />
-            <img src="images/icon-instagram.svg" alt="" />
+            <img class="networks__icon" src="images/icon-facebook.svg" alt="" />
+            <img class="networks__icon" src="images/icon-twitter.svg" alt="" />
+            <img class="networks__icon" src="images/icon-pinterest.svg" alt="" />
+            <img class="networks__icon" src="images/icon-instagram.svg" alt="" />
           </div>
           <p class="">© 2021 Loopstudios. All rights reserved.</p>
         </nav>
