@@ -10,7 +10,11 @@
       href="https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans&display=swap"
       rel="stylesheet"
     />
-
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <script defer src="js/app.js"></script>
     <link
       rel="icon"
       type="image/png"
@@ -33,48 +37,47 @@
     </style>
   </head>
   <body>
-    <div class="container">
+    
       <header>
-        <nav class="main-nav">
-          <!-- <a href="#"> -->
+        <div class="">
           <img
             src="images/logo.svg"
             alt="Loopstudios logo"
             class="main-nav__logo"
           />
-          <!-- </a> -->
-          <div class="">
-            <img
-              src="images/icon-hamburger.svg"
-              alt="Hamburger menu"
-              class="main-nav__hamburger"
-            />
-          </div>
+        </div>
+        <nav class="main-nav">
           <ul class="main-nav__list">
             <li class="main-nav__item">
-              <a href="#" class="main-nav__item">About</a>
+              <a href="#" class="main-nav__link">About</a>
             </li>
             <li class="main-nav__item">
-              <a href="#" class="main-nav__item">Careers</a>
+              <a href="#" class="main-nav__link">Careers</a>
             </li>
             <li class="main-nav__item">
-              <a href="#" class="main-nav__item">Events</a>
+              <a href="#" class="main-nav__link">Events</a>
             </li>
             <li class="main-nav__item">
-              <a href="#" class="main-nav__item">Products</a>
+              <a href="#" class="main-nav__link">Products</a>
             </li>
             <li class="main-nav__item">
-              <a href="#" class="main-nav__item">Support</a>
+              <a href="#" class="main-nav__link">Support</a>
             </li>
           </ul>
         </nav>
+        <div class="menu-toggle">
+          <img
+            src="images/icon-hamburger.svg"
+            alt="Hamburger menu"
+            class="main-nav__hamburger"
+          />
+        </div>
       </header>
-
+      <div class="container">
       <main class="main">
-        <h1 class="main__headline">
+        <h1 class="main__headline" style="display: block">
           Immersive<br />experiences<br />that<br />deliver
         </h1>
-
         <section class="main__product-info">
           <img
             class="main__product-img"
@@ -91,10 +94,8 @@
         </section>
 
         <section class="product">
-          <!-- <div class="product__header"> -->
           <h2 class="product__headline">Our creations</h2>
           <button class="product__btn">See all</button>
-          <!-- </div> -->
           <div class="product__galery">
             <figure class="product__figure">
               <picture>
@@ -179,32 +180,42 @@
           </div>
         </section>
       </main>
-      <footer>
+      <!-- <footer>
         <nav class="nav full-width">
           <img class="nav__logo" src="images/logo.svg" alt="" />
           <ul class="nav__list">
             <li class="nav__item"><a class="nav__link" href="#">About</a></li>
             <li class="nav__item"><a class="nav__link" href="#">Careers</a></li>
             <li class="nav__item"><a class="nav__link" href="#">Events</a></li>
-            <li class="nav__item"><a class="nav__link" href="#">Products</a></li>
+            <li class="nav__item">
+              <a class="nav__link" href="#">Products</a>
+            </li>
             <li class="nav__item"><a class="nav__link" href="#">Support</a></li>
           </ul>
           <div class="networks">
             <img class="networks__icon" src="images/icon-facebook.svg" alt="" />
             <img class="networks__icon" src="images/icon-twitter.svg" alt="" />
-            <img class="networks__icon" src="images/icon-pinterest.svg" alt="" />
-            <img class="networks__icon" src="images/icon-instagram.svg" alt="" />
+            <img
+              class="networks__icon"
+              src="images/icon-pinterest.svg"
+              alt=""
+            />
+            <img
+              class="networks__icon"
+              src="images/icon-instagram.svg"
+              alt=""
+            />
           </div>
           <p class="">© 2021 Loopstudios. All rights reserved.</p>
         </nav>
-      </footer>
+      </footer> -->
     </div>
     <!-- Container -->
-    <div class="attribution">
+    <!-- <div class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
         >Frontend Mentor</a
       >. Coded by <a href="#">Your Name Here</a>.
-    </div>
+    </div> -->
   </body>
 </html>
