@@ -38,58 +38,65 @@
   </head>
   <body>
     <header>
-      <div class="">
-        <img
-          src="images/logo.svg"
-          alt="Loopstudios logo"
-          class="main-nav__logo"
-        />
-      </div>
-      <nav class="main-nav">
-        <ul class="main-nav__list">
-          <li class="main-nav__item">
-            <a href="#" class="main-nav__link">About</a>
-          </li>
-          <li class="main-nav__item">
-            <a href="#" class="main-nav__link">Careers</a>
-          </li>
-          <li class="main-nav__item">
-            <a href="#" class="main-nav__link">Events</a>
-          </li>
-          <li class="main-nav__item">
-            <a href="#" class="main-nav__link">Products</a>
-          </li>
-          <li class="main-nav__item">
-            <a href="#" class="main-nav__link">Support</a>
-          </li>
-        </ul>
-      </nav>
-      <div class="menu-toggle">
-        <img
-          src="images/icon-hamburger.svg"
-          alt="Hamburger menu"
-          class="main-nav__hamburger"
-        />
+      <div class="container">
+        <div class="">
+          <img
+            src="images/logo.svg"
+            alt="Loopstudios logo"
+            class="main-nav__logo"
+          />
+        </div>
+        <nav class="main-nav">
+          <ul class="main-nav__list">
+            <li class="main-nav__item">
+              <a href="#" class="main-nav__link nav__link">About</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="#" class="main-nav__link nav__link">Careers</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="#" class="main-nav__link nav__link">Events</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="#" class="main-nav__link nav__link">Products</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="#" class="main-nav__link nav__link">Support</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="menu-toggle">
+          <img
+            src="images/icon-hamburger.svg"
+            alt="Hamburger menu"
+            class="main-nav__hamburger"
+          />
+        </div>
       </div>
     </header>
+
     <div class="container">
+      <h1 class="main__headline">
+        Immersive<br />experiences<br />that<br />deliver
+      </h1>
       <main class="main">
-        <h1 class="main__headline">
-          Immersive<br />experiences<br />that<br />deliver
-        </h1>
-        <section class="main__product-info">
-          <img
-            class="main__product-img"
-            src="images/mobile/image-interactive.jpg"
-            alt=""
-          />
-          <h2 class="main__product-headline">The leader in interactive VR</h2>
-          <p class="main__product-text">
-            Founded in 2011, Loopstudios has been producing world-class virtual
-            reality projects for some of the best companies around the globe.
-            Our award-winning creations have transformed businesses through
-            digital experiences that bind to their brand.
-          </p>
+        <section class="main__info">
+          <div class="main__la">
+            <img
+              class="main__img"
+              src="images/mobile/image-interactive.jpg"
+              alt=""
+            />
+          </div>
+          <div class="main__body">
+            <h2 class="main__body__headline">The leader in interactive VR</h2>
+            <p class="main__text">
+              Founded in 2011, Loopstudios has been producing world-class
+              virtual reality projects for some of the best companies around the
+              globe. Our award-winning creations have transformed businesses
+              through digital experiences that bind to their brand.
+            </p>
+          </div>
         </section>
 
         <section class="product">
@@ -211,37 +218,38 @@
           </div>
         </section>
       </main>
-      <!-- <footer>
-        <nav class="nav full-width">
+    </div>
+
+    <footer>
+      <div class="container">
+        <nav class="nav">
           <img class="nav__logo" src="images/logo.svg" alt="" />
+          
           <ul class="nav__list">
             <li class="nav__item"><a class="nav__link" href="#">About</a></li>
-            <li class="nav__item"><a class="nav__link" href="#">Careers</a></li>
-            <li class="nav__item"><a class="nav__link" href="#">Events</a></li>
+            <li class="nav__item">
+              <a class="nav__link" href="#">Careers</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#">Events</a>
+            </li>
             <li class="nav__item">
               <a class="nav__link" href="#">Products</a>
             </li>
-            <li class="nav__item"><a class="nav__link" href="#">Support</a></li>
+            <li class="nav__item">
+              <a class="nav__link" href="#">Support</a>
+            </li>
           </ul>
           <div class="networks">
-            <img class="networks__icon" src="images/icon-facebook.svg" alt="" />
-            <img class="networks__icon" src="images/icon-twitter.svg" alt="" />
-            <img
-              class="networks__icon"
-              src="images/icon-pinterest.svg"
-              alt=""
-            />
-            <img
-              class="networks__icon"
-              src="images/icon-instagram.svg"
-              alt=""
-            />
+            <a href="https://facebook.com/" class="networks__link nav__link"><img class="networks__icon" src="images/icon-facebook.svg" alt="" /></a>
+            <a href="https://www.twitter.com/" class="networks__link nav__link"><img class="networks__icon" src="images/icon-twitter.svg" alt="" /></a>
+            <a href="https://pinterest.com/" class="networks__link nav__link"><img class="networks__icon" src="images/icon-pinterest.svg" alt=""/></a>
+            <a href="https://instagram.com/" class="networks__link nav__link"><img class="networks__icon" src="images/icon-instagram.svg" alt=""/></a>
           </div>
           <p class="">© 2021 Loopstudios. All rights reserved.</p>
         </nav>
-      </footer> -->
-    </div>
-    <!-- Container -->
+      </div>
+    </footer>
     <!-- <div class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"

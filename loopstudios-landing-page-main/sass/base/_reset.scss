@@ -20,6 +20,14 @@ dd {
   margin: 0;
 }
 
+body,
+h1,
+h2,
+h3,
+h4 {
+  line-height: 1;
+}
+
 ul[class],
 ol[class] {
   list-style: none;
@@ -51,10 +59,10 @@ body {
 
   background: top url('../images/mobile/image-hero.jpg');
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: 100vw 80vh;
 
   @media (min-width: 400px) {
-    // background: top url('../images/desktop/image-hero.jpg') no-repeat;
-    // background-size: contain;
+    background: top url('../images/desktop/image-hero.jpg') no-repeat;
+    background-size: 100vw 80vh;
   }
 }
