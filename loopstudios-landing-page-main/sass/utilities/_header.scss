@@ -20,12 +20,8 @@ header {
   padding-top: 10rem;
   height: 100vh;
   background: black;
-
-  // transform: translateX(100%);
-  // transition: transform 250ms ease-out;
-
-  transform: translateY(-100%);
-  transition: transform 500ms ease-out;
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  transition: clip-path 500ms ease-out;
 
   &__logo {
     position: relative;
@@ -40,7 +36,7 @@ header {
   }
 
   &__item {
-    padding: .5em 1.25em;
+    padding: 0.5em 1.25em;
   }
 
   &__link {
@@ -59,20 +55,38 @@ header {
   }
 
   .main-nav {
-    padding: 0;
-    height: auto;
     position: relative;
+    height: auto;
+    padding: 0;
     background: transparent;
+    clip-path: initial;
   }
 
   .main-nav__list {
+    justify-content: space-between;
+    gap: 1rem;
     flex-direction: row;
   }
 
   .main-nav__item {
+    padding: 0;
   }
 
-  .main-nav__item + .main-nav__item {
-    margin-left: 1.75rem;
+  .main-nav__link {
+    font-size: 1rem;
   }
+}
+
+@keyframes menu {
+  50% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0);
+  }
+}
+
+.main-nav--open {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }

@@ -64,7 +64,6 @@ body {
   background-repeat: no-repeat;
   background-size: contain;
 }
-
 .container {
   width: 90%;
   margin: 0 auto;
@@ -92,8 +91,11 @@ header {
   padding-top: 10rem;
   height: 100vh;
   background: black;
-  transform: translateY(-100%);
-  transition: transform 500ms ease-out;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+          clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  transition: -webkit-clip-path 500ms ease-out;
+  transition: clip-path 500ms ease-out;
+  transition: clip-path 500ms ease-out, -webkit-clip-path 500ms ease-out;
 }
 .main-nav__logo {
   position: relative;
@@ -123,22 +125,54 @@ header {
   }
 
   .main-nav {
-    padding: 0;
-    height: auto;
     position: relative;
+    height: auto;
+    padding: 0;
     background: transparent;
+    -webkit-clip-path: initial;
+            clip-path: initial;
   }
 
   .main-nav__list {
+    justify-content: space-between;
+    gap: 1rem;
     flex-direction: row;
   }
 
-  .main-nav__item + .main-nav__item {
-    margin-left: 1.75rem;
+  .main-nav__item {
+    padding: 0;
+  }
+
+  .main-nav__link {
+    font-size: 1rem;
   }
 }
+@-webkit-keyframes menu {
+  50% {
+    transform: translateX(0%);
+  }
+  100% {
+    -webkit-clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0);
+            clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0);
+  }
+}
+@keyframes menu {
+  50% {
+    transform: translateX(0%);
+  }
+  100% {
+    -webkit-clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0);
+            clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0);
+  }
+}
+.main-nav--open {
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
 .main__headline {
   --size: 2.5px;
+  max-width: 600px;
   padding: 0.75em 0.75em;
   margin: 10rem 0;
   outline: var(--size) solid var(--clr-primary-50);
@@ -199,6 +233,7 @@ header {
 .product__galery {
   grid-area: galery;
   display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 1.5rem;
 }
 .product__figure {

@@ -2,6 +2,7 @@
 
   &__headline {
     --size: 2.5px;
+    max-width: 600px;
     padding: .75em .75em;
     margin: 10rem 0;
     outline: var(--size) solid var(--clr-primary-50);
@@ -78,6 +79,7 @@
   &__galery {
     grid-area: galery;
     display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 1.5rem;
   }
 

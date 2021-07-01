@@ -52,4 +52,9 @@ body {
   background: top url('../images/mobile/image-hero.jpg');
   background-repeat: no-repeat;
   background-size: contain;
+
+  @media (min-width: 400px) {
+    // background: top url('../images/desktop/image-hero.jpg') no-repeat;
+    // background-size: contain;
+  }
 }
