@@ -68,14 +68,13 @@ body {
   font-family: var(--ff-alata);
   font-size: var(--fz);
   line-height: 1.5;
-  background: top url("../images/mobile/image-hero.jpg");
-  background-repeat: no-repeat;
-  background-size: 100vw 80vh;
+  background: top url("../images/mobile/image-hero.jpg") no-repeat;
+  background-size: contain;
 }
 @media (min-width: 400px) {
   body {
-    background: top url("../images/desktop/image-hero.jpg") no-repeat;
-    background-size: 100vw 80vh;
+    background: url("../images/desktop/image-hero.jpg") no-repeat top center;
+    background-size: 100vw 80vmin;
   }
 }
 
@@ -92,10 +91,15 @@ header .container {
   position: relative;
   padding: 2rem 1.25rem;
 }
+@media (min-width: 700px) {
+  header .container {
+    padding: 4rem 0;
+  }
+}
 
 .menu-toggle {
   position: relative;
-  z-index: 1;
+  z-index: 3;
 }
 
 .main-nav {
@@ -113,10 +117,11 @@ header .container {
   transition: -webkit-clip-path 500ms ease-out;
   transition: clip-path 500ms ease-out;
   transition: clip-path 500ms ease-out, -webkit-clip-path 500ms ease-out;
+  z-index: 2;
 }
 .main-nav__logo {
   position: relative;
-  z-index: 1;
+  z-index: 3;
 }
 .main-nav__list {
   display: flex;
@@ -128,7 +133,7 @@ header .container {
   padding: 0.5em 1.25em;
 }
 .main-nav__link {
-  display: block;
+  display: inline-block;
   font-family: "Josefin Sans", sans-serif;
   font-weight: 400;
   font-size: 1.75rem;
@@ -161,26 +166,8 @@ header .container {
   }
 
   .main-nav__link {
-    font-size: 1rem;
+    font-size: 1.55rem;
     text-transform: capitalize;
-  }
-}
-@-webkit-keyframes menu {
-  50% {
-    transform: translateX(0%);
-  }
-  100% {
-    -webkit-clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0);
-            clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0);
-  }
-}
-@keyframes menu {
-  50% {
-    transform: translateX(0%);
-  }
-  100% {
-    -webkit-clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0);
-            clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0);
   }
 }
 .main-nav--open {
@@ -212,13 +199,11 @@ header .container {
   position: relative;
 }
 .main__la::after {
+  display: none;
   content: "";
   position: absolute;
   top: 0;
   right: 0;
-  transform: translateX(100%);
-  width: 180px;
-  height: 180px;
   background-image: linear-gradient(to top, #c469d2, #cd71d4);
 }
 .main__img {
@@ -234,14 +219,14 @@ header .container {
   color: var(--clr-primary-200);
 }
 .main__headline {
-  margin: 10vh 0 0.5rem 0;
+  display: inline-block;
+  margin: 1vmax 0 0.5rem 0;
   font-family: var(--ff-josefin);
   font-weight: var(--fw-300);
   color: var(--clr-primary-50);
   text-transform: uppercase;
-  text-align: center;
   line-height: 1;
-  font-size: 2rem;
+  font-size: clamp(2rem, 2.5vw, 2.5rem);
 }
 .main__text {
   max-width: 47ch;
@@ -262,7 +247,7 @@ header .container {
     flex-direction: row;
   }
   .main__headline {
-    font-size: 4.5rem;
+    font-size: clamp(2rem, 5.5vw, 4.5rem);
     text-align: left;
   }
   .main__text {
@@ -276,6 +261,12 @@ header .container {
     font-weight: 300;
     font-size: 3rem;
     margin-bottom: 1rem;
+  }
+  .main__la::after {
+    display: block;
+    transform: translateX(100%);
+    width: 180px;
+    height: 180px;
   }
 }
 
@@ -365,6 +356,7 @@ footer {
   padding: 3em 0;
   display: grid;
   grid-template-areas: "logo" "navbar" "social" "copy";
+  justify-items: center;
   gap: 2rem;
   background: black;
   color: white;
@@ -424,6 +416,9 @@ footer {
   .nav__list {
     flex-direction: row;
     margin: 0;
+  }
+  .nav__logo {
+    justify-self: start;
   }
   .nav .networks {
     justify-self: end;

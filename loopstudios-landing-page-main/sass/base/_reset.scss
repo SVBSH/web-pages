@@ -56,13 +56,11 @@ body {
   font-family: var(--ff-alata);
   font-size: var(--fz);
   line-height: 1.5;
-
-  background: top url('../images/mobile/image-hero.jpg');
-  background-repeat: no-repeat;
-  background-size: 100vw 80vh;
+  background: top url('../images/mobile/image-hero.jpg') no-repeat;
+  background-size: contain;
 
   @media (min-width: 400px) {
-    background: top url('../images/desktop/image-hero.jpg') no-repeat;
-    background-size: 100vw 80vh;
+    background: url('../images/desktop/image-hero.jpg') no-repeat top center;
+    background-size: 100vw 80vmin;
   }
 }

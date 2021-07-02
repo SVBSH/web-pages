@@ -11,8 +11,8 @@ footer{
     "navbar" 
     "social"
     "copy";
+  justify-items: center;
   gap: 2rem;
-  // justify-items: center;
   background: black;
 
   color: white;
@@ -77,11 +77,15 @@ footer{
     "logo   social" 
     "navbar copy";
     justify-content: space-between;
-    gap: 1rem 0;;
+    gap: 1rem 0;
     // grid-template-columns: min-content 1fr min-content;
     &__list { 
       flex-direction: row;
       margin: 0;
+    }
+
+    &__logo {
+      justify-self: start;
     }
 
     .networks {
