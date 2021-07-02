@@ -111,13 +111,12 @@ body {
   }
 }
 header {
-  --size: 4rem;
+  --size: 6rem;
   position: relative;
   background: top url("../images/mobile/image-hero.jpg") no-repeat;
   background-position: center;
   background-size: cover;
   padding-bottom: var(--size);
-  margin-bottom: var(--size);
 }
 @media (min-width: 400px) {
   header {
@@ -222,6 +221,9 @@ header .container {
           clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
 
+.main {
+  margin-top: 6rem;
+}
 .main__headline {
   --size: 2.5px;
   max-width: 600px;
@@ -258,10 +260,18 @@ header .container {
      object-fit: cover;
 }
 .main__body {
-  -moz-text-align-last: center;
-       text-align-last: center;
+  margin-top: 3rem;
+  text-align: center;
   font-family: var(--ff-alata);
   color: var(--clr-primary-200);
+}
+.main__body__headline {
+  text-transform: uppercase;
+  font-family: var(--ff-josefin);
+  color: var(--clr-primary-900);
+  font-weight: 300;
+  font-size: 2rem;
+  margin-bottom: 0.5em;
 }
 .main__text {
   max-width: 47ch;
@@ -270,19 +280,20 @@ header .container {
 }
 @media (min-width: 700px) {
   .main {
-    margin-top: 50vh;
+    margin-top: 14rem;
   }
   .main__headline {
     display: inline-block;
-    margin: 1vmax 0 0.5rem 0;
     font-family: var(--ff-josefin);
     font-weight: var(--fw-300);
+    margin: 0 auto;
     color: var(--clr-primary-50);
     text-transform: uppercase;
     line-height: 1;
     font-size: clamp(2rem, 2.5vw, 2.5rem);
   }
   .main__body {
+    text-align: left;
     margin: 0;
     padding-top: 260px;
     padding-left: 90px;
@@ -296,6 +307,7 @@ header .container {
   }
   .main__text {
     padding: 0;
+    margin: 0;
     text-align: left;
   }
   .main__body__headline {
