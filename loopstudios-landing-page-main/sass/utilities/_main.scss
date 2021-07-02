@@ -1,11 +1,11 @@
 .main {
-  margin-top: 15rem;
+  // margin-top: 15rem;
 
   &__headline {
     --size: 2.5px;
     max-width: 600px;
     padding: 0.75em 0.75em;
-    margin: 10rem 0;
+    margin: 6rem auto;
     outline: var(--size) solid var(--clr-primary-50);
     outline-offset: calc(var(--size) * -2);
 
@@ -42,31 +42,32 @@
   }
 
   &__body {
-    align-self: flex-end;
+    text-align-last: center;
+    // align-self: flex-end;
     font-family: var(--ff-alata);
     color: var(--clr-primary-200);
   }
 
-  &__headline {
-    display: inline-block;
-    margin: 1vmax 0 0.5rem 0;
-    font-family: var(--ff-josefin);
-    font-weight: var(--fw-300);
-    color: var(--clr-primary-50);
-    text-transform: uppercase;
-    line-height: 1;
-    font-size: clamp(2rem, 2.5vw, 2.5rem);
-  }
-
   &__text {
     max-width: 47ch;
+    margin: 0 auto;
     color: var(--clr-primary-100);
-    padding: 1em 2em;
-    text-align: center;
+    // padding: 1em 2em;
   }
 
   @media (min-width: 700px) {
     margin-top: 50vh;
+
+    &__headline {
+      display: inline-block;
+      margin: 1vmax 0 0.5rem 0;
+      font-family: var(--ff-josefin);
+      font-weight: var(--fw-300);
+      color: var(--clr-primary-50);
+      text-transform: uppercase;
+      line-height: 1;
+      font-size: clamp(2rem, 2.5vw, 2.5rem);
+    }
 
     &__body {
       margin: 0;

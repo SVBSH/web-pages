@@ -1,5 +1,18 @@
 header {
+  --size: 4rem;
   position: relative;
+  background: top url("../images/mobile/image-hero.jpg") no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  padding-bottom: var(--size);
+  margin-bottom: var(--size);
+
+  @media (min-width: 400px) {
+    background: url("../images/desktop/image-hero.jpg") no-repeat top center;
+    background-position: center;
+    background-size: cover;
+  }
 }
 
 header .container {
@@ -95,21 +108,4 @@ header .container {
 
 .main-nav--open {
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-}
-
-.tracking-in-expand {
-  animation: tracking-in-expand 500ms 800ms cubic-bezier(0.215, 0.61, 0.355, 1) both;
-}
-
-@keyframes tracking-in-expand {
-  0% {
-    letter-spacing: -0.5em;
-    opacity: 0;
-  }
-  40% {
-    opacity: 0.6;
-  }
-  100% {
-    opacity: 1;
-  }
 }

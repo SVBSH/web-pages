@@ -68,14 +68,6 @@ body {
   font-family: var(--ff-alata);
   font-size: var(--fz);
   line-height: 1.5;
-  background: top url("../images/mobile/image-hero.jpg") no-repeat;
-  background-size: contain;
-}
-@media (min-width: 400px) {
-  body {
-    background: url("../images/desktop/image-hero.jpg") no-repeat top center;
-    background-size: 100vw 80vmin;
-  }
 }
 
 .container {
@@ -119,7 +111,20 @@ body {
   }
 }
 header {
+  --size: 4rem;
   position: relative;
+  background: top url("../images/mobile/image-hero.jpg") no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding-bottom: var(--size);
+  margin-bottom: var(--size);
+}
+@media (min-width: 400px) {
+  header {
+    background: url("../images/desktop/image-hero.jpg") no-repeat top center;
+    background-position: center;
+    background-size: cover;
+  }
 }
 
 header .container {
@@ -217,31 +222,11 @@ header .container {
           clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
 
-.tracking-in-expand {
-  -webkit-animation: tracking-in-expand 500ms 800ms cubic-bezier(0.215, 0.61, 0.355, 1) both;
-          animation: tracking-in-expand 500ms 800ms cubic-bezier(0.215, 0.61, 0.355, 1) both;
-}
-
-@keyframes tracking-in-expand {
-  0% {
-    letter-spacing: -0.5em;
-    opacity: 0;
-  }
-  40% {
-    opacity: 0.6;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-.main {
-  margin-top: 15rem;
-}
 .main__headline {
   --size: 2.5px;
   max-width: 600px;
   padding: 0.75em 0.75em;
-  margin: 10rem 0;
+  margin: 6rem auto;
   outline: var(--size) solid var(--clr-primary-50);
   outline-offset: calc(var(--size) * -2);
   font-family: var(--ff-josefin);
@@ -273,29 +258,29 @@ header .container {
      object-fit: cover;
 }
 .main__body {
-  align-self: flex-end;
+  -moz-text-align-last: center;
+       text-align-last: center;
   font-family: var(--ff-alata);
   color: var(--clr-primary-200);
 }
-.main__headline {
-  display: inline-block;
-  margin: 1vmax 0 0.5rem 0;
-  font-family: var(--ff-josefin);
-  font-weight: var(--fw-300);
-  color: var(--clr-primary-50);
-  text-transform: uppercase;
-  line-height: 1;
-  font-size: clamp(2rem, 2.5vw, 2.5rem);
-}
 .main__text {
   max-width: 47ch;
+  margin: 0 auto;
   color: var(--clr-primary-100);
-  padding: 1em 2em;
-  text-align: center;
 }
 @media (min-width: 700px) {
   .main {
     margin-top: 50vh;
+  }
+  .main__headline {
+    display: inline-block;
+    margin: 1vmax 0 0.5rem 0;
+    font-family: var(--ff-josefin);
+    font-weight: var(--fw-300);
+    color: var(--clr-primary-50);
+    text-transform: uppercase;
+    line-height: 1;
+    font-size: clamp(2rem, 2.5vw, 2.5rem);
   }
   .main__body {
     margin: 0;
