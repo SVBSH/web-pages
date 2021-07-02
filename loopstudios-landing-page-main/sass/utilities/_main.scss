@@ -150,6 +150,9 @@
     }
   }
 
+  &__img {
+  }
+
   &__galery {
     grid-area: galery;
     display: flex;
@@ -161,9 +164,15 @@
   &__figure {
     position: relative;
     margin: 0;
-
+    
     :hover {
-      opacity: 0.6;
+      opacity: 0.8;
+      transition: opacity 150ms linear;
+    }
+
+    &:hover figcaption {
+      transition: color 150ms linear;
+      color: var(--clr-primary-900);
     }
   }
 

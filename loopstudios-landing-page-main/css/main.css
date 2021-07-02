@@ -83,12 +83,50 @@ body {
   margin: 0 auto;
 }
 
+.main-nav--open {
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.tracking-in-expand {
+  -webkit-animation: tracking-in-expand 500ms 800ms cubic-bezier(0.215, 0.61, 0.355, 1) both;
+          animation: tracking-in-expand 500ms 800ms cubic-bezier(0.215, 0.61, 0.355, 1) both;
+}
+
+@-webkit-keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+header {
+  position: relative;
+}
+
 header .container {
   display: flex;
   justify-content: space-between;
   align-content: center;
   align-items: center;
-  position: relative;
   padding: 2rem 1.25rem;
 }
 @media (min-width: 700px) {
@@ -107,13 +145,12 @@ header .container {
   top: 0%;
   right: 0%;
   left: 0;
-  margin: 0 -40px;
-  padding-left: 40px;
+  padding-left: 1rem;
   padding-top: 10rem;
-  height: 100vh;
   background: black;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
           clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  height: 100vh;
   transition: -webkit-clip-path 500ms ease-out;
   transition: clip-path 500ms ease-out;
   transition: clip-path 500ms ease-out, -webkit-clip-path 500ms ease-out;
@@ -156,6 +193,11 @@ header .container {
   }
 
   .main-nav__list {
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  .main-c {
     justify-content: space-between;
     gap: 1rem;
     flex-direction: row;
@@ -175,6 +217,23 @@ header .container {
           clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
 
+.tracking-in-expand {
+  -webkit-animation: tracking-in-expand 500ms 800ms cubic-bezier(0.215, 0.61, 0.355, 1) both;
+          animation: tracking-in-expand 500ms 800ms cubic-bezier(0.215, 0.61, 0.355, 1) both;
+}
+
+@keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .main {
   margin-top: 15rem;
 }
@@ -316,7 +375,12 @@ header .container {
   margin: 0;
 }
 .product__figure :hover {
-  opacity: 0.6;
+  opacity: 0.8;
+  transition: opacity 150ms linear;
+}
+.product__figure:hover figcaption {
+  transition: color 150ms linear;
+  color: var(--clr-primary-900);
 }
 .product__caption {
   position: absolute;
