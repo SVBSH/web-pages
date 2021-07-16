@@ -1,0 +1,61 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+body {
+    display: grid;
+    grid-template-areas: 
+      "main"
+      "rating"
+      "review";
+    gap: 4rem;
+
+    font-size: 0.938rem;
+    font-family: var(--ff);
+    line-height: 1.5;
+    width: 87.5%;
+    margin: 0 auto;
+
+    background: top left url('../images/bg-pattern-top-mobile.svg') no-repeat;
+
+
+    @media (min-width: 800px) {
+      margin-top: 6.5rem;
+      grid-template-columns: 1fr 1.5fr;
+      grid-template-areas: 
+        "main rating"
+        "review review";
+      gap: 2rem 4rem;
+      background: top    left  /40% url('../images/bg-pattern-top-desktop.svg') no-repeat;
+    }
+}

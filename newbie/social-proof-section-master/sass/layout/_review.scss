@@ -1,0 +1,76 @@
+.review {
+  grid-area: review;
+
+  &__card-container {
+    max-width: 400px;
+    margin: 1rem 0;
+    padding: 2.5em 1.75em;
+    border-radius: var(--bdr);
+
+    font-weight: var(--fw-md);
+    background: var(--clr-primary-200);
+    color: var(--clr-secondary-50);
+
+    &:nth-of-type(1) {
+      @media (min-width: 800px) {
+        transform: translateY(0%);
+      }
+    }
+
+    &:nth-of-type(2) {
+      @media (min-width: 800px) {
+        transform: translateY(7.5%);
+      }
+    }
+
+    &:nth-of-type(3) {
+      @media (min-width: 800px) {
+        transform: translateY(15%);
+      }
+    }
+  }
+
+  &__card {
+    margin-bottom: 1.75rem;
+  }
+
+  &__author-info {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+  }
+
+  &__img {
+    --img-size: 60px;
+    width: var(--img-size);
+    height: var(--img-size);
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  &__author {
+    font-weight: var(--fw-lg);
+  }
+
+  &__text + &__text {
+    margin-top: 0.25em;
+  }
+
+  &__text {
+
+    &--pink {
+      font-weight: var(--fw-sm);
+      color: var(--clr-primary-100);
+    }
+  }
+
+  @media (min-width: 800px) {
+    display: flex;
+    gap: 0 2rem;
+    justify-self: center;
+
+    .review__card-container {
+      width: 100%;
+    }
+  }
+}
