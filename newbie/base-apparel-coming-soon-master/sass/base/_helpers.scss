@@ -1,0 +1,17 @@
+.grid-container {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-areas:
+      "logo"
+      "pic"
+      "Main";
+
+  @media (min-width: 500px) {
+    height: 100vh;
+    grid-template-rows: 1fr 2.5fr;
+    grid-template-columns: 1.2fr 1fr;
+    grid-template-areas:
+      "logo pic"
+      "Main pic";
+  }
+}

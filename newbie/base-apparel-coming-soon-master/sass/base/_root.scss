@@ -1,0 +1,26 @@
+:root {
+  /* Colors */
+  --clr-primary-100: hsl(0, 36%, 70%);
+  --clr-primary-200: hsl(0, 93%, 68%);
+  --clr-neutral: hsl(0, 6%, 24%);
+  /* Gradients */
+  --clr-gradient-100: linear-gradient(
+    90deg,
+  hsl(0, 0%, 100%),
+  hsl(0, 100%, 98%)
+  );
+  --clr-gradient-200: linear-gradient(
+    90deg,
+    hsl(0, 80%, 86%),
+    hsl(0, 74%, 74%)
+  );
+  
+  /* Font settings */
+  --ff: 'Josefin Sans', sans-serif;
+
+  --fz: 1rem;
+
+  --fw-300: 300;
+  --fw-400: 400;
+  --fw-600: 600;
+}
