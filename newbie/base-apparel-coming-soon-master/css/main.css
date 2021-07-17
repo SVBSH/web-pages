@@ -161,6 +161,7 @@ header {
   padding: 1em 0em;
   padding-left: 1.5em;
   border-radius: 1.75rem;
+  color: var(--clr-neutral);
 }
 .main__input--submit {
   right: 0;

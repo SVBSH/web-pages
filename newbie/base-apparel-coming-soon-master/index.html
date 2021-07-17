@@ -59,10 +59,13 @@
         </p>
         <form action="" class="main__form">
           <input
-            type="text"
+            type="email"
             class="main__input"
             name="email_address"
             placeholder="Email Address"
+            required
+            oninvalid="this.setCustomValidity('Please enter a valid email address')"
+            onchange="this.setCustomValidity('')" type="text"
           />
           <button type="submit" for="main__form" class="main__input--submit">
             <img src="images/icon-arrow.svg" alt="" />
@@ -71,13 +74,13 @@
       </main>
     </div>
 
-    <!-- <footer>
+    <footer>
       <p class="attribution">
         Challenge by
         <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
           >Frontend Mentor</a
         >. Coded by <a href="#">Your Name Here</a>.
       </p>
-    </footer> -->
+    </footer>
   </body>
 </html>

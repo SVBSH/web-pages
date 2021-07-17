@@ -34,6 +34,8 @@
     padding: 1em 0em;
     padding-left: 1.5em;
     border-radius: 1.75rem;
+    // color: var(--clr-neutral);
+    color: var(--clr-neutral);
 
     &--submit {
       right: 0;
@@ -45,6 +47,7 @@
       background-image: var(--clr-gradient-200);
       padding: 1rem 2rem;
     }
+
   }
 
   @media (min-width: 600px) {
