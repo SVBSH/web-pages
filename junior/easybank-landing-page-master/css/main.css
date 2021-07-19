@@ -13,4 +13,81 @@
   --fw-300: 300;
   --fw-400: 400;
   --fw-700: 700;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+ul[class] {
+  list-style: none;
+}
+
+.is-hidden {
+  display: none;
+}
+
+.nav--active {
+  display: block;
+}
+
+header {
+  position: relative;
+  width: 85%;
+  margin: 2rem auto;
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav {
+  position: absolute;
+  margin-top: 2rem;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 3;
+  background: white;
+  border-radius: 5px;
+}
+.nav__list {
+  padding: 0;
+}
+.nav__item {
+  text-align: center;
+  padding: 0.6em 1em;
+}
+.nav__link {
+  color: var(--clr-primary-blue);
+  font-weight: var(--fw-400);
+  text-decoration: none;
 }/*# sourceMappingURL=main.css.map */

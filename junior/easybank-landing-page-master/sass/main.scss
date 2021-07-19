@@ -1,5 +1,9 @@
+// Base
 @use './base/root';
 @use './base/reset';
 @use './base/helpers';
-
+// Components
 @use './components/buttons';
+// Layout
+@use './layout/header';
+@use './layout/navigation';
