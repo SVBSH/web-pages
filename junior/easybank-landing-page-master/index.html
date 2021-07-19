@@ -4,6 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
   <title>Frontend Mentor | Easybank landing page</title>
@@ -17,7 +22,8 @@
 <body>
 
   <header>
-    <div class=""><img src="images/logo.svg" alt="" class="logo"></div>
+    <img src="images/logo.svg" alt="" class="logo">
+    <img src="images/icon-hamburger.svg" alt="Hamburger menu" class="hamburger">
     <nav class="nav">
       <li class="nav__item"><a href="#" class="nav__link">Home</a></li>
       <li class="nav__item"><a href="#" class="nav__link">About</a></li>
@@ -25,7 +31,7 @@
       <li class="nav__item"><a href="#" class="nav__link">Blog</a></li>
       <li class="nav__item"><a href="#" class="nav__link">Careers</a></li>
     </nav>
-    <button class="btn">Request Invite</button>
+    <button class="btn is-hidden">Request Invite</button>
   </header>
 
   <main class="main">
@@ -52,7 +58,6 @@
     your finances like never before.
         </p>
       </div>
-
       <article class="feature">
         <img src="images/icon" alt="Icon - Online Banking" class="feature__img">
         <div class="feature__info">
