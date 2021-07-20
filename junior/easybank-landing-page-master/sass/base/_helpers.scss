@@ -17,8 +17,12 @@
   font-size: 2.2rem;
 }
 
-.feature-container {
+.grid-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 3rem;
+}
+
+.article-list-container {
+  background: var(--clr-neutral-50);
 }
