@@ -9,7 +9,11 @@
 
   // background: black;
   background: white;
+  border: 1px solid red;
   border-radius: 5px;
+
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  transition: clip-path 500ms ease-in-out;
 
   &__list {
     padding: 0;
@@ -25,4 +29,8 @@
     font-weight: var(--fw-400);
     text-decoration: none;
   }
+}
+
+.nav--active {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }

@@ -1,0 +1,41 @@
+.features {
+  text-align: center;
+  background: var(--clr-neutral-25);
+  padding: 4.5rem 0;
+
+  &__info {
+    margin-bottom: 3.5rem;
+  }
+
+  &__heading {
+    // margin-top: 4rem;
+    margin-bottom: 1.25rem;
+  }
+
+  &__text {
+    color: var(--clr-neutral-100);
+  }
+
+}
+
+.feature {
+  margin: 0 auto;
+  max-width: 300px;
+  display: grid;
+  grid-auto-flow: row;
+  gap: 1.5rem;
+
+  &__img {
+    margin: 0 auto;
+  }
+
+  &__heading {
+    font-weight: var(--fw-400);
+  }
+
+  &__text {
+    color: var(--clr-neutral-100);
+  }
+
+}
+
