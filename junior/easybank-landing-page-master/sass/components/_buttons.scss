@@ -1,0 +1,13 @@
+.btn {
+  border: none;
+  border-radius: 30px;
+  padding: 1em 2.75em;
+  // outline: none;
+  background: linear-gradient(90deg, var(--clr-primary-green), var(--clr-primary-cyan));
+  color: var(--clr-neutral-25);
+  font-weight: var(--fw-700);
+
+  &:hover {
+    opacity: .5;
+  }
+}

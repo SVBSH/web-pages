@@ -3,9 +3,22 @@
 }
 
 .nav--closed {
-  // display: none;
+  display: none;
 }
 
-.nav--active {
-  display: block;
+.container {
+  width: 85%;
+  margin: 0 auto;
+}
+
+.section--heading {
+  text-align: center;
+  font-weight: var(--fw-400);
+  font-size: 2.2rem;
+}
+
+.feature-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 3rem;
 }

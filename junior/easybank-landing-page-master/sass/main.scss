@@ -7,3 +7,10 @@
 // Layout
 @use './layout/header';
 @use './layout/navigation';
+
+@use './layout/main';
+@use './layout/info';
+@use './layout/features';
+@use './layout/articles';
+
+@use './layout/footer';
