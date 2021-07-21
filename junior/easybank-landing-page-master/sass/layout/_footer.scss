@@ -1,61 +1,53 @@
 .footer {
   padding: 2.5rem 0;
-
   background: var(--clr-primary-blue);
-  color: white;
+  color: var(--clr-neutral-50);
   --sec-gap: 2rem;
 
   &-grid {
     display: grid;
-    gap: var(--sec-gap);
-    justify-content: center;
-    // justify-items: center;
-    grid-template-areas: "sec-fst"
-                         "sec-middle"
-                         "sec-lst";
-
-    & > * {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 1.5rem;
-    }
-
-    &--sec-fst {
-      grid-area: sec-fst;
-    }
-
-    &--sec-middle {
-      grid-area: sec-middle;
-    }
-
-    &--sec-lst {
-      grid-area: sec-lst;
-    }
-  }
-
-  .social-media {
-    display: flex;
-    gap: .9rem;
+    justify-items: center;
+    grid-template-areas:
+      "logo"
+      "social"
+      "cont"
+      "button"
+      "copyrights";
   }
 
   .logo {
-    margin: 0 auto;
+    grid-area: logo;
+  }
+
+  .social-media {
+    grid-area: social;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 0.9rem;
   }
 
   .contact {
+    grid-area: cont;
+    display: flex;
+    flex-direction: column;
 
     text-align: center;
+    margin: 1.5rem 0;
+
     &__list {
       padding: 0;
+      margin: 0;
     }
 
     &__item {
-      position: relative;
-      padding: .6em 0em;
+      padding: 0.6em 0em;
+    }
 
+    &__link {
+      position: relative;
       &::after {
-        content: '';
+        content: "";
         position: absolute;
         left: 0;
         right: 0;
@@ -66,7 +58,6 @@
 
         transition: width 250ms ease-in-out;
         background: red;
-
       }
 
       &:hover::after {
@@ -75,7 +66,69 @@
     }
   }
 
+  .btn {
+    grid-area: button;
+  }
+
   .copyrights {
+    grid-area: copyrights;
     color: var(--clr-neutral-100);
+  }
+
+  @media (min-width: 600px) {
+    &-grid {
+      align-items: center;
+      grid-template-areas:
+        "logo   cont"
+        "social cont"
+        "button copyrights";
+    }
+
+    .contact {
+      flex-direction: row;
+      margin: 0;
+      gap: 5vw;
+      text-align: left;
+    }
+
+    .social-media {
+      margin-top: 0;
+     }
+
+
+  }
+
+  @media (min-width: 900px) {
+    &-grid {
+      align-items: center;
+      grid-template-areas:
+        "logo   cont button"
+        "social cont copyrights";
+    }
+
+    .logo {
+      justify-self: start;
+    }
+
+    .contact {
+      text-align: left;
+      justify-self: left;
+      flex-direction: row;
+      margin: 0;
+      gap: 5vw;
+    }
+
+    .social-media {
+      justify-self: start;
+    }
+
+    .btn {
+      margin: 0;
+      justify-self: end;
+    }
+
+    .copyrights {
+      justify-self: end;
+    }
   }
 }

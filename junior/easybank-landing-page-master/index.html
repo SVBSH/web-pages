@@ -58,7 +58,9 @@
 
     <main class="main">
       <section class="intro">
-        <img src="images/bg-intro-mobile.svg" alt="" class="intro__img" />
+        <div class="intro-image-container">
+          <img src="images/image-mockups.png" alt="" class="intro__img" />
+        </div>
         <div class="container">
           <div class="intro__body">
             <div class="intro__info">
@@ -142,85 +144,87 @@
 
       <section class="article">
         <!-- <div class="article-container"> -->
-          <h2 class="section--heading">Latest Articles</h2>
-          <div class="article-list-container">
-            <ul class="article__list grid-container">
-              <li class="article__item">
-                <img
-                  src="images/image-currency.jpg"
-                  alt="Article image"
-                  class="article__img"
-                />
-                <div class="article__info">
-                  <p class="article__author">By Claire Robinson</p>
-                  <h3 class="article__heading">
-                    Receive money in any currency with no fees
-                  </h3>
-                  <p class="article__text">
-                    The world is getting smaller and we’re becoming more mobile. So
-                    why should you be forced to only receive money in a single …
-                  </p>
-                </div>
-              </li>
-              <li class="article__item">
-                <img
-                  src="images/image-restaurant.jpg"
-                  alt="Article image"
-                  class="article__img"
-                />
-                <div class="article__info">
-                  <p class="article__author">By Wilson Hutton</p>
-                  <h3 class="article__heading">
-                    Treat yourself without worrying about money
-                  </h3>
-                  <p class="article__text">
-                    Our simple budgeting feature allows you to separate out your
-                    spending and set realistic limits each month. That means you …
-                  </p>
-                </div>
-              </li>
-              <li class="article__item">
-                <img
-                  src="images/image-plane.jpg"
-                  alt="Article image"
-                  class="article__img"
-                />
-                <div class="article__info">
-                  <p class="article__author">By Wilson Hutton</p>
-                  <h3 class="article__heading">
-                    Take your Easybank card wherever you go
-                  </h3>
-                  <p class="article__text">
-                    We want you to enjoy your travels. This is why we don’t charge
-                    any fees on purchases while you’re abroad. We’ll even show you …
-                  </p>
-                </div>
-              </li>
-              <li class="article__item">
-                <img
-                  src="images/image-confetti.jpg"
-                  alt="Article image"
-                  class="article__img"
-                />
-                <div class="article__info">
-                  <p class="article__author">By Claire Robinson</p>
-                  <h3 class="article__heading">
-                    Our invite-only Beta accounts are now live!
-                  </h3>
-                  <p class="article__text">
-                    After a lot of hard work by the whole team, we’re excited to
-                    launch our closed beta. It’s easy to request an invite through
-                    the site ...
-                  </p>
-                </div>
-              </li>
-            </ul>
-          </div>
+        <h2 class="section--heading">Latest Articles</h2>
+        <div class="article-list-container">
+          <ul class="article__list grid-container">
+            <li class="article__item">
+              <img
+                src="images/image-currency.jpg"
+                alt="Article image"
+                class="article__img"
+              />
+              <div class="article__info">
+                <p class="article__author">By Claire Robinson</p>
+                <h3 class="article__heading">
+                  Receive money in any currency with no fees
+                </h3>
+                <p class="article__text">
+                  The world is getting smaller and we’re becoming more mobile.
+                  So why should you be forced to only receive money in a single
+                  …
+                </p>
+              </div>
+            </li>
+            <li class="article__item">
+              <img
+                src="images/image-restaurant.jpg"
+                alt="Article image"
+                class="article__img"
+              />
+              <div class="article__info">
+                <p class="article__author">By Wilson Hutton</p>
+                <h3 class="article__heading">
+                  Treat yourself without worrying about money
+                </h3>
+                <p class="article__text">
+                  Our simple budgeting feature allows you to separate out your
+                  spending and set realistic limits each month. That means you …
+                </p>
+              </div>
+            </li>
+            <li class="article__item">
+              <img
+                src="images/image-plane.jpg"
+                alt="Article image"
+                class="article__img"
+              />
+              <div class="article__info">
+                <p class="article__author">By Wilson Hutton</p>
+                <h3 class="article__heading">
+                  Take your Easybank card wherever you go
+                </h3>
+                <p class="article__text">
+                  We want you to enjoy your travels. This is why we don’t charge
+                  any fees on purchases while you’re abroad. We’ll even show you
+                  …
+                </p>
+              </div>
+            </li>
+            <li class="article__item">
+              <img
+                src="images/image-confetti.jpg"
+                alt="Article image"
+                class="article__img"
+              />
+              <div class="article__info">
+                <p class="article__author">By Claire Robinson</p>
+                <h3 class="article__heading">
+                  Our invite-only Beta accounts are now live!
+                </h3>
+                <p class="article__text">
+                  After a lot of hard work by the whole team, we’re excited to
+                  launch our closed beta. It’s easy to request an invite through
+                  the site ...
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
         <!-- </div> -->
       </section>
 
-      <footer class="footer footer-grid">
-        <div class="footer-grid--sec-fst">
+      <footer class="footer">
+        <div class="footer-grid container">
           <img src="images/logo-white.svg" alt="easybank logo" class="logo" />
           <div class="social-media">
             <img
@@ -249,32 +253,31 @@
               class="social-media__icon"
             />
           </div>
-        </div>
-
-        <nav class="contact footer-grid--sec-middle">
-          <ul class="contact__list">
-            <li class="contact__item">
-              <a href="#" class="contact__link">About Us</a>
-            </li>
-            <li class="contact__item">
-              <a href="#" class="contact__link">Contact</a>
-            </li>
-            <li class="contact__item">
-              <a href="#" class="contact__link">Blog</a>
-            </li>
-            <li class="contact__item">
-              <a href="#" class="contact__link">Careers</a>
-            </li>
-            <li class="contact__item">
-              <a href="#" class="contact__link">Support</a>
-            </li>
-            <li class="contact__item">
-              <a href="#" class="contact__link">Privacy Policy</a>
-            </li>
-          </ul>
-        </nav>
-
-        <div class="footer-grid--sec-lst">
+          <nav class="contact">
+            <ul class="contact__list">
+              <li class="contact__item">
+                <a href="#" class="contact__link">About Us</a>
+              </li>
+              <li class="contact__item">
+                <a href="#" class="contact__link">Contact</a>
+              </li>
+              <li class="contact__item">
+                <a href="#" class="contact__link">Blog</a>
+              </li>
+            </ul>
+            <ul class="contact__list">
+              <li class="contact__item">
+                <a href="#" class="contact__link">Careers</a>
+              </li>
+              <li class="contact__item">
+                <a href="#" class="contact__link">Support</a>
+              </li>
+              <li class="contact__item">
+                <a href="#" class="contact__link">Privacy Policy</a>
+              </li>
+            </ul>
+          </nav>
+          
           <button class="btn">Request Invite</button>
           <p class="copyrights">© Easybank. All Rights Reserved</p>
         </div>

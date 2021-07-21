@@ -1,15 +1,14 @@
 .nav {
   position: absolute;
-  margin-top: 2rem;
+  margin-top: 4rem;
   top: 0;
   left: 0;
   right: 0;
 
-  z-index: 3;
+  z-index: 1;
 
   // background: black;
   background: white;
-  border: 1px solid red;
   border-radius: 5px;
 
   clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);

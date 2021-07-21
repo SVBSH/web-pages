@@ -15,11 +15,15 @@
   text-align: center;
   font-weight: var(--fw-400);
   font-size: 2.2rem;
+
+  @media (min-width: 550px) {
+    text-align: left;
+  }
 }
 
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 3rem;
 }
 

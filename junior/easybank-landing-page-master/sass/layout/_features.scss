@@ -1,7 +1,7 @@
 .features {
   text-align: center;
   background: var(--clr-neutral-25);
-  padding: 4.5rem 0;
+  padding: 5rem 0;
 
   &__info {
     margin-bottom: 3.5rem;
@@ -13,9 +13,13 @@
   }
 
   &__text {
+    max-width: 52ch;
     color: var(--clr-neutral-100);
   }
 
+  @media (min-width: 550px) {
+    text-align: left;
+  }
 }
 
 .feature {
@@ -35,6 +39,12 @@
 
   &__text {
     color: var(--clr-neutral-100);
+  }
+
+  @media (min-width: 550px) {
+    &__img {
+      margin: 0;
+    }
   }
 
 }
