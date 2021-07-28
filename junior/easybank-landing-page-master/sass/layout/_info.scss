@@ -34,15 +34,20 @@
 
   &__text {
     max-width: 42ch;
+    // margin: 0 auto;
     padding: 1.25em 0 2.25em 0;
     color: var(--clr-neutral-100);
   }
 
   @media (min-width: 500px) {
-    flex-direction: row-reverse;
-    text-align: left;
+    display: grid;
+    justify-items: center;
     align-items: center;
-    grid-auto-flow: column;
+    // grid-template-rows: repeat(2, 1fr);
+    // grid-template-columns: repeat(2 );
+    grid-template-areas: 
+    "info img";
+    text-align: left;
     // overflow: visible;
 
     &__img {
@@ -50,12 +55,21 @@
     }
 
     &-image-container {
+      max-height: 80vh;
+      grid-area: img;
       background-image: url("../images/bg-intro-desktop.svg");
       background-repeat: no-repeat;
       background-position-y: -200%;
     }
 
     &__info {
+      grid-area: info;
+    }
+
+    &__btn {
+      grid-area: btn;
+      align-self: start;
+      display: inline-block;
     }
   }
 }

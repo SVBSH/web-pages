@@ -45,24 +45,7 @@
     }
 
     &__link {
-      position: relative;
-      &::after {
-        content: "";
-        position: absolute;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        margin: 0 auto;
-        width: 0%;
-        height: 1px;
-
-        transition: width 250ms ease-in-out;
-        background: red;
-      }
-
-      &:hover::after {
-        width: 100%;
-      }
+      color: var(--clr-neutral-25);
     }
   }
 
