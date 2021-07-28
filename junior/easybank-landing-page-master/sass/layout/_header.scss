@@ -1,14 +1,16 @@
 header {
   position: relative;
-  z-index: 2;
+  z-index: 3;
   width: 85%;
-  margin: 1.5rem auto;
+  margin: 0 auto;
+  padding: 1.5rem 0;
 
   display: grid;
   grid-auto-flow: column;
-  // display: flex;
+  
   justify-content: space-between;
   align-items: center;
+  background: white;
 
   @media (min-width: 500px) {
 

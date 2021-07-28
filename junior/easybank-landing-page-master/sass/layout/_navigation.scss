@@ -4,13 +4,9 @@
   top: 0;
   left: 0;
   right: 0;
+  z-index: 2;
 
-  z-index: 1;
-
-  // background: black;
-  background: white;
   border-radius: 5px;
-
   clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
   transition: clip-path 500ms ease-in-out;
 
