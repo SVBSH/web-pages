@@ -1,0 +1,26 @@
+.intro {
+  display: grid;
+  
+  grid-auto-flow: row;
+
+  // background: url('../images/bg-tablet-pattern.svg') no-repeat;
+  // background-position: bottom -10% left 60px;;
+  // background-size: contain;
+
+  text-align: center;
+
+  &__heading {
+    margin: 0.5em 0;
+    line-height: 1.2;
+    color: var(--clr-primary-blue);
+    font-size: 2.5rem;
+  }
+
+  &__text {
+    margin-bottom: 1.75em;
+  }
+
+  &__stats {
+    grid-row: 1;
+  }
+}
