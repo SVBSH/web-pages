@@ -5,9 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam:wght@400;500;700&display=swap" rel="stylesheet">
   <title>Frontend Mentor | Manage landing page</title>
-
+  <link rel="stylesheet" href="css/main.css">
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     .attribution { font-size: 11px; text-align: center; }
@@ -15,16 +17,29 @@
   </style>
 </head>
 <body>
+  <header>
+    <img src="images/logo.svg" alt="Manage Logo" class="logo">
 
-  Pricing
-  Product
-  About Us
-  Careers
-  Community
+    <div class="menu-control">
+      <img src="images/icon-hamburger.svg" alt="hamburger menu">
+      <img src="images/icon-close.svg" alt="close menu icon">
+    </div>
 
-  Get Started
-
-  Bring everyone together to build better products.
+    <nav class="nav">
+      <ul class="nav__list">
+        <li class="nav__item">Pricing</li>
+        <li class="nav__item">Product</li>
+        <li class="nav__item">About Us</li>
+        <li class="nav__item">Careers</li>
+        <li class="nav__item">Community</li>
+      </ul>
+    </nav>
+    <button class="btn">Get Started</button>
+  </header>
+  <main>
+    <!-- section. -->
+  </main>
+  <!-- Bring everyone together to build better products.
 
   Manage makes it simple for software teams to plan day-to-day 
   tasks while keeping the larger team goals in view.
@@ -96,6 +111,6 @@
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
-  </div>
+  </div> -->
 </body>
 </html>
