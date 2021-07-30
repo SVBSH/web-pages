@@ -318,6 +318,7 @@ header .btn {
 .feedback__author {
   position: relative;
   color: var(--clr-primary-blue);
+  margin: 1rem 0;
 }
 .feedback__icon {
   --icon-size: 70px;
