@@ -113,7 +113,7 @@ header .nav {
 header .nav__list {
   border: 1px solid #5e5d5f;
   background: var(--clr-neutral-white-0);
-  box-shadow: 0px 0px 0px 400px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 0px 1000px rgba(0, 0, 0, 0.5);
   margin: 0;
   padding: 1.5em 1em;
   border-radius: 5px;
@@ -444,6 +444,7 @@ header .btn {
 }
 .footer__input {
   display: block;
+  border: none;
   border-radius: 30px;
 }
 .footer__input--set {
