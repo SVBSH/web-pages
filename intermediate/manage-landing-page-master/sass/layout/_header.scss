@@ -20,7 +20,7 @@ header {
     &__list {
       border: 1px solid rgb(94, 93, 95);
       background: var(--clr-neutral-white-0);
-      box-shadow: 0px 0px 0px 1000px rgba(0,0,0,0.5);
+      box-shadow: 0px 0px 0px 1000px rgba(0, 0, 0, 0.5);
       margin: 0;
       padding: 1.5em 1em;
       border-radius: 5px;
@@ -34,8 +34,8 @@ header {
       color: var(--clr-primary-blue);
       font-weight: var(--fw-700);
 
-      animation: tracking-in-expand 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
-      animation-delay: .2s;
+      animation: tracking-in-expand 2s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+      animation-delay: 0.2s;
     }
     animation: tilt-in-fwd-tr 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   }
@@ -45,6 +45,18 @@ header {
   }
 
   @media (min-width: 800px) {
+    .nav {
+      
+      &__list {
+        border: none;
+        box-shadow: none;
+      }
+      animation: initial;
+
+      &__item {
+        animation: initial;
+      }
+    }
     .menu-control {
       display: none;
     }

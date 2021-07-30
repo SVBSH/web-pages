@@ -46,6 +46,10 @@
 
   &__item {
     padding: .5em 0em;
+
+    &:hover {
+      color: var(--clr-primary-red);
+    }
   }
 
   &__form {

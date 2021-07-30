@@ -134,6 +134,18 @@ header .btn {
   display: none;
 }
 @media (min-width: 800px) {
+  header .nav {
+    -webkit-animation: initial;
+            animation: initial;
+  }
+  header .nav__list {
+    border: none;
+    box-shadow: none;
+  }
+  header .nav__item {
+    -webkit-animation: initial;
+            animation: initial;
+  }
   header .menu-control {
     display: none;
   }
@@ -434,6 +446,9 @@ header .btn {
 }
 .footer__item {
   padding: 0.5em 0em;
+}
+.footer__item:hover {
+  color: var(--clr-primary-red);
 }
 .footer__form {
   grid-area: formular;
