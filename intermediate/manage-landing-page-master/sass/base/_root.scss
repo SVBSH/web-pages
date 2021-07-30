@@ -1,12 +1,16 @@
 :root {
 // Colors
-  --clr-primary: hsl(12, 88%, 59%);
-  --clr-primary: hsl(228, 39%, 23%);
-  --clr-neutral: hsl(227, 12%, 61%);
-  --clr-neutral: hsl(233, 12%, 13%);
-  --clr-neutral: hsl(13, 100%, 96%);
-  --clr-neutral: hsl(0, 0%, 98%);
+  --clr-primary-red: hsl(12, 88%, 59%);
+  --clr-primary-blue: hsl(228, 39%, 23%);
+  --clr-neutral-white-0: hsl(0, 0%, 98%);
+  --clr-neutral-white-25: hsl(13, 100%, 96%);
+  --clr-neutral-blue-25: hsl(227, 12%, 61%);
+  --clr-neutral-black: hsl(233, 12%, 13%);
 // Fonts
   --ff: 'Be Vietnam', sans-serif;
   --fz: 1rem;
+
+  --fw-400: 400;  
+  --fw-500: 500;
+  --fw-700: 700;
 }

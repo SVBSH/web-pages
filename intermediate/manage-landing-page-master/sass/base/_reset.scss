@@ -42,8 +42,19 @@ a {
 
 a {
   color: inherit;
+  text-decoration: none;
+}
+
+button {
+  display: inline-block;
 }
 
 body {
+  font-family: var(--ff);
+  font-size: var(--fz);
+  color: var(--clr-neutral-blue-25);
   line-height: 1.5;
+  background: url('../images/bg-tablet-pattern.svg') no-repeat;
+  background-position: top -60px left 70px;
+  background-size: 100%;
 }

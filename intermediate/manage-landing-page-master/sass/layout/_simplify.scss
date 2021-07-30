@@ -1,0 +1,23 @@
+.simplify {
+  margin-top: 3rem;
+  padding: 5em 2em;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background: var(--clr-primary-red);
+  color: var(--clr-neutral-white-0);
+
+  &__heading {
+    font-size: 2.35rem;
+    line-height: 1.2;
+    margin-bottom: 1em;
+  }
+
+  .btn {
+    align-self: center;
+    color: var(--clr-primary-red);;
+    background: var(--clr-neutral-white-0);
+  }
+}
