@@ -4,10 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="css/main.css">
   <title>Frontend Mentor | [Challenge Name Here]</title>
-
+  <!-- <link rel="stylesheet" href="css/main.css"> -->
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     .attribution { font-size: 11px; text-align: center; }
@@ -15,33 +18,50 @@
   </style>
 </head>
 <body>
+  <main>
+    <div class="mobile">
+      <div class="mobile__header">
+        <div class="header__info">
+          <img src="images/avatar.jpg" alt="" class="avatar">
+          <p class="header__author">Samuel Green</p>
+          <p class="header__status">Available to Walk</p>
+        </div>
+      </div> class="chat__image"
+      <div class="mobile__chat">
+        <p class="chat__message chat__message--left">That sounds great. I’d be happy with that.</p>
+        <p class="chat__message chat__message--left">Could you send over some pictures of your dog, please?</p>
 
-  Samuel Green
-  Available to Walk
+        <div class="chat__images chat__message--right">
+          <img src="images/dog-image-1.jpg" alt="" class="chat__image">
+          <img src="images/dog-image-2.jpg" alt="" class="chat__image">
+          <img src="images/dog-image-3.jpg" alt="" class="chat__image">
+        </div>
+        <p class="chat__message chat__message--right">Here are a few pictures. She’s a happy girl!</p>
+        <p class="chat__message chat__message--right">Can you make it?</p>
 
-  That sounds great. I’d be happy with that.
+        <p class="chat__message chat__message--left">She looks so happy! The time we discussed works. How long shall I take her out for?</p>
+        <!-- Offer -->
+        <p class="chat__message chat__message--left"></p>
+        <p class="chat__message chat__message--left"></p>
+      </div>
 
-  Could you send over some pictures of your dog, please?
+      <div class="mobile__message">
+        <form action="" class="input__form">
+          <input type="text" class="input">
+        </form>
+      </div>
+    </div>
+    <!-- 30 minute walk
+    $29
+    1 hour walk
+    $49
 
-  Here are a few pictures. She’s a happy girl!
-
-  Can you make it?
-
-  She looks so happy! The time we discussed works. How long shall I take her out for?
-
-  30 minute walk
-  $29
-
-  1 hour walk
-  $49
-
-  Type a message…
-
-  Simple booking
-
-  Stay in touch with our dog walkers through the chat interface. This makes it easy to 
-  discuss arrangements and make bookings. Once the walk has been completed you can rate 
-  your walker and book again all through the chat.
+    Type a message…
+    Simple booking
+    Stay in touch with our dog walkers through the chat interface. This makes it easy to
+    discuss arrangements and make bookings. Once the walk has been completed you can rate
+    your walker and book again all through the chat. -->
+  </main>
   
   <!-- <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 

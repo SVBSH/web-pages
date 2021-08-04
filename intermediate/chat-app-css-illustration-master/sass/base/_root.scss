@@ -1,0 +1,20 @@
+:root {
+  /* Colors */
+  // Text
+  --clr-text-violet-50: hsl(276, 100%, 81%);
+  --clr-text-violet-100: hsl(276, 55%, 52%);
+  --clr-text-dark-50: hsl(271, 15%, 43%);
+  --clr-text-dark-100: hsl(271, 36%, 24%);
+  --clr-text-white: hsl(206, 6%, 79%);
+  --clr-text-grey: hsl(270, 7%, 64%);
+  // Gradients
+  --clr-grad: linear-gradient(90deg, hsl(293, 100%, 63%), hsl(264, 100%, 61%));
+  // Secondary
+  --clr-snd-0: hsl(0, 0%, 100%);
+  --clr-snd-25: hsl(270, 20%, 96%);
+  --clr-snd-50: hsl(289, 100%, 72%);
+  --clr-snd-100: hsl(271, 36%, 24%);
+/* Font settings */
+  --ff: 'Rubik', sans-serif;
+  --fz: 1rem;
+}
