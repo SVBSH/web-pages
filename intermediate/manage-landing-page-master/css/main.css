@@ -519,12 +519,18 @@ header .btn {
   grid-area: logo;
   justify-self: center;
 }
+.footer__logo--text {
+  fill: var(--clr-neutral-white-0);
+}
 .footer__social {
   grid-area: social;
   justify-self: center;
   display: flex;
   flex-direction: row;
   gap: 1.5rem;
+}
+.footer__icon:hover {
+  fill: var(--clr-primary-red);
 }
 .footer__nav {
   grid-area: navigation;

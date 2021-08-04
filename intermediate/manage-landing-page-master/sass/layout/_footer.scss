@@ -19,6 +19,10 @@
   &__logo {
     grid-area: logo;
     justify-self: center;
+
+    &--text {
+      fill: var(--clr-neutral-white-0);
+    }
   }
 
   &__social {
@@ -28,6 +32,13 @@
     flex-direction: row;
     gap: 1.5rem;
   }
+
+  &__icon {
+    &:hover {
+      fill: var(--clr-primary-red);
+    }
+  }
+
 
   &__nav {
     grid-area: navigation;
