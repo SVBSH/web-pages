@@ -5,7 +5,6 @@ const menuNav = document.querySelector(".nav");
 
 const track = document.querySelector(".feedback__card-container");
 const slides = Array.from(track.children);
-const slideWidth = track.getBoundingClientRect().width;
 
 const trackNav = document.querySelector(".feedback__nav");
 const trackNavChildren = Array.from(trackNav.children);
