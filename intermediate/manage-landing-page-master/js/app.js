@@ -28,6 +28,8 @@ const updateSlide = (prevSlide, targetSlide) => {
 }
 
 const moveSlide = (track, targetSlideIndex) => {
+  const slideWidth = track.getBoundingClientRect().width;
+
   console.log(slideWidth * targetSlideIndex);
   track.style.transform = "translateX(-" + slideWidth * targetSlideIndex + "px)";
 }

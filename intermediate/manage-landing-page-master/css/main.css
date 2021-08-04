@@ -460,9 +460,13 @@ header .btn {
 .feedback .btn {
   margin-top: 3rem;
 }
-@media (min-width: 500px) {
+@media (min-width: 600px) {
   .feedback__indicator {
     display: none;
+  }
+  .feedback .btn {
+    margin-top: 0rem;
+    margin-bottom: 4rem;
   }
 }
 @media (min-width: 600px) {
@@ -479,7 +483,6 @@ header .btn {
     max-width: 36%;
     margin: 0 auto;
     padding: 2em 2em;
-    flex-shrink: 0;
   }
 }
 
@@ -489,6 +492,7 @@ header .btn {
 
 .simplify {
   position: relative;
+  z-index: 1;
   margin-top: 3rem;
   padding: 5em 0;
   text-align: center;
@@ -515,6 +519,7 @@ header .btn {
   content: "";
   position: absolute;
   inset: 0;
+  z-index: -1;
   background: url("../images/bg-tablet-pattern.svg"), top 111% right -70% url("../images/bg-tablet-pattern.svg");
   background-repeat: no-repeat;
   opacity: 0.1;

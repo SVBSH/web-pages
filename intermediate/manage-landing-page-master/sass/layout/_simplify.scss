@@ -1,6 +1,6 @@
 .simplify {
   position: relative;
-
+  z-index: 1;
   margin-top: 3rem;
   padding: 5em 0;
   text-align: center;
@@ -31,6 +31,7 @@
     content: "";
     position: absolute;
     inset: 0;
+    z-index: -1;
     background: url("../images/bg-tablet-pattern.svg"),
       top 111% right -70% url("../images/bg-tablet-pattern.svg");
     background-repeat: no-repeat;

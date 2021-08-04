@@ -39,7 +39,6 @@
     margin-top: 3rem;
     margin: 0 auto;
     padding: 2.25em 0em 1.5em 0em;
-
     background: var(--clr-neutral-white-0);
   }
 
@@ -70,9 +69,14 @@
     margin-top: 3rem;
   }
 
-  @media (min-width: 500px) {
+  @media (min-width: 600px) {
     &__indicator {
       display: none;
+    }
+
+    .btn {
+      margin-top: 0rem;
+      margin-bottom: 4rem;
     }
   }
 
@@ -87,15 +91,12 @@
 
     &__card:last-of-type {
       display: none;
-      // max-width: 40ch;
     }
 
     &__card {
       max-width: 36%;
       margin: 0 auto;
       padding: 2em 2em;
-      // justify-items: center;
-      flex-shrink: 0;
     }
   }
 }
