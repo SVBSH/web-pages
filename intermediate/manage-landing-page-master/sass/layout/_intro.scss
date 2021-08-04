@@ -1,11 +1,9 @@
 .intro {
   display: grid;
   grid-auto-flow: row;
-
-  // background: url('../images/bg-tablet-pattern.svg') no-repeat;
+  // background: url('../images/2bg-tablet-pattern.svg') no-repeat;
   // background-position: bottom -10% left 60px;;
   // background-size: contain;
-
   text-align: center;
 
   &__heading {
@@ -41,7 +39,6 @@
     &__heading {
       max-width: 15ch;
       font-size: clamp(2.5rem, 4.5vw, 3.45rem);
-      // font-size: 3.75rem;
     }
 
     &__text {

@@ -55,8 +55,17 @@ body {
   font-size: var(--fz);
   color: var(--clr-neutral-blue-25);
   line-height: 1.5;
-  background: url('../images/bg-tablet-pattern.svg') no-repeat;
+  background: url("../images/bg-tablet-pattern.svg") no-repeat;
   background-position: top -60px left 70px;
   background-size: 100%;
-  
+
+  @media (min-width: 800px) {
+    background-position: top -18% left 55vw;
+    background-size: 70%;
+  }
+
+  @media (min-width: 1400px) {
+    background-position: top -20% left 135%;
+    background-size: 60%;
+  }
 }

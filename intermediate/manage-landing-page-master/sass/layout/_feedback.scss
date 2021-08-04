@@ -37,7 +37,6 @@
     width: 100%;
     flex-shrink: 0;
     margin-top: 3rem;
-    width: 100%;
     margin: 0 auto;
     padding: 2.25em 0em 1.5em 0em;
 
@@ -72,17 +71,31 @@
   }
 
   @media (min-width: 500px) {
+    &__indicator {
+      display: none;
+    }
+  }
+
+  @media (min-width: 600px) {
 
     &__card-container {
+      justify-content: center;
       gap: 3rem;
       transform: initial !important;
       transition: initial;
     }
 
+    &__card:last-of-type {
+      display: none;
+      // max-width: 40ch;
+    }
+
     &__card {
-      min-width: 400px;
-      justify-items: center;
-      flex-shrink: 1;
+      max-width: 36%;
+      margin: 0 auto;
+      padding: 2em 2em;
+      // justify-items: center;
+      flex-shrink: 0;
     }
   }
 }

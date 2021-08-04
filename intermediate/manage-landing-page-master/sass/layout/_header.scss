@@ -5,8 +5,7 @@ header {
   grid-auto-flow: column;
   justify-content: space-between;
   align-items: center;
-
-  padding: 2em 0em;
+  padding-block: clamp(2em, 10vw, 3.75em);
 
   .nav {
     position: absolute;

@@ -5,8 +5,8 @@
   padding: 5em 0;
   text-align: center;
 
+  background: var(--clr-primary-red);
   color: var(--clr-neutral-white-0);
-  background-color: var(--clr-primary-red);
 
   &__info {
     display: flex;
@@ -27,7 +27,17 @@
     background: var(--clr-neutral-white-0);
   }
 
-  @media (min-width: 500px) {
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url("../images/bg-tablet-pattern.svg"),
+      top 111% right -70% url("../images/bg-tablet-pattern.svg");
+    background-repeat: no-repeat;
+    opacity: 0.1;
+  }
+
+  @media (min-width: 800px) {
     text-align: left;
 
     &__info {
