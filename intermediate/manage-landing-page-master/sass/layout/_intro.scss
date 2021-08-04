@@ -1,6 +1,5 @@
 .intro {
   display: grid;
-  
   grid-auto-flow: row;
 
   // background: url('../images/bg-tablet-pattern.svg') no-repeat;
@@ -22,5 +21,31 @@
 
   &__stats {
     grid-row: 1;
+  }
+
+  @media (min-width: 600px) {
+    margin-top: 5rem;
+    text-align: left;
+    grid-auto-flow: column;
+    align-items: center;
+
+    &__info {
+      grid-column: 1;
+    }
+
+    &__stats {
+      grid-column: 2;
+      max-height: 450px;
+    }
+
+    &__heading {
+      max-width: 15ch;
+      font-size: clamp(2.5rem, 4.5vw, 3.45rem);
+      // font-size: 3.75rem;
+    }
+
+    &__text {
+      max-width: 41ch;
+    }
   }
 }

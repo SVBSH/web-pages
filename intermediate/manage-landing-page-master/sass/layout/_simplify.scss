@@ -1,23 +1,42 @@
 .simplify {
-  margin-top: 3rem;
-  padding: 5em 2em;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  position: relative;
 
-  background: var(--clr-primary-red);
+  margin-top: 3rem;
+  padding: 5em 0;
+  text-align: center;
+
   color: var(--clr-neutral-white-0);
+  background-color: var(--clr-primary-red);
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
   &__heading {
     font-size: 2.35rem;
     line-height: 1.2;
     margin-bottom: 1em;
+    max-width: 22ch;
   }
 
   .btn {
     align-self: center;
-    color: var(--clr-primary-red);;
+    color: var(--clr-primary-red);
     background: var(--clr-neutral-white-0);
+  }
+
+  @media (min-width: 500px) {
+    text-align: left;
+
+    &__info {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    &__heading {
+      margin: 0;
+    }
   }
 }

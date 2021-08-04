@@ -3,17 +3,13 @@ const menuHamburger = document.querySelector(".menu-control__hamburger");
 const menuClose = document.querySelector(".menu-control__close");
 const menuNav = document.querySelector(".nav");
 
-const track = document.querySelector(".la");
+const track = document.querySelector(".feedback__card-container");
 const slides = Array.from(track.children);
 const slideWidth = track.getBoundingClientRect().width;
 
 const trackNav = document.querySelector(".feedback__nav");
 const trackNavChildren = Array.from(trackNav.children);
 
-
-const setSlidePosition = (slide, index) => {
-  slide.style.left = slideWidth * index + "px";
-};
 
 const toggleNav = () => {
   menuHamburger.classList.toggle("is-hidden");
@@ -31,17 +27,19 @@ const updateSlide = (prevSlide, targetSlide) => {
   targetSlide.classList.add("current-slide");
 }
 
-const moveSlide = (track, targetSlide) => {
-  track.style.transform = "translateX(-" + targetSlide.style.left + ")";
+const moveSlide = (track, targetSlideIndex) => {
+  console.log(slideWidth * targetSlideIndex);
+  track.style.transform = "translateX(-" + slideWidth * targetSlideIndex + "px)";
 }
 
 
-slides.forEach(setSlidePosition);
+// slides.forEach(setSlidePosition);
+
 // Event listeners
 /* Show and hide menu after click */
 menuControl.addEventListener("click", () => toggleNav());
 /* Mode slides */
-trackNav.addEventListener("click", (e) => {
+trackNav.addEventListener("click", e => {
   const targetDot = e.target.closest("button");
   if (!targetDot) {
     return;
@@ -57,5 +55,5 @@ trackNav.addEventListener("click", (e) => {
 
   updateIndicator(prevDot, targetDot);
   updateSlide(prevSlide, targetSlide);
-  moveSlide(track, targetSlide);
+  moveSlide(track, targetSlideIndex);
 });

@@ -32,7 +32,12 @@
   </head>
   <body>
     <header class="container">
-      <img src="images/logo.svg" alt="Manage Logo" class="logo" />
+      <img
+        draggable="false"
+        src="images/logo.svg"
+        alt="Manage Logo"
+        class="logo"
+      />
       <div class="menu-control">
         <img
           src="images/icon-hamburger.svg"
@@ -56,6 +61,7 @@
       </nav>
       <button class="btn">Get Started</button>
     </header>
+
     <main class="main">
       <section class="intro container">
         <div class="intro__info">
@@ -69,14 +75,15 @@
           <button class="btn intro__btn">Get Started</button>
         </div>
         <img
+          draggable="false"
           src="images/illustration-intro.svg"
           alt="stats"
           class="intro__stats"
         />
       </section>
 
-      <section class="about">
-        <div class="about__info container">
+      <section class="about about--container">
+        <div class="about__info">
           <h2 class="about__heading">What’s different about Manage?</h2>
           <p class="about__text">
             Manage provides all the functionality your team needs, without the
@@ -122,50 +129,52 @@
         </div>
       </section>
 
-      <section class="feedback container">
+      <section class="feedback">
         <h2 class="feedback__heading">What they’ve said</h2>
 
         <div class="feedback__card-container">
-          <div class="la">
-            <article class="feedback__card current-slide">
-              <img src="images/avatar-anisha.png" alt="" class="feedback__icon">
-              <h3 class="feedback__author">Anisha Li</h3>
-              <p class="feedback__text">
-                “Manage has supercharged our team’s workflow. The ability to
-                maintain visibility on larger milestones at all times keeps
-                everyone motivated.”
-              </p>
-            </article>
-            <article class="feedback__card">
-              <img src="images/avatar-ali.png" alt="" class="feedback__icon">
-              <h3 class="feedback__author">Ali Bravo</h3>
-              <p class="feedback__text">
-                “We have been able to cancel so many other subscriptions since
-                using Manage. There is no more cross-channel confusion and
-                everyone is much more focused.”
-              </p>
-            </article>
-            <article class="feedback__card">
-              <img src="images/avatar-richard.png" alt="" class="feedback__icon">
-              <h3 class="feedback__author">Richard Watts</h3>
-              <p class="feedback__text">
-                “Manage allows us to provide structure and process. It keeps us
-                organized and focused. I can’t stop recommending them to everyone
-                I talk to!”
-              </p>
-            </article>
-            <article class="feedback__card">
-              <img src="images/avatar-shanai.png" alt="" class="feedback__icon">
-              <h3 class="feedback__author">Shanai Gough</h3>
-              <p class="feedback__text">
-                “Their software allows us to track, manage and collaborate on our
-                projects from anywhere. It keeps the whole team in-sync without
-                being intrusive.”
-              </p>
-            </article>
-          </div>
+          <article class="feedback__card current-slide">
+            <img src="images/avatar-anisha.png" alt="" class="feedback__icon" />
+            <h3 class="feedback__author">Anisha Li</h3>
+            <p class="feedback__text">
+              “Manage has supercharged our team’s workflow. The ability to
+              maintain visibility on larger milestones at all times keeps
+              everyone motivated.”
+            </p>
+          </article>
+          <article class="feedback__card">
+            <img src="images/avatar-ali.png" alt="" class="feedback__icon" />
+            <h3 class="feedback__author">Ali Bravo</h3>
+            <p class="feedback__text">
+              “We have been able to cancel so many other subscriptions since
+              using Manage. There is no more cross-channel confusion and
+              everyone is much more focused.”
+            </p>
+          </article>
+          <article class="feedback__card">
+            <img
+              src="images/avatar-richard.png"
+              alt=""
+              class="feedback__icon"
+            />
+            <h3 class="feedback__author">Richard Watts</h3>
+            <p class="feedback__text">
+              “Manage allows us to provide structure and process. It keeps us
+              organized and focused. I can’t stop recommending them to everyone
+              I talk to!”
+            </p>
+          </article>
+          <article class="feedback__card">
+            <img src="images/avatar-shanai.png" alt="" class="feedback__icon" />
+            <h3 class="feedback__author">Shanai Gough</h3>
+            <p class="feedback__text">
+              “Their software allows us to track, manage and collaborate on our
+              projects from anywhere. It keeps the whole team in-sync without
+              being intrusive.”
+            </p>
+          </article>
         </div>
-        
+
         <div class="feedback__nav">
           <button class="feedback__indicator current-slide"></button>
           <button class="feedback__indicator"></button>
@@ -177,43 +186,95 @@
       </section>
 
       <section class="simplify">
-        <h2 class="simplify__heading">Simplify how your team works today.</h2>
-        <button class="btn">Get Started</button>
+        <div class="simplify__info container">
+          <h2 class="simplify__heading">Simplify how your team works today.</h2>
+          <button class="btn">Get Started</button>
+        </div>
       </section>
     </main>
-    
+
     <footer class="footer">
-      <div class="footer__container">
-        <img src="images/logo-white.svg" alt="Logo" class="footer__logo">
+      <div class="footer__grid container">
+        <img src="images/logo-white.svg" alt="Logo" class="footer__logo" />
         <div class="footer__social">
-          <a href="https://www.facebook.com"><img src="images/icon-facebook.svg" alt="Facebook icon" class="footer__icon"></a>
-          <a href="https://www.youtube.com"><img src="images/icon-youtube.svg" alt="Youtube icon" class="footer__icon"></a>
-          <a href="https://www.twitter.com"><img src="images/icon-twitter.svg" alt="Twitter icon" class="footer__icon"></a>
-          <a href="https://www.pinterest.com"><img src="images/icon-pinterest.svg" alt="Pinterest icon" class="footer__icon"></a>
-          <a href="https://www.instagram.com"><img src="images/icon-instagram.svg" alt="Instagram icon" class="footer__icon"></a>
+          <a href="https://www.facebook.com"
+            ><img
+              src="images/icon-facebook.svg"
+              alt="Facebook icon"
+              class="footer__icon"
+          /></a>
+          <a href="https://www.youtube.com"
+            ><img
+              src="images/icon-youtube.svg"
+              alt="Youtube icon"
+              class="footer__icon"
+          /></a>
+          <a href="https://www.twitter.com"
+            ><img
+              src="images/icon-twitter.svg"
+              alt="Twitter icon"
+              class="footer__icon"
+          /></a>
+          <a href="https://www.pinterest.com"
+            ><img
+              src="images/icon-pinterest.svg"
+              alt="Pinterest icon"
+              class="footer__icon"
+          /></a>
+          <a href="https://www.instagram.com"
+            ><img
+              src="images/icon-instagram.svg"
+              alt="Instagram icon"
+              class="footer__icon"
+          /></a>
         </div>
         <nav class="footer__nav">
           <ul class="footer__list">
-            <li class="footer__item"><a href="#" class="footer__link">Home</a></li>
-            <li class="footer__item"><a href="#" class="footer__link">Pricing</a></li>
-            <li class="footer__item"><a href="#" class="footer__link">Products</a></li>
-            <li class="footer__item"><a href="#" class="footer__link">About Us</a></li>
+            <li class="footer__item">
+              <a href="#" class="footer__link">Home</a>
+            </li>
+            <li class="footer__item">
+              <a href="#" class="footer__link">Pricing</a>
+            </li>
+            <li class="footer__item">
+              <a href="#" class="footer__link">Products</a>
+            </li>
+            <li class="footer__item">
+              <a href="#" class="footer__link">About Us</a>
+            </li>
           </ul>
           <ul class="footer__list">
-            <li class="footer__item"><a href="#" class="footer__link">Careers</a></li>
-            <li class="footer__item"><a href="#" class="footer__link">Community</a></li>
-            <li class="footer__item"><a href="#" class="footer__link">Privacy Policy</a></li>
+            <li class="footer__item">
+              <a href="#" class="footer__link">Careers</a>
+            </li>
+            <li class="footer__item">
+              <a href="#" class="footer__link">Community</a>
+            </li>
+            <li class="footer__item">
+              <a href="#" class="footer__link">Privacy Policy</a>
+            </li>
           </ul>
         </nav>
         <form action="" class="footer__form">
-          <input type="text" class="footer__input footer__input--set" name="footer__input" placeholder="Updates in your inbox…" required>
-          <input type="submit" for="footer__input" class="footer__input footer__input--submit" value="Go">
+          <input
+            type="text"
+            class="footer__input footer__input--set"
+            name="footer__input"
+            placeholder="Updates in your inbox…"
+            required
+          />
+          <input
+            type="submit"
+            for="footer__input"
+            class="footer__input footer__input--submit"
+            value="Go"
+          />
         </form>
         <p class="footer__copyrights">Copyright 2020. All Rights Reserved</p>
       </div>
     </footer>
-  
-  <!-- <div class="attribution">
+
+    <!-- <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
   </div> -->

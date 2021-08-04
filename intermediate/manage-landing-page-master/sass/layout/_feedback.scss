@@ -1,6 +1,6 @@
 .feedback {
-  text-align: center;
   overflow-x: hidden;
+  text-align: center;
 
   &__heading {
     font-size: 2.1rem;
@@ -9,7 +9,6 @@
   }
 
   &__author {
-    position: relative;
     color: var(--clr-primary-blue);
     margin: 1rem 0;
   }
@@ -17,7 +16,7 @@
   &__icon {
     --icon-size: 70px;
     position: absolute;
-    width:  var(--icon-size);
+    width: var(--icon-size);
     height: var(--icon-size);
     top: 0;
     left: 0;
@@ -27,12 +26,16 @@
   }
 
   &__card-container {
-    position: relative;
-    height: 200px;
+    display: flex;
+    flex-wrap: nowrap;
+    transition: transform 350ms ease-in;
   }
-
+  //  the size of all flex items is larger than the flex container,
+  //  <&__card> shrinks to 0
   &__card {
-    position: absolute;
+    position: relative;
+    width: 100%;
+    flex-shrink: 0;
     margin-top: 3rem;
     width: 100%;
     margin: 0 auto;
@@ -43,6 +46,7 @@
 
   &__nav {
     margin-top: 1.25rem;
+    padding: 1em 1em;
     display: flex;
     gap: 0.5rem;
     flex-direction: row;
@@ -67,30 +71,22 @@
     margin-top: 3rem;
   }
 
-  @media (min-width: 800px) {
+  @media (min-width: 500px) {
+
     &__card-container {
+      gap: 3rem;
+      transform: initial !important;
+      transition: initial;
     }
 
     &__card {
-      left: initial !important;
-      position: relative;
+      min-width: 400px;
+      justify-items: center;
+      flex-shrink: 1;
     }
   }
 }
 
 .feedback__nav .current-slide {
   background: var(--clr-primary-red);
-}
-
-.la {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  transition: transform 150ms ease-in;
-
-  @media (min-width: 800px) {
-    display: flex;
-    gap: 1rem;
-    transform: initial !important;
-  }
 }

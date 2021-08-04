@@ -5,4 +5,11 @@
   font-weight: 700;
   color: var(--clr-neutral-white-0);
   background: var(--clr-primary-red);
+  cursor: pointer;
+
+  &:hover {
+    opacity: .6;
+    box-shadow: 0 16px 26px -15px var(--clr-primary-red);
+
+  }
 }

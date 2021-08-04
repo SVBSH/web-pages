@@ -1,16 +1,24 @@
 .about {
+  display: flex;
+  flex-direction: column;
   margin-top: 7rem;
 
-  &__info {
+  &--container {
+    width: 100%;
   }
 
-  &__heading{
+  &__info {
+    width: 87%;
+    margin: 0 auto;
+  }
+
+  &__heading {
     font-size: 2rem;
     line-height: 1.2;
     font-weight: 700;
     color: var(--clr-primary-blue);
     text-align: center;
-    margin-bottom: .75em;
+    margin-bottom: 0.75em;
   }
 
   &__text {
@@ -20,6 +28,34 @@
   }
 
   &__feature-container {
+  }
+
+  @media (min-width: 700px) {
+    flex-direction: row;
+    justify-content: space-between;
+
+    &--container {
+      width: 75%;
+      margin: 8rem auto;
+    }
+
+    &__info {
+      width: 100%;
+      margin: 0;
+      max-width: 40ch;
+    }
+
+    &__feature {
+      width: 100%;
+    }
+
+    &__heading {
+      text-align: left;
+    }
+
+    &__text {
+      text-align: left;
+    }
   }
 }
 
@@ -40,7 +76,7 @@
     background: var(--clr-neutral-white-25);
     border-top-left-radius: var(--bdr);
     border-bottom-left-radius: var(--bdr);
-  } 
+  }
 
   &__heading {
     font-size: inherit;
@@ -48,7 +84,7 @@
 
   &__number {
     color: var(--clr-neutral-white-0);
-    padding: .5em 1.5em;
+    padding: 0.5em 1.5em;
     border-radius: var(--bdr);
     display: inline-block;
     background: var(--clr-primary-red);
@@ -58,5 +94,15 @@
     width: 90%;
     margin: 0 auto;
   }
-}
 
+  @media (min-width: 700px) {
+
+    &__info {
+      background: transparent;
+    }
+
+    &__text {
+      max-width: 55ch;
+    }
+  }
+}

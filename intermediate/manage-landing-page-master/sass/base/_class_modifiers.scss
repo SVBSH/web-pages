@@ -5,4 +5,9 @@
 .container {
   width: 87%;
   margin: 0 auto;
+  
+  @media (min-width: 1200px) {
+    width: 75%;
+    margin: 0 auto;
+  }
 }
