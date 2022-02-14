@@ -7,8 +7,33 @@
   --clr-neutral-gray: 273 4% 51%;
   --clr-neutral-light: 0 0% 98%;
   // Font sizes
-  --fz: 1rem;
+  --fz-100: .87rem;
+  --fz-200: 1rem;
+  --fz-300: 1.125rem;
+  --fz-400: 1.5rem;
+  --fz-500: 2.2rem;
+  --fz-600: 3rem;
 
-  --ff-headings: "DM Serif Display", serif;
+  --fz-900: 3.5rem;
+
+  --ff-heading: "DM Serif Display", serif;
   --ff-primary: "Karla", sans-serif;
+
+  --base-width: 87.5%;
+  --container-padding-size: calc((100% - var(--base-width)) / 2);
+
+  @media (min-width: 700px) {
+    --base-width: 90%;
+  }
+
+  @media (min-width: 1200px) {
+    --fz-500: var(--fz-900);
+    --base-width: max(90%)%;
+  }
+
+
+  @media (min-width: 1400px) {
+    --fz-500: var(--fz-900);
+    --base-width: max(77%);
+  }
 }

@@ -35,13 +35,16 @@ html:focus-within {
 /* Set core body defaults */
 body {
   font-family: var(--ff-primary);
-  font-size: var(--fz);
+  font-size: var(--fz-100);
   min-height: 100vh;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
 
   margin: 0 auto;
-  // padding: 0 5%; 
+
+  @media (min-width: 700px) {
+    overflow-y: auto !important;
+  }
 }
 
 

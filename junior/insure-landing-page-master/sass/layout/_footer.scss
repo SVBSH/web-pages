@@ -1,0 +1,117 @@
+.footer {
+  --size: 2rem;
+  letter-spacing: 1.5px;
+
+  &__nav-container {
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: 700px) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  &__nav {
+    text-transform: uppercase;
+    text-align: center;
+
+    &:last-of-type {
+      padding-bottom: calc(2 * var(--size));
+    }
+
+    &-category {
+      font-family: var(--ff-primary);
+      font-weight: 900;
+      color: hsl(var(--clr-neutral-gray) / 0.9);
+      margin: 0;
+      padding-block: var(--size);
+    }
+
+    &-link {
+      position: relative;
+      text-decoration: none;
+      color: hsl(var(--clr-primary-dark) / 0.8);
+
+      &::after {
+        content: "";
+        position: absolute;
+        height: 2px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 0%;
+        margin: 0 auto;
+        background: hsl(var(--clr-neutral-gray));
+        transition: width 150ms ease-out;
+      }
+    }
+    // underline decoration for link
+    &-item:hover &-link::after {
+      width: 100%;
+    }
+
+    @media (min-width: 700px) {
+      text-align-last: left;
+    }
+  }
+
+  &__intro {
+    position: relative;
+
+    display: flex;
+    gap: 1.75rem;
+    flex-direction: column;
+    justify-content: end;
+    padding-bottom: 2em;
+    align-items: center;
+    // aspect-ratio: 2 / 1;
+    background: top center
+      url("../../images/backgrounds/bg-pattern-footer-mobile.svg") no-repeat;
+    background-size: 100% 90%;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: var(--base-width);
+      margin: 0 auto;
+      height: 1px;
+      background: hsl(var(--clr-neutral-gray) / 0.3);
+      transform: translateY(100%);
+
+      @media (min-width: 700px) {
+        width: 100%;
+      }
+    }
+
+    @media (min-width: 700px) {
+      width: 100%;
+      padding-top: 3rem;
+      background-image: none;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  &__logo {
+  }
+
+  &__social {
+    display: grid;
+    gap: 1rem;
+    grid-auto-flow: column;
+    justify-content: center;
+  }
+
+  @media (min-width: 700px) {
+    padding-inline: var(--container-padding-size);
+    
+    background: top left
+      url("../../images/backgrounds/bg-pattern-footer-desktop.svg");
+    background-size: 40% 60%;
+    background-repeat: no-repeat;
+  }
+}

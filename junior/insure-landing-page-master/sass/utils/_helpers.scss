@@ -1,0 +1,22 @@
+// .container {
+//     width: var(--base-width);
+//     margin: 0 auto;
+// }
+
+.ff-heading {
+    font-family: var(--ff-heading);
+}
+
+.clr-heading {
+    color: hsl(var(--clr-primary-dark));
+}
+
+.grid {
+    display: grid;
+    gap: var(--gap, 1rem);
+}
+
+.flex {
+    display: flex;
+    gap: var(--gap, 1rem);
+}

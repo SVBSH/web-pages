@@ -1,0 +1,19 @@
+.button {
+    --color-invert: var(--clr-primary-dark);
+    --bg-color-invert: var(--clr-neutral-light);
+    --border-color-invert: transparent;
+
+    background-color: transparent;
+    color: hsl(var(--clr-neutral-light));
+
+    font-weight: 700;
+    padding: 1.125em 2.7em;
+    border: 1.2px solid hsl(var(--clr-neutral-light));
+
+    text-transform: uppercase;    
+
+    &:hover {
+        color: hsl(var(--color-invert));
+        background-color: hsl(var(--bg-color-invert));
+    }
+}

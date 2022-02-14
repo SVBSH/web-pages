@@ -1,5 +1,13 @@
-@import "./base/root";
-@import "./base/reset";
-
-@import "./components/button";
-@import "./layout/navigation";
+// Base
+@use './base/root';
+@use './base/reset';
+// Components
+@use './components/button';
+@use './components/card';
+// Layout
+@use './layout/navigation';
+@use './layout/hero';
+@use './layout/about';
+@use './layout/footer';
+// Helpers
+@use './utils/helpers';
