@@ -1,0 +1,62 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+.header {
+  display: grid;
+  grid-template-areas: ". logoo navv .";
+  grid-template-columns: 3rem max-content 1fr 3rem;
+  grid-template-rows: max-content;
+  align-items: space-between;
+
+}
+
+.header__logo {
+  display: block;
+  grid-area: logoo;
+}
+
+.header__nav {
+  grid-column: logoo-start / navv-end;
+  grid-row: 1;
+}
+
+.header__nav-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  background: red;
+  height: 100vh;
+
+}
+
+.header__nav-item {
+  padding: 1em 2em;
+  align-self: center;
+}
+
+@media (min-width: 800px) {
+  .header__nav {
+    grid-column: navv-start / navv-end;
+  }
+
+  .header__nav-list {
+    height: auto;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+}
+
+
+
+

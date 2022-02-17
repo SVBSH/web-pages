@@ -1,26 +1,28 @@
 .card {
   display: grid;
-  gap: 1rem;
+  gap: 2vw;
   justify-items: center;
   text-align: center;
 
   &__img {
-    margin-right: auto;
-  }
-
-  &__info {
+    @media (min-width: 700px) {
+      margin-right: auto;
+    }
   }
 
   &__heading {
     color: hsl(var(--clr-primary-dark));
-    font-size: 1.65rem;
-    font-weight: 700;
+    font-size: var(--fz-400);
+
+    font-weight: 400;
     padding-bottom: 0.2em;
   }
 
   &__text {
+    font-size: var(--fz-100);
     color: hsl(var(--clr-primary-dark) / .4);
     font-weight: 400;
+    max-width: 37ch;
   }
 
   @media (min-width: 700px) {

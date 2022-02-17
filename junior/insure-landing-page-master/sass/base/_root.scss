@@ -11,6 +11,7 @@
   --fz-200: 1rem;
   --fz-300: 1.125rem;
   --fz-400: 1.5rem;
+
   --fz-500: 2.2rem;
   --fz-600: 3rem;
 
@@ -27,13 +28,19 @@
   }
 
   @media (min-width: 1200px) {
-    --fz-500: var(--fz-900);
+    --fz-400: 1.75rem;
+    --fz-100: var(--fz-300);
+    --fz-500: var(--fz-600);
     --base-width: max(90%)%;
   }
 
 
   @media (min-width: 1400px) {
     --fz-500: var(--fz-900);
-    --base-width: max(77%);
+    --base-width: max(90%);
+  }
+
+  @media (min-width: 1500px) {
+    --base-width: max(80%);
   }
 }

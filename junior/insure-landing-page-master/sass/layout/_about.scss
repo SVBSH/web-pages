@@ -1,13 +1,19 @@
 .about {
+  position: relative;
+  z-index: 1;
+  padding-block: 3.5vw;
+
   text-align: center;
   padding-inline: var(--container-padding-size);
 
   &__heading {
     position: relative;
-    margin-top: 3em;
+    // margin-top: 3em;
     padding-block: 0.4em;
     padding-bottom: 1em;
-    font-size: var(--fz-600);
+    // font-size: var(--fz-500);
+    font-size: 1.75rem;
+
     font-weight: 400;
     line-height: 1;
 
@@ -40,6 +46,7 @@
     display: grid;
     gap: 3rem;
     align-items: baseline;
+    padding-block: 3rem;
 
     @media (min-width: 700px) {
       grid-auto-flow: column;

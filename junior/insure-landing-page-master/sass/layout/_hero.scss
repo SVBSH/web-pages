@@ -1,56 +1,38 @@
-.hero-container {
-  background-color: hsl(var(--clr-primary-dark));
-}
-
 .hero {
-  --size: 0%;
   position: relative;
-  display: flex;
-  gap: 2vw;
-  flex-direction: column-reverse;
+  display: grid;
+
+  background: hsl(var(--clr-primary-dark));
+
+  grid-template-areas:
+    "photo photo photo"
+    ".     info  .";
+  grid-template-columns: var(--container-padding-size) auto var(
+      --container-padding-size
+    );
+
+  &__image-container {
+    grid-area: photo;
+  }
 
   &__info {
+    grid-area: info;
     position: relative;
-    padding-inline: var(--container-padding-size);
-    padding-block: 7em;
-    background: top left
-      url(../../images/backgrounds/bg-pattern-intro-left-mobile.svg) no-repeat;
+    padding-top: 2rem;
+    align-self: center;
+
     text-align: center;
     color: hsl(var(--clr-neutral-light));
 
     @media (min-width: 700px) {
-      padding: 0;
+      z-index: 2;
+      padding-right: 2vw;
+      padding-bottom: 3rem;
       text-align: left;
-      background: none;
-
-      transform: translateY(calc(0.5 * var(--size)));
     }
 
-    &-width-wrapper {
-      margin-inline: auto;
-      width: var(--base-width);
-      // reset width
-      @media (min-width: 700px) {
-        width: auto;
-      }
-    }
-
-    &::before {
-      content: "";
-      position: absolute;
-      bottom: -30%;
-      right: 0;
-      width: 124px;
-      height: 330px;
-      z-index: 1;
-      background: bottom right
-        url(../../images/backgrounds/bg-pattern-intro-right-mobile.svg)
-        no-repeat;
-      background-repeat: no-repeat;
-
-      @media (min-width: 700px) {
-        background: none;
-      }
+    @media (min-width: 900px) {
+      padding-block: 3rem;
     }
   }
 
@@ -67,17 +49,12 @@
   }
 
   &__text {
+    font-size: var(--fz-100);
     max-width: 58ch;
   }
 
   &__button {
-    position: relative;
-    z-index: 11221;
     margin-top: 3em;
-  }
-
-  &__image-container {
-    width: 100%;
   }
 
   &__image {
@@ -85,15 +62,64 @@
   }
 
   @media (min-width: 700px) {
-    --size: clamp(1rem, 10.5vw, 8rem);
-    padding-inline: var(--container-padding-size);
-    flex-direction: row;
-    justify-content: space-between;
-    overflow-y: visible;
-    transform: translateY(var(--size));
+    padding-top: 3rem;
+    grid-template-areas:
+      ". line    . photo ."
+      ". info info photo ."
+      ". .    .    photo .";
+    grid-template-columns: var(--container-padding-size) 0.3fr 1fr 1fr var(
+        --container-padding-size
+      );
+    grid-template-rows: 10px 2fr minmax(3rem, 170px);
 
-    & > * {
+    // Line on top of the Heading
+    .bgr {
+      grid-row: 3;
+      grid-column: 1 / -1;
       width: 100%;
+      height: 100%;
+      background: white;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+
+      grid-column: line;
+      grid-row: 1;
+
+      background: red;
+      width: 100%;
+      height: 10px;
+    }
+
+    // Backgrounds
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: 2;
+      inset: 0;
+      background-image: url(../../images/backgrounds/bg-pattern-intro-left-desktop.svg),
+        url(../../images/backgrounds/bg-pattern-intro-right-desktop.svg);
+      background-repeat: no-repeat;
+      // FIXME: modify background-size in smaller screen sizes
+      background-position: bottom left, top right;
+
+
+      @media (min-width: 700px) {
+        background-position: bottom left, top right;
+        background-size: 20%, 35%;
+      }
+
+      
+      
+      @media (min-width: 1000px) {
+        background-size: 11%, 23%;
+        
+      }
+      @media (min-width: 1400px) {
+        background-size: 12%, 26%;
+      }
     }
   }
 }
