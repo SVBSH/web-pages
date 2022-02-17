@@ -4,12 +4,6 @@
   justify-items: center;
   text-align: center;
 
-  &__img {
-    @media (min-width: 700px) {
-      margin-right: auto;
-    }
-  }
-
   &__heading {
     color: hsl(var(--clr-primary-dark));
     font-size: var(--fz-400);
@@ -20,12 +14,13 @@
 
   &__text {
     font-size: var(--fz-100);
-    color: hsl(var(--clr-primary-dark) / .4);
     font-weight: 400;
+    color: hsl(var(--clr-primary-dark) / .7);
     max-width: 37ch;
   }
 
   @media (min-width: 700px) {
+    justify-items: start;
     text-align: left;
   }
 }

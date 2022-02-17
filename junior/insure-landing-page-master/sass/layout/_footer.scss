@@ -1,13 +1,28 @@
 .footer {
+  // position: relative;
+  // background-color: var(--clr-neutral-light);
+
+  display: grid;
+  grid-template-areas:
+    ". logo       ."
+    ". social     ."
+    ". nav-bottom .";
+  grid-template-columns:
+    var(--container-padding-size)
+    1fr
+    var(--container-padding-size);
+
   --size: 2rem;
   letter-spacing: 1.5px;
 
   &__nav-container {
+    grid-area: nav-bottom;
     display: flex;
     flex-direction: column;
 
-    @media (min-width: 700px) {
+    @media (min-width: 600px) {
       flex-direction: row;
+      gap: 1rem;
       justify-content: space-between;
     }
   }
@@ -19,10 +34,13 @@
     &:last-of-type {
       padding-bottom: calc(2 * var(--size));
     }
-
+   
     &-category {
       font-family: var(--ff-primary);
+      font-size: var(--fz-200);
+
       font-weight: 900;
+
       color: hsl(var(--clr-neutral-gray) / 0.9);
       margin: 0;
       padding-block: var(--size);
@@ -56,62 +74,69 @@
     }
   }
 
-  &__intro {
-    position: relative;
-
-    display: flex;
-    gap: 1.75rem;
-    flex-direction: column;
-    justify-content: end;
-    padding-bottom: 2em;
-    align-items: center;
-    // aspect-ratio: 2 / 1;
-    background: top center
-      url("../../images/backgrounds/bg-pattern-footer-mobile.svg") no-repeat;
-    background-size: 100% 90%;
-
-    &::after {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      width: var(--base-width);
-      margin: 0 auto;
-      height: 1px;
-      background: hsl(var(--clr-neutral-gray) / 0.3);
-      transform: translateY(100%);
-
-      @media (min-width: 700px) {
-        width: 100%;
-      }
-    }
-
-    @media (min-width: 700px) {
-      width: 100%;
-      padding-top: 3rem;
-      background-image: none;
-      flex-direction: row;
-      justify-content: space-between;
-    }
-  }
-
-  &__logo {
-  }
-
   &__social {
+    grid-area: social;
     display: grid;
-    gap: 1rem;
+    gap: 1vw;
     grid-auto-flow: column;
     justify-content: center;
   }
 
+  .social__network {
+    cursor: pointer;
+
+    &:hover {
+      fill: hsl(var(--clr-primary-dark));
+    }
+  }
+
+  &__logo {
+    grid-area: logo;
+    justify-self: center;
+  }
+
+  &::after {
+    //   content: '';
+    //   position: absolute;
+    //   grid-column: social-start / social-end;
+
+    //   width: 100%;
+    //   height: 20px;
+    //   background: red;
+  }
+
+  @media (min-width: 600px) {
+    grid-template-areas:
+      ". logo           social  ."
+      ". nav-bottom  nav-bottom .";
+    grid-template-columns:
+      var(--container-padding-size)
+      1fr 1fr
+      var(--container-padding-size);
+
+    &__logo {
+      justify-self: start;
+    }
+    &__social {
+      justify-self: end;
+    }
+  }
+
   @media (min-width: 700px) {
-    padding-inline: var(--container-padding-size);
-    
+    padding-top: 4rem;
     background: top left
-      url("../../images/backgrounds/bg-pattern-footer-desktop.svg");
+      url("../../images/backgrounds/bg-pattern-footer-desktop.svg")
+      hsl(var(--clr-neutral-light));
     background-size: 40% 60%;
     background-repeat: no-repeat;
+  }
+
+  @media (min-width: 800px) {
+    grid-template-areas:
+      ". logo        .          social ."
+      ". nav-bottom  nav-bottom .      .";
+    grid-template-columns: var(--container-padding-size) max-content 1fr max-content var(
+        --container-padding-size
+      );
   }
 }

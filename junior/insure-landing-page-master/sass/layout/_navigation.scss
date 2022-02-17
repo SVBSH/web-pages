@@ -88,6 +88,7 @@
     }
 
     .nav__item {
+      cursor: pointer;
       padding: 0.8em 1em;
       color: hsl(var(--clr-neutral-light));
       @media (min-width: 700px) {
@@ -96,6 +97,8 @@
 
       &--fancy {
         outline: 3px solid hsl(var(--clr-primary-dark));
+        padding: .75em 2em;
+        color: hsl(var(--clr-neutral-dark));
 
         @media (min-width: 700px) {
           &:hover,
@@ -131,9 +134,6 @@
     }
   }
 
-  &__logo {
-  }
-
   @media (min-width: 700px) {
     grid-auto-flow: column;
     align-content: space-between;
@@ -152,12 +152,10 @@
     font-weight: 700;
     text-transform: uppercase;
     text-align: center;
-
-    &:hover {
-    }
   }
 
   &__link {
+    font-size: var(--fz-100);
     color: inherit;
   }
 }

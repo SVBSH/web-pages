@@ -1,21 +1,23 @@
 :root {
   // Colors
+  --opacity-clr-text: .65;
   --clr-primary-dark: 256 26% 20%;
   --clr-primary-blue: 216 30% 68%;
-
+  
   --clr-neutral-dark: 270 9% 17%;
   --clr-neutral-gray: 273 4% 51%;
   --clr-neutral-light: 0 0% 98%;
+
   // Font sizes
-  --fz-100: .87rem;
+  --fz-100: 1rem;
   --fz-200: 1rem;
   --fz-300: 1.125rem;
-  --fz-400: 1.5rem;
-
-  --fz-500: 2.2rem;
-  --fz-600: 3rem;
-
-  --fz-900: 3.5rem;
+  --fz-400: 1.25rem;
+  --fz-500: 1.5rem;
+  --fz-600: 2rem;
+  --fz-700: clamp(2rem,  6vw, 2.5rem);
+  --fz-800: clamp(2.5rem, 9vw, 3rem);
+  --fz-900: clamp(3rem, 9vw, 3.5rem);
 
   --ff-heading: "DM Serif Display", serif;
   --ff-primary: "Karla", sans-serif;
@@ -24,19 +26,21 @@
   --container-padding-size: calc((100% - var(--base-width)) / 2);
 
   @media (min-width: 700px) {
+    --fz-200: var(--fz-300);
     --base-width: 90%;
   }
 
   @media (min-width: 1200px) {
-    --fz-400: 1.75rem;
-    --fz-100: var(--fz-300);
-    --fz-500: var(--fz-600);
-    --base-width: max(90%)%;
+    // --fz-200: var(--fz-400);
+    --fz-600: clamp(2rem,  6vw, 2.5rem);
+    --base-width: max(90%);
   }
 
 
   @media (min-width: 1400px) {
-    --fz-500: var(--fz-900);
+    --fz-400: 1.5rem;
+    --fz-700: clamp(2.5rem, 9vw, 3rem);
+    --fz-800: var(--fz-900);
     --base-width: max(90%);
   }
 

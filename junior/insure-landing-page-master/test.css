@@ -12,12 +12,11 @@ ul {
 }
 
 .header {
-  display: grid;
+  /* display: grid;
   grid-template-areas: ". logoo navv .";
   grid-template-columns: 3rem max-content 1fr 3rem;
   grid-template-rows: max-content;
-  align-items: space-between;
-
+  align-items: space-between; */
 }
 
 .header__logo {
@@ -36,7 +35,6 @@ ul {
   flex-direction: column;
   background: red;
   height: 100vh;
-
 }
 
 .header__nav-item {
@@ -54,9 +52,30 @@ ul {
     flex-direction: row;
     justify-content: space-between;
   }
-
 }
 
 
 
+/* ================================================= */
+.tooltip {
+  /*position: relative;*/
+  display: inline-block;
+}
 
+/* Tooltip text */
+.tooltip .tooltipdetails {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltipdetails {
+  visibility: visible;
+}
