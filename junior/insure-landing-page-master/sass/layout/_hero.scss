@@ -12,6 +12,11 @@
 
   &__image-container {
     grid-area: photo;
+    
+  }
+  
+  &__image {
+    min-height: 400px;
   }
 
   &__info {

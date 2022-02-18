@@ -12,7 +12,8 @@
 
     text-transform: uppercase;    
 
-    &:hover {
+    &:hover,
+    &:focus {
         color: hsl(var(--color-invert));
         background-color: hsl(var(--bg-color-invert));
     }
