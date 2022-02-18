@@ -1,0 +1,33 @@
+.header {
+  border: 3px solid red;
+
+  display: grid;
+  grid-template-areas:
+    ". logo       .          menu       ."
+    ". navigation navigation navigation .";
+  grid-template-columns: 2rem min-content 1fr min-content 2rem;
+  grid-template-rows: max-content 0px;
+
+  &__logo {
+    grid-area: logo;
+    display: block;
+
+    background: rgb(132, 132, 192);
+  }
+
+  &__container {
+    grid-area: navigation;
+
+    &[data-active="false"] {
+      display: none;
+    }
+
+    &[data-active="true"] {
+      display: block;
+    }
+  }
+
+  &__menu {
+    grid-area: menu;
+  }
+}
