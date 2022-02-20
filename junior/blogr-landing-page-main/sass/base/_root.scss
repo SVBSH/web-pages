@@ -2,25 +2,24 @@
 /* Colors */
   // Text
   --clr-primary-red-900: 356 100% 66%;
-  --clr-neutral-: 0 0% 100%;
-  --clr-neutral-: 240 2% 79%; // Footer text
+  --clr-neutral-100: 0 0% 100%;
+  --clr-neutral-200: 240 2% 79%; // Footer text
   // Hover background
   --clr-primary-red-800: 355 100% 74%;
   // Footer background
-  --clr-neutral-: 240 10% 16%;
+  --clr-neutral-400: 240 10% 16%;
   //Headings
   --clr-primary-blue: 208 49% 24%;
   // Body copy
-  --clr-neutral-: 207 13% 34%;
+  --clr-neutral-300: 207 13% 34%;
 
 /* Gradients */
   --gradient-red: ;
   --gradient-dark-blue: ;
 
 /* Font settings */
-  // Font sizes
   --font-size: 1rem;
-  // Font families
+  
   --font-family-serif: "DM Serif Display", serif;
   --font-family-sans-1: "Karla", sans-serif;
   --font-family-sans-2: "Overpass", sans-serif;
@@ -31,4 +30,7 @@
   --font-weight-5: 500;
   --font-weight-6: 600;
   --font-weight-7: 700;
+
+  --base-width: 90%;
+  --container-base-width: calc((100% - var(--base-width)) / 2);
 }
