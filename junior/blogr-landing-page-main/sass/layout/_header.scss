@@ -1,33 +1,174 @@
 .header {
+  font-family: var(--font-family-sans-3);
+  font-weight: var(--font-weight-5);
+  color: hsl(var(--clr-primary-blue));
+
+  position: relative;
+
+  padding-block: 1em;
   border: 3px solid red;
 
   display: grid;
-  grid-template-areas:
-    ". logo       .          menu       ."
-    ". navigation navigation navigation .";
-  grid-template-columns: 2rem min-content 1fr min-content 2rem;
-  grid-template-rows: max-content 0px;
+  grid-template-areas: ". logo . menu .";
+  grid-template-columns: var(--container-base-width) max-content 1fr max-content var(
+      --container-base-width
+    );
+  align-items: center;
+  align-content: center;
 
   &__logo {
     grid-area: logo;
+    height: min(40px, 40px);
     display: block;
-
-    background: rgb(132, 132, 192);
   }
 
   &__container {
-    grid-area: navigation;
+    grid-column: logo-start / menu-end;
+    padding-inline: var(--container-base-width);
+    // border: 1px solid blue;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    margin-top: 1em;
 
-    &[data-active="false"] {
-      display: none;
+    max-height: 0vh;
+    transition: max-height 500ms linear;
+    background: white;
+    overflow: hidden;
+    text-align: center;
+
+    --border-radius-nav: 5px;
+    border-radius: var(--border-radius-nav);
+
+    &[data-menu-active="false"] {
+      max-height: 0vh;
+      // TODO: On larger screens set height to zero
     }
 
-    &[data-active="true"] {
-      display: block;
+    &[data-menu-active="true"] {
+      max-height: 100vh;
+    }
+  }
+
+  &__nav {
+    &-list {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &-item {
+    }
+
+    &-link {
+      padding: 1em 3em;
     }
   }
 
   &__menu {
     grid-area: menu;
+    padding: 1em 1em;
+    // remove blue lign after click on link
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+    background-image: url("../../images/icons/icon-hamburger.svg");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 18px;
+    width: 32px;
+    cursor: pointer;
+  }
+
+  &__user-btn-container {
+    padding-block: 2em;
+    // border: 1px solid red;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 1.3em;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0.6em;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: hsl(var(--clr-neutral-200));
+    }
+  }
+
+  &__user-btn {
+    &--login {
+    }
+
+    &--sing-up {
+    }
+  }
+}
+
+.dropdown {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.9em;
+
+  opacity: 0.7;
+  &-button {
+    display: block;
+    // color: green !important;
+  }
+  cursor: pointer;
+  max-height: 0;
+  transition: max-height 300ms ease-out;
+
+  background: hsl(var(--clr-neutral-300) / 0.2);
+  border-radius: var(--border-radius-nav);
+  overflow: hidden;
+
+  &-button {
+    position: relative;
+
+    // Icon open/close dropdown menu
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      margin-left: 0.3em;
+      width: 10px;
+      height: 7px;
+      background-repeat: no-repeat;
+      // TODO: on window width > 700px change img to:
+      //  url('../../images/icons/icon-arrow-light.svg');
+      transition: transform 400ms ease;
+      background-image: url("../../images/icons/icon-arrow-dark.svg");
+    }
+
+    &[data-active="true"] {
+      opacity: .78;
+
+      &::after {
+        transform: scaleY(-1);
+      }
+    }
+
+  }
+
+  &__item {
+    --padding-size: 1em;
+    &:first-of-type {
+      padding-top: var(--padding-size);
+    }
+
+    &:last-of-type {
+      padding-bottom: var(--padding-size);
+    }
+
+    &:hover {
+      color: red;
+    }
   }
 }
