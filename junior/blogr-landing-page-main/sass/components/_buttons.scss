@@ -1,0 +1,34 @@
+.btn {
+  margin-top: 2em;
+  margin-left: 2em;
+  display: block;
+  border-radius: var(--border-radius, 40px);
+  color: var(--color, hsl(var(--clr-neutral-100)));
+  background: var(--background, hsl(var(--clr-primary-red-900)));
+  padding: .75em 2.5em;
+  font-family: var(--font-family-sans-3);
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.btn--white {
+  --color: hsl(var(--clr-primary-red-900));
+  --background: hsl(var(--clr-neutral-100));
+
+
+  &:hover {
+    --color: hsl(var(--clr-neutral-100)) ;
+    --background: hsl(var(--clr-primary-red-800) / .25);
+  }
+}
+
+.btn--red {
+  border: 2px solid hsl(var(--clr-neutral-100));
+  
+  &:hover {
+    --color: hsl(var(--clr-primary-red-800));
+    --background: hsl(var(--clr-neutral-100));
+  }
+
+}
+
