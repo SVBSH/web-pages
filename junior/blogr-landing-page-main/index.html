@@ -12,7 +12,7 @@
       href="./images/favicon-32x32.png"
     />
     <title>Frontend Mentor | [Blogr]</title>
-    <link rel="stylesheet" href="./sass/main.css" />
+    <link rel="stylesheet" href="./css/main.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -32,7 +32,7 @@
   </head>
   <body>
     <header class="header">
-      <a href="#" class="header__logo" aria-label="Logo">
+      <a href="#" class="header__logo logo" aria-label="Logo">
         <svg
           class="logo haeder_logo-img"
           width="101"
@@ -50,11 +50,11 @@
       <div class="header__container" data-menu-active="true">
         <nav class="header__nav" aria-label="Primary">
           <ul class="header__nav-list">
-            <li class="header__nav-item header__nav-item--parent">
-              <a data-active="false" class="dropdown-button header__nav-link" href="#">Product</a>
-              <ul
-                class="dropdown"
+            <li class="header__nav-item">
+              <a data-active="false" class="dropdown-button" href="#"
+                >Product</a
               >
+              <ul class="dropdown">
                 <li class="dropdown__item">
                   <a href="#" class="dropdown__link">Overview</a>
                 </li>
@@ -73,11 +73,7 @@
               </ul>
             </li>
             <li class="header__nav-item">
-              <a
-                class="dropdown-button header__nav-link"
-                data-active="false"
-                >Company</a
-              >
+              <a class="dropdown-button" data-active="false">Company</a>
               <ul class="dropdown">
                 <li class="dropdown__item">
                   <a href="#" class="dropdown__link">About</a>
@@ -94,7 +90,9 @@
               </ul>
             </li>
             <li class="header__nav-item">
-              <a data-active="false" class="dropdown-button header__nav-link" href="#">Connect</a>
+              <a data-active="false" class="dropdown-button" href="#"
+                >Connect</a
+              >
               <ul class="dropdown">
                 <li class="dropdown__item">
                   <a href="#" class="dropdown__link">Contact</a>
@@ -109,18 +107,31 @@
             </li>
           </ul>
         </nav>
-        <div class="header__user-btn-container">
-          <button class="header__user-btn header__user-btn--login">
-            Login
-          </button>
-          <button class="header__user-btn header__user-btn--sign-up">
-            Sign Up
-          </button>
+        <div class="header__btn-container">
+          <button class="header__btn header__btn--login">Login</button>
+          <button class="header__btn header__btn--sign-up">Sign Up</button>
         </div>
       </div>
 
-      <button class="btn header__menu" aria-label="Primary menu" aria-level="0"></button>
+      <button
+        class="header__menu"
+        aria-label="Primary menu"
+        aria-level="0"
+      ></button>
+      
     </header>
+
+    
+    <!-- <div class="container">
+      <h1 class="main__heading">A modern publishing platform</h1>
+      <h1 class="th__heading">Designed for the future</h1>
+      <h1 class="snd__heading">Robust content management</h1>
+      <p class="text">Grow your audience and build your online brand</p>
+    </div> -->
+
+
+    <!-- <button class="btn btn--gradient-red">Sign Up</button> -->
+
 
     <!-- 
   A modern publishing platform
