@@ -35,7 +35,7 @@ function registerDropdowns(dropdownButtons) {
 function closeDropdowns(dropdownButtons) {
   dropdownButtons.forEach(button => {
     const dropdownOpen = getDropdownState(button);
-    console.log(`state: ${getDropdownState(button)}`)
+    // console.log(`state: ${getDropdownState(button)}`)
     if (dropdownOpen) {
       button.nextElementSibling.style.maxHeight = `0px`;
       setDropdownState(button, false);
@@ -54,10 +54,11 @@ function registerPrimaryMenu(dropdownButtons) {
       return;
     }
     menuStatus = JSON.parse(primaryMenu.getAttribute("data-menu-active"));
-    if(menuStatus) {
+    primaryMenu.setAttribute('data-menu-active', !menuStatus);
+    // If main menu is open
+    if(!menuStatus) {
       closeDropdowns(dropdownButtons);
     }
-    primaryMenu.setAttribute('data-menu-active', !menuStatus);
   }
 }
 
