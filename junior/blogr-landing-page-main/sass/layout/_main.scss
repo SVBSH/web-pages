@@ -1,0 +1,27 @@
+.main {
+  padding-inline: var(--container-base-width);
+
+  &__heading--decor {
+    display: block;
+  }
+
+  &__btn-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: .5em;
+    &>* {
+      width: 100%;
+    }
+    justify-items: center;
+    // grid-auto-flow: column;
+
+    @media (min-width: 400px) {
+      flex-direction: row;
+    }
+  }
+
+  &__btn {
+    padding: .75em 1em;
+  }
+}
