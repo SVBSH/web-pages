@@ -1,0 +1,15 @@
+$breakpoints: (
+  700: 700px,
+  1000: 1000px,
+  1400: 1400px
+);
+
+@function get-breakpoint($breakpoint) {
+  @return map-get($map: $breakpoints, $key: $breakpoint)
+};
+
+@mixin media($breakpoint) {
+  @media (min-width: get-breakpoint($breakpoint)) {
+    @content;
+  }
+};
