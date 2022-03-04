@@ -1,0 +1,485 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-family: var(--font-family-sans-2);
+  background: var(--gradient-dark-blue);
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+}
+
+ul[class] {
+  list-style: none;
+}
+
+a[class] {
+  color: inherit;
+  text-decoration: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+button {
+  background: none;
+  border: none;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+*::before,
+*::after {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+:root {
+  /* Colors */
+  --clr-primary-red-900: 356 100% 66%;
+  --clr-neutral-100: 0 0% 100%;
+  --clr-neutral-200: 240 2% 79%;
+  --clr-primary-red-800: 355 100% 74%;
+  --clr-neutral-400: 240 10% 16%;
+  --clr-primary-blue: 208 49% 24%;
+  --clr-neutral-300: 207 13% 34%;
+  /* Gradients */
+  --gradient-red: linear-gradient(
+    45deg,
+    hsl(13, 100%, 72%),
+    hsl(353, 100%, 62%) 90%
+  );
+  --gradient-dark-blue: linear-gradient(
+    45deg,
+    hsl(237, 17%, 21%),
+    hsl(237, 23%, 32%)
+  );
+  /* Font settings */
+  --font-family-serif: "DM Serif Display", serif;
+  --font-family-sans-1: "Karla", sans-serif;
+  --font-family-sans-2: "Overpass", sans-serif;
+  --font-family-sans-3: "Ubuntu", sans-serif;
+  --font-size-100: 0.87rem;
+  --font-size-200: 1rem;
+  --font-size-300: 1.5rem;
+  --font-size-900: clamp(2rem, 3.5vw, 3.5rem);
+  --font-weight-3: 300;
+  --font-weight-4: 400;
+  --font-weight-5: 500;
+  --font-weight-6: 600;
+  --font-weight-7: 700;
+  /* Container && padding width */
+  --base-width: 90%;
+  --container-base-width: calc((100% - var(--base-width)) / 2);
+}
+
+.btn {
+  display: block;
+  border-radius: var(--border-radius, 40px);
+  color: var(--color, hsl(var(--clr-neutral-100)));
+  background: var(--background, hsl(var(--clr-primary-red-900)));
+  font-family: var(--font-family-sans-3);
+  font-weight: 900;
+  cursor: pointer;
+  max-width: 200px;
+}
+
+.btn--white {
+  --color: hsl(var(--clr-primary-red-900));
+  --background: hsl(var(--clr-neutral-100));
+}
+.btn--white:hover {
+  --color: hsl(var(--clr-neutral-100)) ;
+  --background: hsl(var(--clr-primary-red-800) / .25);
+}
+
+.btn--red {
+  border: 2px solid hsl(var(--clr-neutral-100));
+}
+.btn--red:hover {
+  --color: hsl(var(--clr-primary-red-800));
+  --background: hsl(var(--clr-neutral-100));
+}
+
+.btn--gradient-red {
+  --background: var(--gradient-red);
+}
+
+.logo {
+  display: block;
+  height: 40px;
+  width: 101px;
+}
+
+@media (min-width: 700px) {
+  .dropdown:hover .dropdown__list {
+    max-height: 500px;
+    transform: scaleY(1);
+  }
+}
+.dropdown--open {
+  -webkit-animation-name: tgl;
+          animation-name: tgl;
+  -webkit-animation-duration: 500ms;
+          animation-duration: 500ms;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+@media (min-width: 700px) {
+  .dropdown--open {
+    transform: scaleY(0);
+    max-height: 0;
+    -webkit-animation: none;
+            animation: none;
+  }
+}
+.dropdown__btn {
+  display: block;
+  position: relative;
+  cursor: pointer;
+}
+.dropdown__btn::after {
+  cursor: inherit;
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 auto;
+  width: 10px;
+  height: 7px;
+  margin-block: auto;
+  margin-left: 0.3em;
+  background-repeat: no-repeat;
+  background-image: url("../../images/icons/icon-arrow-dark.svg");
+  transition: transform 400ms ease;
+}
+@media (min-width: 700px) {
+  .dropdown__btn::after {
+    background-image: url("../../images/icons/icon-arrow-light.svg");
+  }
+}
+.dropdown__btn:focus-within, .dropdown__btn:hover {
+  opacity: 0.58;
+}
+.dropdown__btn:focus-within::after, .dropdown__btn:hover::after {
+  transform: scaleY(-1);
+}
+.dropdown__list {
+  position: relative;
+  min-width: 10rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9em;
+  max-height: 0;
+  transform: scaleY(0);
+  background: hsl(var(--clr-neutral-300)/0.2);
+  border-radius: var(--border-radius-nav);
+  transition: max-height 500ms ease-out;
+  opacity: 0.7;
+  cursor: pointer;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+@media (min-width: 700px) {
+  .dropdown__list {
+    position: absolute;
+    top: 80%;
+    z-index: 4;
+    background: white;
+    opacity: 1;
+  }
+}
+.dropdown__item {
+  --padding-size: 1em;
+  padding-inline: 1.5em;
+}
+.dropdown__item:first-of-type {
+  padding-top: var(--padding-size);
+}
+.dropdown__item:last-of-type {
+  padding-bottom: var(--padding-size);
+}
+.dropdown__item:hover {
+  color: red;
+}
+
+.header {
+  position: relative;
+  background: hsl(var(--clr-primary-red-900)/0.9);
+  display: grid;
+  grid-template-columns: var(--container-base-width) -webkit-max-content 1fr -webkit-max-content var(--container-base-width);
+  grid-template-columns: var(--container-base-width) max-content 1fr max-content var(--container-base-width);
+  padding-block: 1em;
+  border: 3px solid red;
+  font-family: var(--font-family-sans-3);
+  font-weight: var(--font-weight-5);
+  color: hsl(var(--clr-primary-blue));
+}
+@media (min-width: 700px) {
+  .header {
+    grid-template-columns: var(--container-base-width) -webkit-min-content 1fr var(--container-base-width);
+    grid-template-columns: var(--container-base-width) min-content 1fr var(--container-base-width);
+  }
+}
+.header__logo {
+  align-self: center;
+  grid-column: 2;
+}
+@media (min-width: 700px) {
+  .header__logo {
+    padding-right: 1.5em;
+    margin-right: 2em;
+  }
+}
+.header__nav-container {
+  --border-radius-nav: 5px;
+  grid-column: 2/5;
+  display: grid;
+  align-items: center;
+  padding-block: 1em;
+  padding-inline: var(--container-base-width);
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  margin-top: 1em;
+  max-height: 0;
+  transform: scaleY(0);
+  transition: max-height 500ms linear;
+  background: hsl(var(--clr-neutral-100));
+  text-align: center;
+  border-radius: var(--border-radius-nav);
+}
+@media (min-width: 700px) {
+  .header__nav-container {
+    grid-auto-flow: column;
+    background: transparent;
+    text-align: left;
+    grid-column: 3;
+    position: initial;
+    padding-inline: 0;
+    margin-top: 0;
+    justify-content: space-between;
+    max-height: 100vh;
+    transform: scaleY(1);
+  }
+}
+.header__nav-container[data-menu-active=false] {
+  max-height: 100vh;
+  transform: scaleY(1);
+}
+.header__nav-container[data-menu-active=true] {
+  max-height: 0vh;
+}
+@media (min-width: 700px) {
+  .header__nav-container[data-menu-active=true] {
+    max-height: 100%;
+  }
+}
+.header__nav-list {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 700px) {
+  .header__nav-list {
+    flex-direction: row;
+    gap: 1em;
+  }
+}
+.header__nav-item {
+  padding: 0.75em 1em;
+}
+.header__nav-link {
+  padding: 1em 3em;
+}
+@media (min-width: 700px) {
+  .header__nav-link {
+    padding: 0em 0.5em;
+  }
+}
+.header__menu {
+  grid-column: 4;
+  padding: 1em 1em;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  background-image: url("../../images/icons/icon-hamburger.svg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 18px;
+  width: 32px;
+  cursor: pointer;
+}
+@media (min-width: 700px) {
+  .header__menu {
+    display: none;
+  }
+}
+.header__btn-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8em;
+}
+@media (min-width: 700px) {
+  .header__btn-container {
+    flex-direction: row;
+    gap: 3em;
+  }
+}
+.header__btn-container::before {
+  content: "";
+  position: absolute;
+  inset: 0.6em 0 0 auto;
+  height: 1px;
+  background: hsl(var(--clr-neutral-200));
+}
+@media (min-width: 700px) {
+  .header__btn-container::before {
+    display: none;
+  }
+}
+.header__btn--login {
+  --background: transparent;
+  --color: hsl(var(--clr-primary-blue));
+}
+.main {
+  padding-inline: var(--container-base-width);
+}
+.main__heading--decor {
+  display: block;
+}
+.main__btn-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.5em;
+  justify-items: center;
+}
+.main__btn-container > * {
+  width: 100%;
+}
+@media (min-width: 400px) {
+  .main__btn-container {
+    flex-direction: row;
+  }
+}
+.main__btn {
+  padding: 0.75em 1em;
+}
+
+.text {
+  font-family: var(--font-family-sans-2);
+  font-weight: var(--font-weight-3);
+  font-size: clamp(var(--font-size-100), 2vw, 1rem);
+  color: hsl(var(--clr-neutral-100));
+}
+
+.heading {
+  font-family: var(--font-family-sans-2);
+  font-weight: var(--font-weight-6);
+}
+
+.heading--title {
+  color: hsl(var(--clr-neutral-100));
+  font-size: clamp(var(--font-size-300), 4.5vw, 3.5rem);
+}
+
+.heading--2 {
+  color: hsl(var(--clr-primary-blue));
+  font-size: clamp(1.35rem, 4.5vw, var(--font-size-300));
+  line-height: 1.2;
+}
+
+.heading--3 {
+  color: hsl(var(--clr-primary-blue));
+  font-size: clamp(1.35rem, 4.5vw, 1.95rem);
+  line-height: 1.2;
+}
+
+.container {
+  padding: var(--container-base-width);
+}
+
+@-webkit-keyframes tgl {
+  0% {
+    max-height: 0px;
+  }
+  25% {
+    transform: scaleY(1);
+  }
+  100% {
+    max-height: 500px;
+    transform: scaleY(1);
+  }
+}
+
+@keyframes tgl {
+  0% {
+    max-height: 0px;
+  }
+  25% {
+    transform: scaleY(1);
+  }
+  100% {
+    max-height: 500px;
+    transform: scaleY(1);
+  }
+}/*# sourceMappingURL=main.css.map */
