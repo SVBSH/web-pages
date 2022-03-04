@@ -1,0 +1,14 @@
+@keyframes tgl {
+  0% {
+    max-height: 0px;
+  }
+
+  25% {
+    transform: scaleY(1);
+  }
+
+  100% {
+    max-height: 500px;
+    transform: scaleY(1);
+  }
+}
