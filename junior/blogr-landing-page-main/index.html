@@ -47,14 +47,14 @@
         </svg>
       </a>
 
-      <div class="header__container" data-menu-active="true">
+      <div class="header__nav-container" data-menu-active="false">
         <nav class="header__nav" aria-label="Primary">
           <ul class="header__nav-list">
-            <li class="header__nav-item">
-              <a data-active="false" class="dropdown-button" href="#"
+            <li class="header__nav-item dropdown">
+              <a data-active="false" class="dropdown__btn" href="#"
                 >Product</a
               >
-              <ul class="dropdown">
+              <ul class="dropdown__list">
                 <li class="dropdown__item">
                   <a href="#" class="dropdown__link">Overview</a>
                 </li>
@@ -72,9 +72,11 @@
                 </li>
               </ul>
             </li>
-            <li class="header__nav-item">
-              <a class="dropdown-button" data-active="false">Company</a>
-              <ul class="dropdown">
+            <li class="header__nav-item dropdown">
+              <a data-active="false" class="dropdown__btn" href="#"
+                >Company</a
+              >
+              <ul class="dropdown__list">
                 <li class="dropdown__item">
                   <a href="#" class="dropdown__link">About</a>
                 </li>
@@ -89,11 +91,11 @@
                 </li>
               </ul>
             </li>
-            <li class="header__nav-item">
-              <a data-active="false" class="dropdown-button" href="#"
+            <li class="header__nav-item dropdown">
+              <a data-active="false" class="dropdown__btn" href="#"
                 >Connect</a
               >
-              <ul class="dropdown">
+              <ul class="dropdown__list">
                 <li class="dropdown__item">
                   <a href="#" class="dropdown__link">Contact</a>
                 </li>
@@ -108,8 +110,8 @@
           </ul>
         </nav>
         <div class="header__btn-container">
-          <button class="header__btn header__btn--login">Login</button>
-          <button class="header__btn header__btn--sign-up">Sign Up</button>
+          <button class="btn header__btn header__btn--login">Login</button>
+          <button class="btn btn--red header__btn header__btn--sign-up">Sign Up</button>
         </div>
       </div>
 
@@ -120,7 +122,16 @@
       ></button>
       
     </header>
-
+    <main class="main">
+      <div class="main__info">
+        <h1 class="main__heading heading heading--title"><span class="main__heading--decor">A modern</span> publishing platform</h1>
+        <p class="main__text  text">Grow your audience and build your online brand</p>
+      </div>
+      <div class="main__btn-container">
+        <button class="main__btn btn btn--white">Start for Free</button>
+        <button class="main__btn btn">Learn More</button>
+      </div>
+    </main>
     
     <!-- <div class="container">
       <h1 class="main__heading">A modern publishing platform</h1>
@@ -134,12 +145,6 @@
 
 
     <!-- 
-  A modern publishing platform
-  Grow your audience and build your online brand
-
-  Start for Free
-  Learn More
-
   Designed for the future
 
   Introducing an extensible editor

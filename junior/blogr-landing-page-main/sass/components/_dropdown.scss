@@ -1,24 +1,32 @@
 @use "../abstracts/breakpoints" as *;
 
+@keyframes drop {
+  0% {
+    opacity: 0;
+    transform: scaleY(0);
+  }
+  40% {
+    opacity: 1;
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
 
 .dropdown {
+
   @include media(700) {
     &:hover &__list {
-      max-height: 500px;
-      transform: scaleY(1);
+      display: flex;
+      transform-origin: top;
+      animation: drop 300ms ease-out;
     }
   }
 
   &--open {
-    animation-name: tgl;
-    animation-duration: 500ms;
-    animation-fill-mode: forwards;
-  
-    @include media(700) {
-      transform: scaleY(0);
-      max-height: 0;
-      animation: none;
-    }
+    display: flex !important;
+    transform-origin: top !important;
+    animation: drop 300ms ease-out !important;
   }
 
   &__btn {
@@ -56,27 +64,39 @@
         transform: scaleY(-1);
       }
     }
+
+    &:focus-within ~ .dropdown__list {
+      transform-origin: top;
+      animation: drop 200ms ease-out;
+      display: flex;
+    }
   }
 
   &__list {
+    
+
     position: relative;
     min-width: 10rem;
     display: flex;
     flex-direction: column;
     gap: 0.9em;
-    // close dropdown
-    max-height: 0;
-    transform: scaleY(0);
-
+    display: none;
 
     background: hsl(var(--clr-neutral-300) / 0.2);
     border-radius: var(--border-radius-nav);
 
-    transition: max-height 500ms ease-out;
-
     opacity: 0.7;
     cursor: pointer;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+
+    &:focus-within,
+    &:hover {
+      transform-origin: top;
+      animation: drop 200ms ease-out;
+      display: flex;
+    }
+
 
     @include media(700) {
       position: absolute;
@@ -102,4 +122,9 @@
       color: red;
     }
   }
+}
+
+.dropdown--open-1 {
+  transform: scaleY(0);
+  max-height: 0;
 }

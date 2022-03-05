@@ -40,8 +40,8 @@ body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
-  background: rgb(29, 26, 26);
-  background: hsl(var(--clr-primary-red-900) / 0.9);
+  font-family: var(--font-family-sans-2);
+  background: var(--gradient-dark-blue);
 }
 
 /* A elements that don't have a class get default styles */

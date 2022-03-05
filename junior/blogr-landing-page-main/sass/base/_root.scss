@@ -1,5 +1,5 @@
 :root {
-/* Colors */
+  /* Colors */
   // Text
   --clr-primary-red-900: 356 100% 66%;
   --clr-neutral-100: 0 0% 100%;
@@ -13,17 +13,29 @@
   // Body copy
   --clr-neutral-300: 207 13% 34%;
 
-/* Gradients */
-  --gradient-red: ;
-  --gradient-dark-blue: ;
+  /* Gradients */
+  --gradient-red: linear-gradient(
+    45deg,
+    hsl(13, 100%, 72%),
+    hsl(353, 100%, 62%) 90%
+  );
+  --gradient-dark-blue: linear-gradient(
+    45deg,
+    hsl(237, 17%, 21%),
+    hsl(237, 23%, 32%)
+  );
 
-/* Font settings */
-  --font-size: 1rem;
-  
+  /* Font settings */
   --font-family-serif: "DM Serif Display", serif;
   --font-family-sans-1: "Karla", sans-serif;
   --font-family-sans-2: "Overpass", sans-serif;
   --font-family-sans-3: "Ubuntu", sans-serif;
+
+  --font-size-100: 0.87rem;
+  --font-size-200: 1rem;
+  --font-size-300: 1.5rem;
+  
+  --font-size-900: clamp(2rem, 3.5vw, 3.5rem);
 
   --font-weight-3: 300;
   --font-weight-4: 400;
@@ -31,6 +43,7 @@
   --font-weight-6: 600;
   --font-weight-7: 700;
 
+  /* Container && padding width */
   --base-width: 90%;
   --container-base-width: calc((100% - var(--base-width)) / 2);
 }
