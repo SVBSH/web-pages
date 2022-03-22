@@ -1,0 +1,20 @@
+::-webkit-scrollbar {
+  width: 10px;
+
+  &-track,
+  &-thumb {
+    border-radius: 10px;
+  }
+
+  &-track {
+    box-shadow: inset 0 0 1px var(--clr-neutral-blue-150); 
+  }
+
+  &-thumb {
+    background: hsl(0 0% 31%);
+
+    &:hover {
+      background: hsl(0 0% 31% / .7);
+    }
+  }
+}
