@@ -1,6 +1,7 @@
 // Base styles
 @use './base/root';
 @use './base/reset';
+@use './base/scrollbar';
 // Components
 @use './components/search_form';
 @use './components/carousel';

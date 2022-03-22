@@ -2,7 +2,7 @@
   display: block;
   border-radius: var(--border-radius, 40px);
   color: var(--color, hsl(var(--clr-neutral-100)));
-  background: var(--background, hsl(var(--clr-primary-red-900)));
+  background: var(--background, transparent);
   font-family: var(--font-family-sans-3);
   font-weight: 900;
   cursor: pointer;
@@ -13,16 +13,17 @@
   --color: hsl(var(--clr-primary-red-900));
   --background: hsl(var(--clr-neutral-100));
 
-
+  &:focus-within,
   &:hover {
     --color: hsl(var(--clr-neutral-100)) ;
-    --background: hsl(var(--clr-primary-red-800) / .25);
+    --background: hsl(var(--clr-primary-red-800) );
   }
 }
 
 .btn--red {
   border: 2px solid hsl(var(--clr-neutral-100));
   
+  &:focus-within,
   &:hover {
     --color: hsl(var(--clr-primary-red-800));
     --background: hsl(var(--clr-neutral-100));
@@ -32,4 +33,5 @@
 
 .btn--gradient-red {
   --background: var(--gradient-red);
+  
 }

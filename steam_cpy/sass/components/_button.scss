@@ -6,8 +6,9 @@
   border-radius: 4px;
   cursor: pointer;
   color: var(--clr-primary-blue);
-
-  :hover {
+  
+  &:focus,
+  &:hover {
     color: var(--clr-neutral-gray-150);
   }
 }

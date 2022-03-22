@@ -1,0 +1,30 @@
+.feature-container {
+  text-align: center;
+  padding: var(--container-base-width);
+  
+  display: flex;
+  flex-direction: column;
+  gap: 4em;
+}
+
+.feature {
+  display: grid;
+
+  &__article {
+    display: flex;
+    flex-direction: column;
+    gap: .4em;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 2.1em;
+  }
+
+  .text {
+    color: hsl(var(--clr-primary-blue));
+  }
+
+  
+}

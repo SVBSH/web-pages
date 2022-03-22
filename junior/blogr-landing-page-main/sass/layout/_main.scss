@@ -1,27 +1,70 @@
+.bg-hero-container {
+  background-image: url("../../images/mobile/bg-pattern-intro-mobile.svg"),
+    linear-gradient(70deg, hsl(13, 100%, 72%), hsl(353, 100%, 62%) 90%);
+  background-position: left 40% top 35%;
+  background-repeat: no-repeat;
+  background-color: hsl(var(--clr-primary-red-800));
+  border-bottom-left-radius: var(--radius-bottom-left);
+
+  @media (min-width: 500px) {
+    background-position: left 40% top 40%;
+    background-size: 250%;
+  }
+
+  @media (min-width: 800px) {
+    background-image: url("../../images/desktop/bg-pattern-intro-desktop.svg"),
+      linear-gradient(70deg, hsl(13, 100%, 72%), hsl(353, 100%, 62%) 90%);
+    background-size: 200%;
+    background-position: left 17% center;
+  }
+}
+
 .main {
+  padding-block: 6rem;
   padding-inline: var(--container-base-width);
+  text-align: center;
 
   &__heading--decor {
     display: block;
+    @media (min-width: 700px) {
+      display: inline-block;
+    }
+  }
+
+  &__text {
+    padding-top: 1em;
+    max-width: 25ch;
+    margin: 0 auto;
+
+    @media (min-width: 700px) {
+      max-width: 100%;
+    }
+    
   }
 
   &__btn-container {
+    margin-top: 2.7rem;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: .5em;
-    &>* {
+    align-items: center;
+
+    gap: 0.5em;
+
+    & > * {
       width: 100%;
     }
     justify-items: center;
     // grid-auto-flow: column;
 
     @media (min-width: 400px) {
+      gap: clamp(0.5rem, 0.6rem, 1rem);
       flex-direction: row;
     }
   }
 
   &__btn {
-    padding: .75em 1em;
+    padding: 0.75em 1em;
   }
 }

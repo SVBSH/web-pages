@@ -16,8 +16,8 @@
 <body class="body-container body-grid">
 
   <header class="header">
-    <img src="./assets/images/logo_steam.svg" alt="Logo - Steam" class="header__logo">
     <nav class="header__nav">
+      <img src="./assets/images/logo_steam.svg" alt="Logo - Steam" class="header__logo">
       <ul class="header__list">
         <li class="header__item"><a href="#" class="header__link">Store</a></li>
         <li class="header__item"><a href="#" class="header__link">Community</a></li>
@@ -29,7 +29,7 @@
 
   <main class="main">
 
-    <nav class="main__nav padding-container">
+    <nav class="main__nav">
       <ul class="main__nav-list">
         <li class="main__nav-item"><a href="#" class="main__nav-link">Your Store</a></li>
         <li class="main__nav-item"><a href="#" class="main__nav-link">New & Noteworthy</a></li>
@@ -41,13 +41,10 @@
       <form action="" class="main__nav-search search-form">
         <input id="search" type="text" placeholder="search" class=" search-form__input">
         <button type="submit" class="material-icons-outlined search-form__icon">search</button>
-        <!-- <label class="material-icons-outlined search-form__icon">
-          search
-        </label> -->
       </form>
     </nav>
 
-    <section class="main__title-container padding-container">
+    <div class="main__title-container">
       <h1 class="main__title main-heading">Grand Theft Auto V</h1>
       <nav class="short__nav">
         <ul class="short__nav-list">
@@ -63,51 +60,52 @@
         </ul>
       </nav>
       <a href="#" class="btn">Community Hub</a>
-    </section>
+    </div>
     
-    <img src="./assets/images/game_card.jpg" alt="Game" class="game__hero-img">
-
-    <section class="game-info-container padding-container game">
-    
-      <div class="game__info">
-        <h1 class="game__title main-heading">Grand Theft Auto V</h1>
-        <p class="game__description">
-          Grand Theft Auto V for PC offers players the option to explore the award-winning world of Los Santos and Blaine County in resolutions of up to 4k and beyond, as well as the chance to experience the game running at 60 frames per second.
-        </p>
-      </div>
-    
-      <ul class="game__detail-list detail">
-        <li class="game__detail-item">
-          <p class="game__detail-heading">Developer</p>
-          <p class="game__detail-text game__detail-text--blue">Rockstar North</p>
-        </li>
-        <li class="game__detail-item">
-          <p class="game__detail-heading">Publisher</p>
-          <p class="game__detail-text game__detail-text--blue">Rockstar Games</p>
-        </li>
-        <li class="game__detail-item">
-          <p class="game__detail-heading">Released</p>
-          <p class="game__detail-text">14 Apr, 2015</p>
-        </li>
-      </ul>
-      <section class="genre">
-        <h3 class="genre__heading">TAGS</h3>
-        <ul class="genre__container">
-          <li class="genre__name">
-            <button class="btn">Open World</button>
+    <div class="game-description-container game">
+      <img src="./assets/images/game_card.jpg" alt="Game" class="game-description__img game__hero-img">
+      <div class="game-info-wrapper">
+        <div class="game-info">
+          <h1 class="game-info__title game__title main-heading">Grand Theft Auto V</h1>
+          <p class="game-info__description game__description">
+            Grand Theft Auto V for PC offers players the option to explore the award-winning world of Los Santos and Blaine County in resolutions of up to 4k and beyond, as well as the chance to experience the game running at 60 frames per second.
+          </p>
+        </div>
+        
+        <ul class="game__detail-list detail">
+          <li class="detail__item">
+            <p class="detail__heading">Developer</p>
+            <p class="detail__text detail__text--blue">Rockstar North</p>
           </li>
-          <li class="genre__name">
-            <button class="btn">Action</button>
+          <li class="detail__item">
+            <p class="detail__heading">Publisher</p>
+            <p class="detail__text detail__text--blue">Rockstar Games</p>
           </li>
-          <li class="genre__name">
-            <button class="btn">Multiplayer</button>
-          </li>
-          <li class="genre__name" data-active="false">
-            <button class="btn">+</button>
+          <li class="detail__item">
+            <p class="detail__heading">Released</p>
+            <p class="detail__text">14 Apr, 2015</p>
           </li>
         </ul>
-      </section>
-    </section>
+        
+        <section class="game__genre genre">
+          <h3 class="genre__heading">TAGS</h3>
+          <ul class="genre__container">
+            <li class="genre__name">
+              <button class="btn genre__btn">Open World</button>
+            </li>
+            <li class="genre__name">
+              <button class="btn genre__btn">Action</button>
+            </li>
+            <li class="genre__name">
+              <button class="btn genre__btn">Multiplayer</button>
+            </li>
+            <li class="genre__name" data-active="false">
+              <button class="btn genre__btn">+</button>
+            </li>
+          </ul>
+        </section>
+      </div>
+    </div>
     
     <div class="carousel">
       <div class="carousel__hero-container">
@@ -121,9 +119,6 @@
         <img src="./assets/images/small_img5.jpg" alt="game scene" class="carousel__img">
       </div>
     </div>
-
-
-    <!-- .main__info.game__description> -->
   </main>
 
   <footer class="footer">

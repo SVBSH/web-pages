@@ -2,15 +2,12 @@
 
 .header {
   position: relative;
-  background: hsl(var(--clr-primary-red-900) / 0.9);
-
   display: grid;
   grid-template-columns: var(--container-base-width) max-content 1fr max-content var(
       --container-base-width
     );
 
-  padding-block: 1em;
-  border: 3px solid red;
+  padding-top: 3em;
   font-family: var(--font-family-sans-3);
   font-weight: var(--font-weight-5);
   color: hsl(var(--clr-primary-blue));
@@ -32,6 +29,8 @@
   }
 
   &__nav-container {
+    box-shadow: 0 0 20px 10px hsl(var(--clr-primary-blue) / 0.2);
+
     --border-radius-nav: 5px;
     grid-column: 2 / 5;
     display: grid;
@@ -53,6 +52,7 @@
     border-radius: var(--border-radius-nav);
 
     @include media(700) {
+      box-shadow: none;
       grid-auto-flow: column;
       background: transparent;
       text-align: left;
@@ -91,7 +91,7 @@
 
       @include media(700) {
         flex-direction: row;
-        gap: 1em;
+        // gap: 1em;
       }
     }
 
@@ -133,33 +133,50 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0.8em;
 
     @include media(700) {
       flex-direction: row;
-      gap: clamp(1em, 1vw + 2em, 3em);
+      // gap: clamp(1em, 1vw + 2em, 3em);
     }
 
     &::before {
       content: "";
       position: absolute;
-      inset: 0.6em 0 0 auto;
+      inset: 0 0 0 auto;
+      width: 100%;
       height: 1px;
       background: hsl(var(--clr-neutral-200));
 
       @include media(700) {
-        display: none;
+        width: 0;
       }
     }
   }
 
   &__btn {
+    padding: 0.75em 2.25em;
+
     &--login {
       --background: transparent;
       --color: hsl(var(--clr-primary-blue));
+
+      @include media(700) {
+        --color: hsl(var(--clr-neutral-100));
+      }
     }
 
-    &--sing-up {
+    &--sign-up {
+      --background: var(--gradient-red);
+
+      @include media(700) {
+        --color: hsl(var(--clr-primary-red-900));
+        --background: hsl(var(--clr-neutral-100));
+
+        &:hover {
+          --color: hsl(var(--clr-neutral-100));
+          --background: hsl(var(--clr-primary-red-800) / 0.25);
+        }
+      }
     }
   }
 }

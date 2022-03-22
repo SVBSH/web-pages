@@ -34,7 +34,7 @@
   --font-size-100: 0.87rem;
   --font-size-200: 1rem;
   --font-size-300: 1.5rem;
-  
+
   --font-size-900: clamp(2rem, 3.5vw, 3.5rem);
 
   --font-weight-3: 300;
@@ -46,4 +46,8 @@
   /* Container && padding width */
   --base-width: 90%;
   --container-base-width: calc((100% - var(--base-width)) / 2);
+
+  /* Border radius */
+  --radius-bottom-left: clamp(100px, 100px + 2vw,200px);
+  --radius-top-right: 23%;
 }

@@ -11,7 +11,7 @@ function registerPrimaryMenu() {
     }
     menuStatus = JSON.parse(primaryMenu.getAttribute("data-menu-active"));
     primaryMenu.setAttribute('data-menu-active', !menuStatus);
-    primaryMenu.classList.toggle('dropdown--open-1')
+    primaryMenu.classList.toggle('dropdown--open')
   }
 }
 

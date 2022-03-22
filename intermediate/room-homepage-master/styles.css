@@ -1,0 +1,132 @@
+/* This is where your styles go! Don't forget to import the correct font (Roboto) from Google Fonts. */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+:root {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+
+  --background-color: #0d0d36;
+}
+
+.header {
+  background-color: var(--background-color);
+  padding: 0.5rem;
+  position: relative;
+}
+
+.heade__image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 10rem;
+  height: 2rem;
+}
+
+.nav {
+  background-image: linear-gradient(to left, #04049a, #3d3de1);
+}
+
+.nav__list {
+  list-style-type: none;
+  color: white;
+  padding: 0.5rem;
+  margin: 0;
+  font-size: 0.7rem;
+}
+
+.nav__list__item {
+  margin: 0.5rem;
+}
+
+.form {
+  display: flex;
+
+  flex-direction: row;
+  background: #8e8ed2;
+  border-radius: 0.5rem;
+  margin: 0.5rem;
+
+  /* Pridat padding*/
+  padding: 2em;
+  justify-content: space-between;
+}
+
+.icon {
+  /* netreba kvoli paddingu vo form*/
+  /* margin-right: 2rem; */
+
+  /* alignment: right; */
+  /* margin-left: auto; */
+  display: block;
+}
+
+.nav__input {
+  /* netreba kvoli paddingu vo form*/
+  /* margin: auto 0; */
+  opacity: 0.5;
+  background: transparent;
+  border-radius: 0.5rem;
+  border: none;
+  outline: none;
+  display: block;
+}
+
+.search {
+  background: #7c7cf1;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.container__description {
+  background-color: var(--background-color);
+  padding: 0 1rem;
+  color: white;
+  font-size: 0.7rem;
+}
+
+.header__title {
+  font-size: 1.25rem;
+}
+
+.header__tags {
+  font-size: 0.75rem;
+}
+
+.container__tags {
+  display: flex;
+  flex-direction: row;
+  gap: 0.2rem;
+  margin-bottom: 1rem;
+}
+
+.tags__button {
+  margin-right: 0.1rem;
+  border-radius: 0.4rem;
+  border: none;
+  outline: none;
+  background-color: #3d3de1;
+  color: #94b1d9;
+}
+
+.main__img {
+  display: block;
+}
+
+@media (min-width: 1200px) {
+}
