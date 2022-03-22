@@ -1,0 +1,43 @@
+.header {
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--clr-primary-dark);
+  padding: 1em 1em;
+  padding-block: 2.25rem;
+
+  &__logo {
+    justify-self: center;
+    max-width: 186px;
+    height: 42px;
+  }
+
+  &__nav {
+    display: none;
+
+    @media (min-width: 700px) {
+      display: block;
+      padding: 0;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    text-transform: uppercase;
+    color: var(--clr-primary-gray);
+    font-size: var(--fz-300);
+  }
+
+  &__item {
+    &:hover {
+      color: var(--clr-neutral-gray-100);
+    }
+  }
+
+  &__link {
+
+  }
+}

@@ -1,0 +1,74 @@
+.body-container {
+  background: var(--clr-neutral-blue-300);
+
+  @media (min-width: 700px) {
+    --p-size: 5%;
+    & > .header {
+      padding-inline: var(--p-size);
+    }
+    & > .main {
+      margin-inline: var(--p-size);
+    }
+
+    & > .footer {
+      margin-inline: var(--p-size);
+    }
+  }
+
+  @media (min-width: 1200px) {
+    --p-size: 10%;
+  }
+
+
+  @media (min-width: 1600px) {
+    --p-size: 17%;
+  }
+}
+
+.body-grid {
+  // display: grid;
+  // grid-template-areas:
+  //   "header header header"
+  //   ".      main   .     "
+  // ;
+
+  // grid-template-columns: ;
+  // grid-template-rows: max-content 1fr;
+
+  // .header {
+  //   grid-area: header;
+  // }
+
+  // .main {
+  //   grid-area: main;
+  // }
+}
+
+.padding-container {
+  // & > .main__nav,
+  // .main__title-container,
+  // .game-info-container {
+  //   padding-inline: var(--container-padding-size);
+  // }
+
+  // @media (min-width: 700px) {
+  //   & >
+  // .main__title-container,
+  // .game-info-container {
+  //   padding-inline: var(--container-padding-size);
+  // }
+  // }
+}
+
+.padding-container {
+  padding-inline: var(--container-padding-size);
+
+  @media (min-width: 700px) {
+    padding-inline: 0;
+  }
+}
+
+.main-heading {
+  font-weight: 700;
+  font-size: var(--fz-400);
+}

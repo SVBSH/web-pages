@@ -1,0 +1,34 @@
+.search-form {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 1fr max-content;
+  justify-content: space-between;
+  padding-inline: 1em;
+  padding-block: 0.2em;
+
+  color: var(--clr-neutral-brown);
+  background: var(--clr-neutral-blue-150);
+  box-shadow: inset 0px 2px 5px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+
+  &__input {
+    display: block;
+    color: none;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: inherit;
+
+    &::placeholder {
+      color: inherit;
+    }
+  }
+
+  .material-icons-outlined {
+    border: none;
+    outline: none;
+    background: transparent;
+    color: inherit;
+    cursor: pointer;
+  }
+}

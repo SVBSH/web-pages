@@ -1,0 +1,7 @@
+.footer {
+  display: none;
+
+  @media(min-width: 700px) {
+    display: block;
+  }
+}

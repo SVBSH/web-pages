@@ -1,0 +1,75 @@
+:root {
+  --container-padding-size: 5%;
+/* Colors */
+  /* Primary */
+  --clr-primary-dark: hsl(213 33% 11%);
+  --clr-primary-white: 0 0% 100%;
+  --clr-primary-blue: hsl(202 88% 68%);
+  --clr-primary-gray: hsl(0 0% 73%);
+  /* Neutral */
+  --clr-neutral-gray-100: hsl(0 0% 91%);
+  --clr-neutral-gray-150: hsl(0 0% 90%);
+  --clr-neutral-gray-200: hsl(0 0% 69%);
+
+  --clr-neutral-blue-100: hsl(206 28% 83%);
+  --clr-neutral-blue-150: hsl(203, 24%, 49%);
+  --clr-neutral-blue-200: hsl(20none;3 15% 39%);
+  --clr-neutral-blue-300: hsl(213 35% 16%);
+  --clr-neutral-brown: hsl(0 0% 31%);
+/* Linear gradients */
+  //  Menu background - mobile
+  --clr-gradient-1: linear-gradient(
+    99.92deg,
+    hsl(0, 0%, 0%) 42.56%,
+    hsl(0 0% 0% / 0.35) 100%
+  );
+  // Background menu desktop
+  --clr-gradient-2: linear-gradient(
+    270deg,
+    hsl(213 35% 16%) 0%,
+    hsl(227 42% 34% / 0.33) 49.98%,
+    hsl(213 35% 16%) 100%
+  );
+
+  // --clr-gradient-1: 212 42% 45%;
+  // --clr-gradient-1: 229 73% 29%;
+
+  --gradient-store-menu: linear-gradient(
+    90deg,
+    hsl(212, 42%, 45%) 0%,
+    hsl(228, 73%, 29%) 100%
+  );
+
+/* Fonts */
+  /* Font family */
+  --ff-serif: "Roboto", sans-serif;
+  /* Font weights */
+  --fw-5: 500;
+  --fw-7: 700;
+
+/* Font sizes */
+  /* Mobile */
+  --fz-mobile-100: 0.75rem;
+  --fz-mobile-200: 0.875rem;
+  --fz-mobile-300: 1rem;
+  --fz-mobile-400: 1.5rem;
+  /* Desktop */
+  --fz-desktop-100: 0.75rem;
+  --fz-desktop-200: 0.875rem;
+  --fz-desktop-300: 1rem;
+  --fz-desktop-400: 1.75rem;
+
+  @media (min-width: 10px) {
+    --fz-100: var(--fz-mobile-100);
+    --fz-200: var(--fz-mobile-200);
+    --fz-300: var(--fz-mobile-300);
+    --fz-400: var(--fz-mobile-400);
+  }
+
+  @media (min-width: 700px) {
+    --fz-100: var(--fz-desktop-100);
+    --fz-200: var(--fz-desktop-200);
+    --fz-300: var(--fz-desktop-300);
+    --fz-400: var(--fz-desktop-400);
+  }
+}

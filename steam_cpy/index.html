@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/main.css">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
+      rel="stylesheet">
+</head>
+<body class="body-container body-grid">
+
+  <header class="header">
+    <img src="./assets/images/logo_steam.svg" alt="Logo - Steam" class="header__logo">
+    <nav class="header__nav">
+      <ul class="header__list">
+        <li class="header__item"><a href="#" class="header__link">Store</a></li>
+        <li class="header__item"><a href="#" class="header__link">Community</a></li>
+        <li class="header__item"><a href="#" class="header__link">About</a></li>
+        <li class="header__item"><a href="#" class="header__link">Support</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="main">
+
+    <nav class="main__nav padding-container">
+      <ul class="main__nav-list">
+        <li class="main__nav-item"><a href="#" class="main__nav-link">Your Store</a></li>
+        <li class="main__nav-item"><a href="#" class="main__nav-link">New & Noteworthy</a></li>
+        <li class="main__nav-item"><a href="#" class="main__nav-link">Categories</a></li>
+        <li class="main__nav-item"><a href="#" class="main__nav-link">Points Shop</a></li>
+        <li class="main__nav-item"><a href="#" class="main__nav-link">News</a></li>
+        <li class="main__nav-item"><a href="#" class="main__nav-link">Labs</a></li>
+      </ul>
+      <form action="" class="main__nav-search search-form">
+        <input id="search" type="text" placeholder="search" class=" search-form__input">
+        <button type="submit" class="material-icons-outlined search-form__icon">search</button>
+        <!-- <label class="material-icons-outlined search-form__icon">
+          search
+        </label> -->
+      </form>
+    </nav>
+
+    <section class="main__title-container padding-container">
+      <h1 class="main__title main-heading">Grand Theft Auto V</h1>
+      <nav class="short__nav">
+        <ul class="short__nav-list">
+          <li class="short__nav-item">
+            <a href="#" class="short__nav-link">All Games</a>
+          </li>
+          <li class="short__nav-item">
+            <a href="#" class="short__nav-link">Action Games</a>
+          </li>
+          <li class="short__nav-item">
+            <a href="#" class="short__nav-link">Grand Theft Auto V </a>
+          </li>
+        </ul>
+      </nav>
+      <a href="#" class="btn">Community Hub</a>
+    </section>
+    
+    <img src="./assets/images/game_card.jpg" alt="Game" class="game__hero-img">
+
+    <section class="game-info-container padding-container game">
+    
+      <div class="game__info">
+        <h1 class="game__title main-heading">Grand Theft Auto V</h1>
+        <p class="game__description">
+          Grand Theft Auto V for PC offers players the option to explore the award-winning world of Los Santos and Blaine County in resolutions of up to 4k and beyond, as well as the chance to experience the game running at 60 frames per second.
+        </p>
+      </div>
+    
+      <ul class="game__detail-list detail">
+        <li class="game__detail-item">
+          <p class="game__detail-heading">Developer</p>
+          <p class="game__detail-text game__detail-text--blue">Rockstar North</p>
+        </li>
+        <li class="game__detail-item">
+          <p class="game__detail-heading">Publisher</p>
+          <p class="game__detail-text game__detail-text--blue">Rockstar Games</p>
+        </li>
+        <li class="game__detail-item">
+          <p class="game__detail-heading">Released</p>
+          <p class="game__detail-text">14 Apr, 2015</p>
+        </li>
+      </ul>
+      <section class="genre">
+        <h3 class="genre__heading">TAGS</h3>
+        <ul class="genre__container">
+          <li class="genre__name">
+            <button class="btn">Open World</button>
+          </li>
+          <li class="genre__name">
+            <button class="btn">Action</button>
+          </li>
+          <li class="genre__name">
+            <button class="btn">Multiplayer</button>
+          </li>
+          <li class="genre__name" data-active="false">
+            <button class="btn">+</button>
+          </li>
+        </ul>
+      </section>
+    </section>
+    
+    <div class="carousel">
+      <div class="carousel__hero-container">
+        <img src="./assets/images/main_img.jpg" alt="" class="carousel__hero">
+      </div>
+      <div class="carousel__image-container">
+        <img src="./assets/images/small_img1.jpg" alt="game scene" class="carousel__img">
+        <img src="./assets/images/small_img2.jpg" alt="game scene" class="carousel__img">
+        <img src="./assets/images/small_img3.jpg" alt="game scene" class="carousel__img">
+        <img src="./assets/images/small_img4.jpg" alt="game scene" class="carousel__img">
+        <img src="./assets/images/small_img5.jpg" alt="game scene" class="carousel__img">
+      </div>
+    </div>
+
+
+    <!-- .main__info.game__description> -->
+  </main>
+
+  <footer class="footer">
+    <p class="footer__text">
+      <a href="#" class="footer__btn">Sign in</a>
+      to add this item to your wishlist, follow it, or mark it as ignored
+    </p>
+  </footer>
+
+</body>
+</html>

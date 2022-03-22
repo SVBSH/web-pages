@@ -1,0 +1,475 @@
+:root {
+  --container-padding-size: 5%;
+  /* Colors */
+  /* Primary */
+  --clr-primary-dark: hsl(213 33% 11%);
+  --clr-primary-white: 0 0% 100%;
+  --clr-primary-blue: hsl(202 88% 68%);
+  --clr-primary-gray: hsl(0 0% 73%);
+  /* Neutral */
+  --clr-neutral-gray-100: hsl(0 0% 91%);
+  --clr-neutral-gray-150: hsl(0 0% 90%);
+  --clr-neutral-gray-200: hsl(0 0% 69%);
+  --clr-neutral-blue-100: hsl(206 28% 83%);
+  --clr-neutral-blue-150: hsl(203, 24%, 49%);
+  --clr-neutral-blue-200: hsl(20none;3 15% 39%);
+  --clr-neutral-blue-300: hsl(213 35% 16%);
+  --clr-neutral-brown: hsl(0 0% 31%);
+  /* Linear gradients */
+  --clr-gradient-1: linear-gradient(
+    99.92deg,
+    hsl(0, 0%, 0%) 42.56%,
+    hsl(0 0% 0% / 0.35) 100%
+  );
+  --clr-gradient-2: linear-gradient(
+    270deg,
+    hsl(213 35% 16%) 0%,
+    hsl(227 42% 34% / 0.33) 49.98%,
+    hsl(213 35% 16%) 100%
+  );
+  --gradient-store-menu: linear-gradient(
+    90deg,
+    hsl(212, 42%, 45%) 0%,
+    hsl(228, 73%, 29%) 100%
+  );
+  /* Fonts */
+  /* Font family */
+  --ff-serif: "Roboto", sans-serif;
+  /* Font weights */
+  --fw-5: 500;
+  --fw-7: 700;
+  /* Font sizes */
+  /* Mobile */
+  --fz-mobile-100: 0.75rem;
+  --fz-mobile-200: 0.875rem;
+  --fz-mobile-300: 1rem;
+  --fz-mobile-400: 1.5rem;
+  /* Desktop */
+  --fz-desktop-100: 0.75rem;
+  --fz-desktop-200: 0.875rem;
+  --fz-desktop-300: 1rem;
+  --fz-desktop-400: 1.75rem;
+}
+@media (min-width: 10px) {
+  :root {
+    --fz-100: var(--fz-mobile-100);
+    --fz-200: var(--fz-mobile-200);
+    --fz-300: var(--fz-mobile-300);
+    --fz-400: var(--fz-mobile-400);
+  }
+}
+@media (min-width: 700px) {
+  :root {
+    --fz-100: var(--fz-desktop-100);
+    --fz-200: var(--fz-desktop-200);
+    --fz-300: var(--fz-desktop-300);
+    --fz-400: var(--fz-desktop-400);
+  }
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  background: hsl(var(--clr-primary-dark));
+  color: hsl(var(--clr-primary-white));
+  font-family: var(--ff-serif);
+  font-weight: 500;
+  font-size: 0.875rem;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+*::before,
+*::after {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+.search-form {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 1fr -webkit-max-content;
+  grid-template-columns: 1fr max-content;
+  justify-content: space-between;
+  padding-inline: 1em;
+  padding-block: 0.2em;
+  color: var(--clr-neutral-brown);
+  background: var(--clr-neutral-blue-150);
+  box-shadow: inset 0px 2px 5px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+}
+.search-form__input {
+  display: block;
+  color: none;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: inherit;
+}
+.search-form__input::-moz-placeholder {
+  color: inherit;
+}
+.search-form__input:-ms-input-placeholder {
+  color: inherit;
+}
+.search-form__input::placeholder {
+  color: inherit;
+}
+.search-form .material-icons-outlined {
+  border: none;
+  outline: none;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+}
+
+.carousel {
+  display: flex;
+  flex-direction: column;
+  max-width: 700px;
+  --carousel-gap-size: .5rem;
+}
+.carousel__hero-container {
+  padding-bottom: var(--carousel-gap-size);
+}
+.carousel__image-container {
+  display: none;
+}
+@media (min-width: 700px) {
+  .carousel__image-container {
+    display: grid;
+    grid-auto-flow: column;
+    gap: var(--carousel-gap-size);
+  }
+}
+.carousel__img {
+  min-width: 115px;
+  min-height: 65px;
+}
+
+.btn {
+  border: none;
+  outline: none;
+  padding: 0.2em 1em;
+  background: rgba(102, 193, 245, 0.2);
+  border-radius: 4px;
+  cursor: pointer;
+  color: var(--clr-primary-blue);
+}
+.btn :hover {
+  color: var(--clr-neutral-gray-150);
+}
+
+.header {
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--clr-primary-dark);
+  padding: 1em 1em;
+  padding-block: 2.25rem;
+}
+.header__logo {
+  justify-self: center;
+  max-width: 186px;
+  height: 42px;
+}
+.header__nav {
+  display: none;
+}
+@media (min-width: 700px) {
+  .header__nav {
+    display: block;
+    padding: 0;
+  }
+}
+.header__list {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  text-transform: uppercase;
+  color: var(--clr-primary-gray);
+  font-size: var(--fz-300);
+}
+.header__item:hover {
+  color: var(--clr-neutral-gray-100);
+}
+.main {
+  display: grid;
+  grid-template-areas: "navigation" "titleContainer" "heroimage" "gameInfoContainer" "Carousel";
+}
+@media (min-width: 1000px) {
+  .main {
+    --grid-gap-size: 2em;
+    grid-template-areas: "navigation navigation" "titleContainer titleContainer" "Carousel heroimage" "Carousel gameInfoContainer";
+    grid-template-columns: 2fr 1.1fr;
+    gap: var(--grid-gap-size);
+    padding-block: var(--grid-gap-size);
+    background-color: var(--clr-neutral-blue-300);
+    background-image: var(--clr-gradient-2);
+  }
+}
+.main .game__hero-img {
+  grid-area: heroimage;
+  width: 100%;
+}
+.main .game-info-container {
+  grid-area: gameInfoContainer;
+}
+.main__nav {
+  grid-area: navigation;
+  --size: 1em;
+  display: flex;
+  flex-direction: column;
+  gap: var(--size);
+  padding-block: var(--size);
+  background: var(--gradient-store-menu);
+}
+@media (min-width: 700px) {
+  .main__nav {
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-between;
+  }
+}
+.main__nav-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7em;
+}
+@media (min-width: 700px) {
+  .main__nav-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1em clamp(1.5em, 1.8em + 2vw, 2.5em);
+  }
+}
+.main__nav-item {
+  font-size: var(--fz-100);
+}
+.main__title-container {
+  grid-area: titleContainer;
+  display: none;
+}
+@media (min-width: 700px) {
+  .main__title-container {
+    display: block;
+    display: grid;
+    grid-template-rows: repeat(2, -webkit-max-content);
+    grid-template-rows: repeat(2, max-content);
+    grid-template-columns: -webkit-max-content 1fr -webkit-max-content;
+    grid-template-columns: max-content 1fr max-content;
+    align-items: center;
+  }
+  .main__title-container .short__nav {
+    grid-row: 1;
+    grid-column: 1;
+  }
+  .main__title-container .main__title {
+    grid-row: 2;
+    grid-column: 1;
+  }
+  .main__title-container .btn {
+    grid-row: 2;
+    grid-column: 3;
+  }
+}
+.main__title-container .short__nav-list {
+  display: flex;
+  flex-direction: row;
+  color: var(--clr-primary-gray);
+}
+.main__title-container .short__nav-item:hover {
+  color: var(--clr-neutral-gray-100);
+}
+.main__title-container .short__nav-item:not(.main__title-container .short__nav-item:first-child)::before {
+  content: ">";
+  display: inline-block;
+  background: var(--clr-neutral-blue-300);
+  height: 100%;
+  padding-left: 0.2em;
+  color: #556772;
+}
+.main .carousel {
+  grid-area: Carousel;
+}
+
+.game-info-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 70ch;
+}
+.game__info {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+.game__title {
+  font-size: var(--fz-400);
+}
+@media (min-width: 700px) {
+  .game__title {
+    display: none;
+  }
+}
+.game__description {
+  font-size: var(--fz-200);
+}
+.game__detail {
+  text-align: left;
+}
+.game__detail-list {
+  display: grid;
+  flex-direction: column;
+  font-size: var(--fz-300);
+}
+.game__detail-item {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-flow: column;
+}
+.game__detail-heading {
+  color: var(--clr-primary-gray);
+}
+.game__detail-text--blue {
+  color: var(--clr-primary-blue);
+}
+.game .genre__heading {
+  color: var(--clr-primary-gray);
+  font-size: var(--fz-300);
+}
+.game .genre__container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4em;
+  padding-top: 0.4em;
+}
+.game .genre__name {
+  font-size: var(--fz-100);
+}
+.game .genre__name:hover .btn {
+  color: var(--clr-neutral-gray-150);
+}
+
+.footer {
+  display: none;
+}
+@media (min-width: 700px) {
+  .footer {
+    display: block;
+  }
+}
+
+.body-container {
+  background: var(--clr-neutral-blue-300);
+}
+@media (min-width: 700px) {
+  .body-container {
+    --p-size: 5%;
+  }
+  .body-container > .header {
+    padding-inline: var(--p-size);
+  }
+  .body-container > .main {
+    margin-inline: var(--p-size);
+  }
+  .body-container > .footer {
+    margin-inline: var(--p-size);
+  }
+}
+@media (min-width: 1200px) {
+  .body-container {
+    --p-size: 10%;
+  }
+}
+@media (min-width: 1600px) {
+  .body-container {
+    --p-size: 17%;
+  }
+}
+
+.padding-container {
+  padding-inline: var(--container-padding-size);
+}
+@media (min-width: 700px) {
+  .padding-container {
+    padding-inline: 0;
+  }
+}
+
+.main-heading {
+  font-weight: 700;
+  font-size: var(--fz-400);
+}/*# sourceMappingURL=main.css.map */

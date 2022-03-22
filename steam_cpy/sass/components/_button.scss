@@ -1,0 +1,13 @@
+.btn {
+  border: none;
+  outline: none;
+  padding: 0.2em 1em;
+  background: hsla(202, 88%, 68%, 0.2);
+  border-radius: 4px;
+  cursor: pointer;
+  color: var(--clr-primary-blue);
+
+  :hover {
+    color: var(--clr-neutral-gray-150);
+  }
+}

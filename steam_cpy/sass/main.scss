@@ -1,0 +1,14 @@
+// Base styles
+@use './base/root';
+@use './base/reset';
+// Components
+@use './components/search_form';
+@use './components/carousel';
+@use './components/button';
+// Layout
+@use './layout/header';
+@use './layout/main';
+@use './layout/section-game';
+@use './layout/footer';
+// Utils
+@use './utils/helpers';
