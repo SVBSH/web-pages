@@ -1,5 +1,20 @@
 .footer {
   display: none;
+  margin-bottom: 2.5em;
+  padding: .8em 1em;
+  background: hsl(0 0% 0% / .2);
+  color: hsl(206, 28%, 83%);
+  font-size: var(--fz-200);
+
+
+  &__btn {
+    color: var(--clr-primary-white);
+    font-weight: var(--fw-700);
+
+    &:hover {
+      color: var(--clr-primary-blue);
+    }
+  }
 
   @media(min-width: 700px) {
     display: block;

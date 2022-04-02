@@ -1,7 +1,6 @@
 .carousel {
   display: flex;
   flex-direction: column;
-  max-width: 700px;
   --carousel-gap-size: .5rem;
 
   &__hero-container {
@@ -12,7 +11,7 @@
     display: none;
 
 
-    @media (min-width: 700px) {
+    @media (min-width: 500px) {
       display: grid;
       grid-auto-flow: column;
       gap: var(--carousel-gap-size);

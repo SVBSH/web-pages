@@ -1,38 +1,38 @@
 .main {
+  --grid-gap-size: 0em;
   display: grid;
   grid-template-areas:
     "navigation"
     "titleContainer"
-    "heroimage"
-    "gameInfoContainer"
+    "game"
     "Carousel";
+  gap: var(--grid-gap-size);
+  padding-block: var(--grid-gap-size);
+
+
+  @media (min-width: 700px) {
+    --grid-gap-size: 1.5em;
+  }
 
   @media (min-width: 1000px) {
-    --grid-gap-size: 2em;
+    --grid-gap-size: 1.6em;
     grid-template-areas:
-      "navigation navigation"
+      "navigation     navigation"
       "titleContainer titleContainer"
-      "Carousel heroimage"
-      "Carousel gameInfoContainer";
-    grid-template-columns: 2fr 1.1fr;
+      "Carousel       game";
+    grid-template-columns: 2fr 1fr;
 
-    gap: var(--grid-gap-size);
-    padding-block: var(--grid-gap-size);
     background-color: var(--clr-neutral-blue-300);
     background-image: var(--clr-gradient-2);
   }
 
-  .game__hero-img {
-    grid-area: heroimage;
-    width: 100%;
-  }
-
-  .game-info-container {
-    grid-area: gameInfoContainer;
+  .game {
+    grid-area: game;
   }
 
   &__nav {
     grid-area: navigation;
+
     --size: 1em;
     display: flex;
     flex-direction: column;
@@ -42,11 +42,11 @@
     background: var(--gradient-store-menu);
 
     @media (min-width: 700px) {
-      // margin-block: 2em;
+      padding-block: 0.3em;
+      padding-inline: 1em;
       flex-direction: row;
-      align-items: baseline;
       justify-content: space-between;
-      // gap: 2.5em;
+      align-items: baseline;
     }
 
     &-list {
@@ -113,11 +113,8 @@
 
       &-link:focus,
       &-link:hover {
-        color:var(--clr-neutral-gray-150);
+        color: var(--clr-neutral-gray-150);
       }
-    }
-
-    .btn {
     }
   }
 

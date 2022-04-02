@@ -1,5 +1,4 @@
 :root {
-  --container-padding-size: 5%;
   /* Colors */
   /* Primary */
   --clr-primary-dark: hsl(213 33% 11%);
@@ -49,6 +48,7 @@
   --fz-desktop-200: 0.875rem;
   --fz-desktop-300: 1rem;
   --fz-desktop-400: 1.75rem;
+  --padding-size: 5%;
 }
 @media (min-width: 10px) {
   :root {
@@ -213,7 +213,6 @@ select {
 .carousel {
   display: flex;
   flex-direction: column;
-  max-width: 700px;
   --carousel-gap-size: .5rem;
 }
 .carousel__hero-container {
@@ -222,7 +221,7 @@ select {
 .carousel__image-container {
   display: none;
 }
-@media (min-width: 700px) {
+@media (min-width: 500px) {
   .carousel__image-container {
     display: grid;
     grid-auto-flow: column;
@@ -278,30 +277,33 @@ select {
   color: var(--clr-primary-gray);
   font-size: var(--fz-300);
 }
-.header__item:hover {
+.header__item:hover .header__link, .header__item:focus .header__link {
   color: var(--clr-neutral-gray-100);
 }
+
 .main {
+  --grid-gap-size: 0em;
   display: grid;
-  grid-template-areas: "navigation" "titleContainer" "heroimage" "gameInfoContainer" "Carousel";
+  grid-template-areas: "navigation" "titleContainer" "game" "Carousel";
+  gap: var(--grid-gap-size);
+  padding-block: var(--grid-gap-size);
+}
+@media (min-width: 700px) {
+  .main {
+    --grid-gap-size: 1.5em;
+  }
 }
 @media (min-width: 1000px) {
   .main {
-    --grid-gap-size: 2em;
-    grid-template-areas: "navigation navigation" "titleContainer titleContainer" "Carousel heroimage" "Carousel gameInfoContainer";
-    grid-template-columns: 2fr 1.1fr;
-    gap: var(--grid-gap-size);
-    padding-block: var(--grid-gap-size);
+    --grid-gap-size: 1.6em;
+    grid-template-areas: "navigation     navigation" "titleContainer titleContainer" "Carousel       game";
+    grid-template-columns: 2fr 1fr;
     background-color: var(--clr-neutral-blue-300);
     background-image: var(--clr-gradient-2);
   }
 }
-.main .game__hero-img {
-  grid-area: heroimage;
-  width: 100%;
-}
-.main .game-info-container {
-  grid-area: gameInfoContainer;
+.main .game {
+  grid-area: game;
 }
 .main__nav {
   grid-area: navigation;
@@ -314,9 +316,11 @@ select {
 }
 @media (min-width: 700px) {
   .main__nav {
+    padding-block: 0.3em;
+    padding-inline: 1em;
     flex-direction: row;
-    align-items: baseline;
     justify-content: space-between;
+    align-items: baseline;
   }
 }
 .main__nav-list {
@@ -381,11 +385,25 @@ select {
   grid-area: Carousel;
 }
 
+.game {
+  --game-scale-gap: 1em;
+  padding-bottom: 2em;
+}
 .game-description-container {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  max-width: 70ch;
+  display: grid;
+  grid-auto-flow: row;
+  gap: var(--game-scale-gap);
+}
+@media (min-width: 700px) {
+  .game-description-container {
+    grid-auto-flow: column;
+  }
+}
+@media (min-width: 1000px) {
+  .game-description-container {
+    grid-auto-flow: row;
+    padding-bottom: 0;
+  }
 }
 .game-info__title {
   font-size: var(--fz-400);
@@ -398,10 +416,10 @@ select {
 .game-info__description {
   font-size: var(--fz-200);
 }
-.game__info-wrapper {
+.game-info-wrapper {
   display: flex;
   flex-direction: column;
-  gap: 1em;
+  gap: var(--game-scale-gap);
 }
 .game__title {
   font-size: var(--fz-400);
@@ -411,6 +429,16 @@ select {
     display: none;
   }
 }
+.game__description {
+  max-width: 60ch;
+}
+
+.game__hero-img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 
 .genre__heading {
   color: var(--clr-primary-gray);
@@ -419,7 +447,7 @@ select {
 .genre__container {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.4em;
+  gap: 0.4rem;
   padding-top: 0.4em;
 }
 .genre__name {
@@ -451,6 +479,18 @@ select {
 
 .footer {
   display: none;
+  margin-bottom: 2.5em;
+  padding: 0.8em 1em;
+  background: rgba(0, 0, 0, 0.2);
+  color: #c8d5e0;
+  font-size: var(--fz-200);
+}
+.footer__btn {
+  color: var(--clr-primary-white);
+  font-weight: var(--fw-700);
+}
+.footer__btn:hover {
+  color: var(--clr-primary-blue);
 }
 @media (min-width: 700px) {
   .footer {
@@ -487,7 +527,7 @@ select {
 }
 
 .padding-container {
-  padding-inline: var(--container-padding-size);
+  padding-inline: var(--padding-size);
 }
 @media (min-width: 700px) {
   .padding-container {

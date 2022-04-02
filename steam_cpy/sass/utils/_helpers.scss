@@ -25,43 +25,8 @@
   }
 }
 
-.body-grid {
-  // display: grid;
-  // grid-template-areas:
-  //   "header header header"
-  //   ".      main   .     "
-  // ;
-
-  // grid-template-columns: ;
-  // grid-template-rows: max-content 1fr;
-
-  // .header {
-  //   grid-area: header;
-  // }
-
-  // .main {
-  //   grid-area: main;
-  // }
-}
-
 .padding-container {
-  // & > .main__nav,
-  // .main__title-container,
-  // .game-info-container {
-  //   padding-inline: var(--container-padding-size);
-  // }
-
-  // @media (min-width: 700px) {
-  //   & >
-  // .main__title-container,
-  // .game-info-container {
-  //   padding-inline: var(--container-padding-size);
-  // }
-  // }
-}
-
-.padding-container {
-  padding-inline: var(--container-padding-size);
+  padding-inline: var(--padding-size);
 
   @media (min-width: 700px) {
     padding-inline: 0;

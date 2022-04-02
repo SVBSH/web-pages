@@ -1,0 +1,24 @@
+:root {
+  --clr-primary-violet: hsl(263, 55%, 52%);
+  --clr-primary-gray: hsl(217, 19%, 35%);
+  --clr-primary-dark: hsl(219, 29%, 14%);
+  --clr-primary-white: hsl(0, 0%, 100%);
+
+  --clr-secondary-violet: hsl(264, 82%, 70%);
+
+  --clr-neutral-white-1: hsl(210, 46%, 95%);
+  --clr-neutral-white-2: hsl(0, 0%, 81%);
+
+  --ff-serif: 'Barlow Semi Condensed', sans-serif;;
+
+  --font-size-xs: 0.8125rem;
+
+  --font-weight-7: 700;
+  --font-weight-5: 500;
+
+
+  @media(min-width: 600px) {
+  --font-size-xs: 1rem;
+  }
+
+}

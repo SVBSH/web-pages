@@ -31,13 +31,8 @@
     font-size: var(--fz-300);
   }
 
-  &__item {
-    &:hover {
+  &__item:hover &__link,
+  &__item:focus &__link {
       color: var(--clr-neutral-gray-100);
-    }
-  }
-
-  &__link {
-
   }
 }

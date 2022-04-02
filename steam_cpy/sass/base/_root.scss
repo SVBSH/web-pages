@@ -1,5 +1,4 @@
 :root {
-  --container-padding-size: 5%;
 /* Colors */
   /* Primary */
   --clr-primary-dark: hsl(213 33% 11%);
@@ -30,9 +29,6 @@
     hsl(227 42% 34% / 0.33) 49.98%,
     hsl(213 35% 16%) 100%
   );
-
-  // --clr-gradient-1: 212 42% 45%;
-  // --clr-gradient-1: 229 73% 29%;
 
   --gradient-store-menu: linear-gradient(
     90deg,
@@ -72,4 +68,6 @@
     --fz-300: var(--fz-desktop-300);
     --fz-400: var(--fz-desktop-400);
   }
+  --padding-size: 5%;
+
 }
