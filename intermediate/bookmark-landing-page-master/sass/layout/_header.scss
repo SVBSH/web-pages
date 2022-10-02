@@ -1,0 +1,83 @@
+@keyframes menu-popup {
+  0% {
+    max-height: 0;
+  }
+
+  70% {
+    max-height: calc(100vh - 100%);
+  }
+}
+
+
+.header {
+  position: relative;
+  display: grid;
+  grid-auto-flow: column;
+  padding: 2em;
+
+  background: var(--color-neutral-blue-2);
+  opacity: 0.96;
+
+  @media (min-width: 400px) {
+    background: white;
+  }
+
+
+  /* Nav open - Changon logo to lighter colors */
+  &:has(&__container[data-nav-active="false"]) {
+    background: white;
+  }
+
+  &:has(&__container[data-nav-active="true"]) .logo * {
+    fill: white;
+  }
+
+  &:has(&__container[data-nav-active="true"]) .logo circle ~ path {
+    fill: var(--color-neutral-blue-2);
+  }
+
+  &__container {
+    justify-content: space-between;
+  }
+
+  &__container[data-nav-active="true"] ~ .nav {
+    max-height: calc(100vh - 100%);
+  }
+
+  &__container[data-nav-active="true"] ~ .nav__item {
+
+  }
+
+  &__container[data-nav-active="false"] ~ .nav {
+    transition: initial;
+    max-height: 0;
+  }
+
+  &__container[data-nav-active="true"] ~ .nav .socials {
+    opacity: 1;
+    animation: menu-popup 2s forwards;
+  }
+
+  &__container[data-nav-active="false"] ~ .nav .socials {
+    opacity: 0;
+  }
+
+}
+
+.socials {
+  --gap: 2rem;
+  align-self: end;
+  justify-self: center;
+
+  padding-bottom: 2em;
+  opacity: 0;
+  transition: opacity 1s ease;
+
+  @media (min-width: 400px) {
+    display: none;
+  }
+}
+
+.main {
+  background: white;
+}
