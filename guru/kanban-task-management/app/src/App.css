@@ -1,0 +1,54 @@
+
+.App {
+  min-height: 100vh;
+  position: relative;
+  display: grid;
+
+  grid-template-rows: 5rem 1fr;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 1000px) {
+  .App {
+    grid-template-rows: min-content 1fr;
+    grid-template-columns: auto 1fr;
+  }
+
+  .fwd {
+    animation: slideForward 500ms linear forwards;
+  }
+
+  .bwd {
+    animation: slideAround 500ms linear forwards;
+  }
+}
+
+/* Animations */
+@keyframes slideAround {
+  0% {
+    min-width: 300px;
+    opacity: 1;
+  }
+
+  70% {
+    min-width: 100px;
+    opacity: 0.3;
+  }
+
+  100% {
+    min-width: 0px;
+    opacity: 0;
+  }
+}
+
+@keyframes slideForward {
+  0% {
+    min-width: 0px;
+    opacity: 0;
+  }
+
+  100% {
+    min-width: 300px;
+    opacity: 1;
+  }
+}

@@ -101,14 +101,13 @@ const CommentContainer = () => {
             {getCommentStructure(comment.replies, false)}
           </div>
         </div>
-        
-        
     )
     
     if(children.length === 0) {
       return;
     }
     if (isRoot) {
+      console.log(comments.length);
       return (
         <div className="comment-container text-neutral-gray-400 text-base">
           {children}

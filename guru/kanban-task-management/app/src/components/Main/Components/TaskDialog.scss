@@ -1,0 +1,32 @@
+.task__description {
+}
+
+.task-dialog::backdrop {
+}
+
+.subtask__item {
+  padding: 1em 1em;
+  border-radius: 5px;
+
+  cursor: pointer;
+  user-select: none;
+
+  & > * {
+    cursor: pointer;
+  }
+
+  &:hover {
+    background-color: hsl(242 48% 58% / .7);
+    color: var(--color-black-4);
+  }
+}
+
+.subtask__checkbox {
+  display: block;
+  padding: 0;
+  border-radius: 0;
+
+  &:checked ~ .subtask__label {
+    text-decoration: line-through;
+  }
+}

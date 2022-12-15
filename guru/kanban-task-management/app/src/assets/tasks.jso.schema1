@@ -1,0 +1,26 @@
+{
+  _id,
+  user_id,
+  alskdas
+  alsdk
+  boards: [
+    {
+      title: str,
+      color: str,
+
+      tasks: [
+        {
+          name: str,
+          description: str,
+
+          subtasks: [
+            {
+              name: str,
+              status: str
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

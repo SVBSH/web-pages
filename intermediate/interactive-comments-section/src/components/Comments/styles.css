@@ -4,7 +4,8 @@
   display: grid;
   justify-content: center;
   align-content: center;
-  gap: 1rem;
+  /* TODO: */
+  /* gap: var(--comment-gaps, 2rem); */
   margin-inline: auto;
   width: min-content;
 }
@@ -151,6 +152,7 @@
 
 
 .children {
+  /* padding-top: var(--comment-gaps); */
   --left-indent: 3rem;
   position: relative;
   display: flex;

@@ -1,0 +1,61 @@
+/* 
+  attrs:
+  --text-color
+  --bg-color
+
+  --text-color-hover
+  --bg-color-hover
+*/
+
+.btn {
+  color: var(--text-color);
+  background-color: var(--bg-color);
+
+  text-transform: capitalize;
+
+  padding: 0.5em 1em;
+  padding: 1em 1.5em;
+
+  font-weight: 600;
+  border-radius: 30px;
+
+  cursor: pointer;
+  transition: background-color 200ms linear;
+}
+
+.btn:hover,
+.btn:focus-within {
+  color: var(--text-color-hover, var(--text-color));
+  background-color: var(--bg-color-hover, var(--bg-color));
+}
+
+/* Primary button */
+.btn[data-type="primary"] {
+  --text-color: var(--color-white-4);
+  --text-color-hover: var(--color-white-4);
+
+  --bg-color: var(--color-purple-4);
+  --bg-color-hover: var(--color-purple-3);
+}
+
+/* Secondary button */
+html[data-theme="light"] .btn[data-type="secondary"] {
+  --text-color: var(--color-purple-4);
+  --bg-color: var(--color-gray-2);
+  --bg-color-hover: var(--color-gray-3);
+}
+
+html[data-theme="dark"] .btn[data-type="secondary"] {
+  --text-color: var(--color-purple-4);
+
+  --bg-color: var(--color-white-4);
+  --bg-color-hover: var(--color-gray-1);
+}
+
+/* Destructive button */
+.btn[data-type="destructive"] {
+  --text-color: var(--color-white-4);
+
+  --bg-color: var(--color-red-4);
+  --bg-color-hover: var(--color-red-3);
+}

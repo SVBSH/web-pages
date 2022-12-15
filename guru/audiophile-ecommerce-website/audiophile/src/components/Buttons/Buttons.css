@@ -1,0 +1,9 @@
+.btn-go-back {
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
+.btn-go-back:hover {
+  color: var(--text-orange-4);
+}

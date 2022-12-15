@@ -1,0 +1,50 @@
+.form {
+
+  & .input__item {
+  }
+
+  & .input__field {
+    outline: none;
+    border: none;
+    border: 0.5px solid hsl(216 15% 57% / 0.3);
+    padding: 0.45em 1em;
+    border-radius: 3px;
+    caret-color: var(--color-black-4);
+
+    &:focus {
+      border: 0.5px solid hsl(216 15% 57% / 0.9);
+    }
+  }
+
+  & .input__remove-img {
+    object-fit: contain;
+  }
+}
+
+.remove-btn {
+  animation: remove-btn 250ms forwards;
+}
+
+.add-btn {
+  animation: add-btn 850ms forwards;
+}
+
+@keyframes add-btn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes remove-btn {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}

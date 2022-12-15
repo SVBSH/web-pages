@@ -1,0 +1,15 @@
+.modal-board-add {
+  width: min(90%, 400px);
+  border: none;
+  inset: 0;
+  z-index: 1000;
+  margin: auto;
+  border-radius: 7px;
+  padding: 2em;
+  box-shadow: 0px 0px 100vmax 100vmax hsla(0deg, 0%, 0%, 0.6);
+}
+.modal-board-add[open] {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}/*# sourceMappingURL=modalBoardAdd.css.map */

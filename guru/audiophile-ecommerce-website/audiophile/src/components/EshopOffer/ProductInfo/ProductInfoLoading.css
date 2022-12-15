@@ -1,0 +1,32 @@
+.animate {
+  
+  /* background-position: bottom right; */
+  background: linear-gradient(to left, rgba(0, 0, 0, 0.1) 10%, rgba(186, 68, 68, 0) 90%) right;
+  background-size: 200%;
+
+  animation: box 1500ms linear infinite;
+  /* transition: .5s ease-out; */
+
+}
+
+.animate:hover {
+  background-position: right;
+}
+
+@keyframes box {
+  0% {
+  background-position: right;
+    
+    
+  }
+
+  50% {
+  background-position: left;
+   
+  }
+
+  100% {
+  background-position: left;
+    
+  }
+}

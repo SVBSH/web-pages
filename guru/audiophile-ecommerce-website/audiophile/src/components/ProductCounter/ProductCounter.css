@@ -1,0 +1,28 @@
+.product-counter {
+  display: flex;
+  flex-direction: row;
+  gap: .5em;
+  align-items: center;
+  align-self: center;
+}
+
+.product-counter > * {
+}
+
+.product-counter__amount {
+  padding: 0;
+  text-align: center;
+  min-width: 30px;
+}
+
+.product-counter__btn {
+  padding: 0.65em .75em;
+
+  border: none;
+  outline: none;
+}
+
+.product-counter__btn:hover {
+  color: var(--text-orange-4)
+}
+

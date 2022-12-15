@@ -1,0 +1,155 @@
+
+@keyframes showOpacity {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes op {
+  0% {
+    opacity: 0;
+    transform: translateY(-20%);
+    visibility: hidden;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+    visibility: visible;
+  }
+}
+
+.roll-out-right {
+  /* transition: max-height 500ms ease; */
+	/* -webkit-animation: roll-out-right 0.6s ease-in both; */
+  animation: roll-out-right 0.8s ease-in both;
+}
+
+@keyframes roll-out-right {
+  0% {
+    /*      transform: translateX(0) rotate(0deg); */
+    opacity: 1;
+    max-height: 100%;
+    visibility: visible;
+    height: 100%;
+    display: block;
+
+  }
+
+  100% {
+    /*      transform: translateX(1000px) rotate(540deg); */
+    opacity: 0;
+    height: 0;
+    max-height: 0;
+    height: 0 !important;
+    /* visibility: hidden; */
+    /* display: none; */
+  }
+}
+
+
+.header {
+  position: relative;
+  background-color: hsla(0, 0%, 10%, 1);
+  display: grid;
+  grid-template-columns: max-content 1fr max-content;
+
+  grid-auto-flow: column;
+  align-items: center;
+  padding-block: 2.5rem;
+}
+
+.header::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin-inline: auto;
+  height: 1px;
+  background: hsl(0 0% 100% / 0.2);
+}
+
+.header .logo {
+  cursor: pointer;
+  justify-self: center;
+}
+
+.header .hamburger {
+  cursor: pointer;
+}
+
+.header[data-menu-active="true"] .nav {
+  /* display: none; */
+  justify-self: center;
+}
+
+.header[data-menu-active="false"] .nav {
+  display: none;
+}
+
+@media (min-width: 700px) {
+  .nav[data-type="primary"] {
+    display: block;
+    justify-self: center;
+  }
+
+  .header .hamburger {
+    display: none;
+  }
+
+  .nav__list {
+    gap: 2.3rem;
+  }
+
+  .header {
+    grid-template-columns: max-content 1fr max-content;
+  }
+
+  .header[data-menu-active="false"] .nav {
+    display: block;
+  }
+
+  .header[data-menu-active="true"] .nav__list,
+  .header[data-menu-active="false"] .nav__list {
+    display: flex;
+    flex-direction: row;
+    min-height: auto !important;
+    position: relative !important;
+  }
+}
+
+.nav[data-type="primary"] > .nav__list {
+  position: absolute;
+  z-index: 10;
+  top: 90%;
+  left: 0;
+  right: 0;
+
+  min-height: 40vh;
+
+  border: 1px solid red;
+  background: blue;
+  opacity: 0.6;
+}
+
+.nav[data-type="primary"] .nav__link {
+  letter-spacing: 2px;
+  color: var(--text-white-4);
+}
+
+.nav[data-type="primary"] .nav__item:hover .nav__link {
+  color: var(--text-orange-4);
+}
+
+.inactive {
+  animation: op 500ms forwards;
+}
+
+.active {
+  animation: op 500ms reverse;
+}

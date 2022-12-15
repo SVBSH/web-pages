@@ -1,0 +1,18 @@
+.board-column {
+  min-width: 300px;
+}
+.board-column__heading {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center;
+}
+.board-column__heading::before {
+  content: "";
+  --size: 1rem;
+  display: block;
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  background-color: var(--heading-decor-color, var(--color-blue-3));
+}/*# sourceMappingURL=BoardColumn.css.map */

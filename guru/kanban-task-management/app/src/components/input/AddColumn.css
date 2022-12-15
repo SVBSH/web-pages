@@ -1,0 +1,19 @@
+.add-column__form {
+  gap: 1rem;
+}
+.add-column__input {
+  border: none;
+  outline: none;
+  border: 1px solid var(--color-gray-3);
+  border-radius: 3px;
+  padding: 0.5em 0.5em;
+}
+.add-column__img {
+  cursor: pointer;
+  --size: 15px;
+  align-self: center;
+  width: var(--size);
+  height: var(--size);
+  -o-object-fit: contain;
+     object-fit: contain;
+}/*# sourceMappingURL=AddColumn.css.map */

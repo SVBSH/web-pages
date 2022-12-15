@@ -1,0 +1,20 @@
+.modal-board-add {
+  width: min(90%, 400px);
+
+  &[open] {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  border: none;
+
+  inset: 0;
+  z-index: 1000;
+  margin: auto;
+
+  border-radius: 7px;
+  padding: 2em;
+
+  box-shadow: 0px 0px 100vmax 100vmax hsl(0 0% 0% / 0.6);
+}

@@ -68,11 +68,11 @@ const Comment = ({data, currentUser, handleRemove}) => {
             </button>
             <button
               className="
-          btn
-          comment__btn
-          comment__reply-btn
-          text-primary-violet-900
-          "
+                        btn
+                        comment__btn
+                        comment__reply-btn
+                        text-primary-violet-900
+              "
               onClick={() => setReply(!reply)}
             >
               Edit

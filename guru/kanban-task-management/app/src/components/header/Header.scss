@@ -1,0 +1,122 @@
+.header {
+  height: 100%;
+  grid-row: 1 / span 1;
+  position: relative;
+  z-index: 4;
+
+  width: 100%;
+  align-self: start;
+  padding-inline: 5%;
+  
+  overflow: hidden;
+
+  display: grid;
+  grid-template-columns: auto 1fr max-content;
+  justify-items: center;
+  align-items: center;
+
+
+  @media (min-width: 1000px) {
+    padding-inline: 0;
+    padding-right: 1.3em;
+
+    grid-column: 1 / span 2;
+    grid-row: 1;
+    position: initial;
+    inset: initial;
+
+    grid-template-columns: auto auto 1fr max-content;
+  }
+}
+
+.kanban {
+  display: none;
+  padding-block: 2.3rem;
+
+  @media (min-width: 1000px) {
+    display: block;
+    padding-left: 1em;
+    min-width: var(--sidebar-width);
+
+    grid-column: 1;
+    position: relative;
+    padding-right: 1.4rem;
+  }
+}
+
+
+
+.logo-container {
+  @media (min-width: 1000px) {
+    grid-column: 1;
+    position: relative;
+    padding-right: 1.4rem;
+  }
+}
+
+
+.main-logo {
+  grid-column: 1;
+  grid-row: 1;
+
+  @media (min-width: 1000px) {
+    grid-column: 2;
+  }
+}
+
+.arrow-down {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+
+  @media (min-width: 1000px) {
+    display: none;
+  }
+}
+
+.new-task-container {
+  grid-column: 3;
+  grid-row: 1;
+  justify-self: right;
+  padding-right: 1rem;
+}
+
+.btn-new-task {
+  // padding-inline: 1.35em;
+
+  & > span {
+    display: none;
+  }
+
+  @media (min-width: 700px) {
+    & > span {
+      display: initial !important;
+    }
+  }
+}
+
+.btn-board-actions {
+  grid-column: 3;
+  cursor: pointer;
+
+  &:hover > * {
+    fill: red;
+  }
+  
+  @media (min-width: 1000px) {
+    grid-column: 4;
+  }
+}
+
+.board-container__title {
+  // TODO: refacotor to variable
+  padding-left: 1.3em;
+}
+
+.logo-container-logo-icon {
+  @media (min-width: 1000px) {
+    display: none;
+  }
+}

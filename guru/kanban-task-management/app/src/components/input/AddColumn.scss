@@ -1,0 +1,24 @@
+.add-column {
+  &__form {
+    gap: 1rem;
+  }
+
+  &__input {
+    border: none;
+    outline: none;
+    border: 1px solid var(--color-gray-3);
+    border-radius: 3px;
+    padding: 0.5em .5em;
+  }
+
+  &__img {
+    cursor: pointer;
+    --size: 15px;
+    align-self: center;
+
+    width: var(--size);
+    height: var(--size);
+
+    object-fit: contain;
+  }
+}

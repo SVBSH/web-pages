@@ -1,0 +1,33 @@
+.eshop__offer {
+  position: relative;
+  width: max(250px, 350px);
+  background-color: hsla(0, 0%, 94%, 1);
+  /* padding-block: 3em; */
+  max-height: 200px;
+  padding-bottom: 1em;
+  /* box-shadow: 0 0 10px 1px hsl(0 0% 0% / .1); */
+}
+
+.eshop__info {
+  padding-top: 5rem;
+  height: 100%;
+}
+
+.eshop__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  transform: translateY(-45%);
+  /* width: 100%; */
+  margin-inline: auto;
+  object-fit: contain;
+  max-height: 160px;
+  /* width: min(122px, 200px); */
+}
+
+@media (min-width: 700px) {
+  .eshop__offer {
+    width: max(250px, 450px);
+  }
+}

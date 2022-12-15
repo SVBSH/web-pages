@@ -1,0 +1,14 @@
+.products__heading-container {
+  padding-block: 3rem;
+}
+
+
+.products .product-container {
+  grid-auto-rows: 1fr;
+  align-items: center;
+  justify-content: center;
+  --item-gap-size: 1.75rem;
+  gap: var(--item-gap-size);
+  padding-block: 7rem;
+}
+

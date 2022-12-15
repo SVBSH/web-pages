@@ -1,0 +1,59 @@
+.form .input__field {
+  outline: none;
+  border: none;
+  border: 0.5px solid hsla(216deg, 15%, 57%, 0.3);
+  padding: 0.45em 1em;
+  border-radius: 3px;
+  caret-color: var(--color-black-4);
+}
+.form .input__field:focus {
+  border: 0.5px solid hsla(216deg, 15%, 57%, 0.9);
+}
+.form .input__remove-img {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.remove-btn {
+  -webkit-animation: remove-btn 250ms forwards;
+          animation: remove-btn 250ms forwards;
+}
+
+.add-btn {
+  -webkit-animation: add-btn 850ms forwards;
+          animation: add-btn 850ms forwards;
+}
+
+@-webkit-keyframes add-btn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes add-btn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes remove-btn {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes remove-btn {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}/*# sourceMappingURL=Form.css.map */
