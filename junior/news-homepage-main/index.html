@@ -20,7 +20,6 @@
     <title>Frontend Mentor | News homepage</title>
 
     <link rel="stylesheet" href="./sass/main.css" />
-
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
     <style>
       .attribution {
@@ -34,25 +33,42 @@
   </head>
   <body>
     <div class="wrapper">
-      <header class="header">
+      <header class="header" data-active="false">
         <div class="logo">
           <img src="./assets/images/logo.svg" alt="Logo" />
         </div>
-        <nav class="nav">
-          <ul role="list">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">New</a></li>
-            <li><a href="#">Popular</a></li>
-            <li><a href="#">Trending</a></li>
-            <li><a href="#">Categories</a></li>
-          </ul>
-        </nav>
+
+        <div class="nav-wrapper">
+          <div class="nav-control">
+            <img class="menu-open" src="./assets/images/icon-menu.svg" alt="" />
+            <img
+              class="menu-close"
+              src="./assets/images/icon-menu-close.svg"
+              alt=""
+            />
+          </div>
+          <nav class="nav">
+            <ul class="nav__list" role="list">
+              <li class="nav__item"><a href="#" class="nav__link">Home</a></li>
+              <li class="nav__item"><a href="#" class="nav__link">New</a></li>
+              <li class="nav__item">
+                <a href="#" class="nav__link">Popular</a>
+              </li>
+              <li class="nav__item">
+                <a href="#" class="nav__link">Trending</a>
+              </li>
+              <li class="nav__item">
+                <a href="#" class="nav__link">Categories</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
       </header>
 
       <main class="main">
         <!-- Hero section -->
-        <div class="">
-          <picture class="hero-img-wrapper">
+        <div class="hero">
+          <picture class="hero__img-wrapper">
             <source
               media="(min-width: 700px)"
               srcset="./assets/images/image-web-3-desktop.jpg"
@@ -63,54 +79,89 @@
             />
           </picture>
 
-          <div class="">
-            <h1>The Bright Future of Web 3.0?</h1>
-            <p>
-              We dive into the next evolution of the web that claims to put the
-              power of the platforms back into the hands of the people. But is
-              it really fulfilling its promise?
-            </p>
-            <a href="#">Read More</a>
+          <div class="hero__content">
+            <h1 class="hero__heading">
+              <span class="block">The Bright</span>
+              <span class="block">Future of</span>
+              Web 3.0?
+            </h1>
+            <div class="">
+              <p class="hero__text">
+                We dive into the next evolution of the web that claims to put
+                the power of the platforms back into the hands of the people.
+                But is it really fulfilling its promise?
+              </p>
+              <a href="#" class="hero__link">Read More</a>
+            </div>
           </div>
         </div>
 
         <!-- Aside - articles -->
-        <aside>
+        <aside class="news">
           <h2 class="text-primary-orange">New</h2>
-          <ul class="articles">
+          <ul class="articles" role="list">
             <li class="article">
               <h3 class="article__heading">Hydrogen VS Electric Cars</h3>
-              <p class="article__text">Will hydrogen-fueled cars ever catch up to EVs?</p>
+              <p class="article__text">
+                Will hydrogen-fueled cars ever catch up to EVs?
+              </p>
             </li>
-          </ul>
-          <ul class="articles">
             <li class="article">
               <h3 class="article__heading">The Downsides of AI Artistry</h3>
-              <p class="article__text">What are the possible adverse effects of on-demand AI image generation?</p>
+              <p class="article__text">
+                What are the possible adverse effects of on-demand AI image
+                generation?
+              </p>
             </li>
-          </ul>
-          <ul class="articles">
             <li class="article">
               <h3 class="article__heading">Is VC Funding Drying Up?</h3>
-              <p class="article__text">Private funding by VC firms is down 50% YOY. We take a look at what that means.</p>
+              <p class="article__text">
+                Private funding by VC firms is down 50% YOY. We take a look at
+                what that means.
+              </p>
             </li>
           </ul>
         </aside>
 
-        <div class="">
-          <article>
-            <img src="./assets/images/image-retro-pcs.jpg" alt="">
-            <h2 class="font-size-base"><span class="block text-neutral-gray-200 font-size-lg">01</span>Reviving Retro PCs</h2>
-            <p class="">What happens when old PCs are given modern upgrades?</p>
+        <div class="article-wrapper">
+          <article class="novelty">
+            <img
+              src="./assets/images/image-retro-pcs.jpg"
+              class="novelty__img"
+              alt=""
+            />
+            <h2 class="font-size-base">
+              <span class="block text-neutral-gray-200 font-size-lg">01</span
+              >Reviving Retro PCs
+            </h2>
+            <p class="novelty__text">
+              What happens when old PCs are given modern upgrades?
+            </p>
           </article>
-          <article>
-            <img src="./assets/images/image-top-laptops.jpg" alt="">
-            <h2 class="font-size-base"><span class="block text-neutral-gray-200 font-size-lg">02</span>Top 10 Laptops of 2022</h2>
-            <p class="">Our best picks for various needs and budgets.</p>
+          <article class="novelty">
+            <img
+              src="./assets/images/image-top-laptops.jpg"
+              class="novelty__img"
+              alt=""
+            />
+            <h2 class="font-size-base">
+              <span class="block text-neutral-gray-200 font-size-lg">02</span
+              >Top 10 Laptops of 2022
+            </h2>
+            <p class="news__text">
+              Our best picks for various needs and budgets.
+            </p>
           </article>
-          <article>
-            <img src="./assets/images/image-gaming-growth.jpg" alt="">
-            <h2 class="font-size-base"><span class="block text-neutral-gray-200 font-size-lg">03</span>The Growth of Gaming</h2>
+          <article class="novelty">
+            <img
+              src="./assets/images/image-gaming-growth.jpg"
+              class="novelty__img"
+              alt=""
+            />
+            <h2 class="font-size-base">
+              <span class="block text-neutral-gray-200 font-size-lg">03</span
+              >The Growth of Gaming
+            </h2>
             <p class="">How the pandemic has sparked fresh opportunities.</p>
           </article>
         </div>
@@ -123,4 +174,5 @@
     Coded by <a href="#">Your Name Here</a>.
   </div> -->
   </body>
+  <script src="./js/navigation.js"></script>
 </html>

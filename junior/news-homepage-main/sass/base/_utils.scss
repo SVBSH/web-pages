@@ -6,6 +6,18 @@
   margin-inline: auto;
 }
 
+.logo {
+  align-self: center;
+}
+
+.menu-open,
+.menu-close {
+  --size: 20px;
+  height: var(--size);
+  width: var(--size);
+  align-self: center;;
+}
+
 .logo > * {
   max-width: 50px;
 }
@@ -14,6 +26,9 @@
   display: block;
 }
 
+.flex {
+  display: flex;
+}
 
 .text-primary-orange {
   color: var(--text-primary-orange);

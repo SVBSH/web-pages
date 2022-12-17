@@ -84,7 +84,7 @@ h3 {
 }
 
 h1 {
-  font-size: var(--font-size-xl);
+  font-size: var(--font-size-xxl);
 }
 
 h2 {
@@ -92,18 +92,20 @@ h2 {
 }
 
 h3 {
-  font-size: var(--font-size-md);
+  font-size: var(--font-size-base);
 }
 
 blockquote,
 li,
 p {
   max-width: 50ch;
-  color: var(--text-neutral-blue-700)
+  color: var(--text-neutral-blue-700);
+  font-size: var(--font-size-sm);
 }
 
 a {
-  color: currentColor;
+  color: inherit;
+  text-decoration: none;
 
   &:hover {
     text-decoration: none;
@@ -114,6 +116,9 @@ body {
   font-family: var(--font-family);
   font-size: var(--font-size-base);
   font-weight: var(--font-normal);
-  
   background-color: var(--text-neutral-gray-100);
+
+  max-width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
 }
