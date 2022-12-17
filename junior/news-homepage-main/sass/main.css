@@ -1,0 +1,138 @@
+:root {
+  --font-family: "Inter", sans-serif;
+  /* Font sizes */
+  --font-size-sm: clamp(0.83rem, 0.12vw + 0.81rem, 0.91rem);
+  --font-size-base: clamp(0.94rem, 0.38vw + 0.85rem, 1.19rem);
+  --font-size-md: clamp(1.05rem, 0.73vw + 0.88rem, 1.54rem);
+  --font-size-lg: clamp(1.19rem, 1.23vw + 0.9rem, 2.01rem);
+  --font-size-xl: clamp(1.33rem, 1.91vw + 0.89rem, 2.61rem);
+  --font-size-xxl: clamp(1.5rem, 2.84vw + 0.84rem, 3.39rem);
+  /* Font weights */
+  --font-normal: 400;
+  --font-bold: 700;
+  --font-extrabold: 800;
+  /* Colors */
+  --text-primary-orange: hsl(35, 77%, 62%);
+  --text-primary-red: hsl(5, 85%, 63%);
+  --text-neutral-gray-100: hsl(36, 100%, 99%);
+  --text-neutral-gray-200: hsl(233, 8%, 79%);
+  --text-neutral-blue-700: hsl(236, 13%, 42%);
+  --text-neutral-blue-800: hsl(240, 100%, 5%);
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+*::before,
+*::after {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+body {
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-normal);
+}
+
+h1,
+h2,
+h3 {
+  color: var(--text-neutral-blue-800);
+  max-width: 20ch;
+  line-height: 1;
+  font-weight: var(--font-extrabold);
+}
+
+h1 {
+  font-size: var(--font-size-xl);
+}
+
+h2 {
+  font-size: var(--font-size-lg);
+}
+
+h3 {
+  font-size: var(--font-size-md);
+}
+
+blockquote,
+li,
+p {
+  max-width: 50ch;
+  color: var(--text-neutral-blue-700);
+}
+
+a {
+  color: currentColor;
+}
+a:hover {
+  text-decoration: none;
+}/*# sourceMappingURL=main.css.map */

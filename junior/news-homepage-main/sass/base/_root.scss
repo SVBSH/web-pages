@@ -1,0 +1,24 @@
+:root {
+  --font-family: "Inter", sans-serif;
+
+  /* Font sizes */
+  --font-size-sm: clamp(0.83rem, 0.12vw + 0.81rem, 0.91rem);
+  --font-size-base: clamp(0.94rem, 0.38vw + 0.85rem, 1.19rem);
+  --font-size-md: clamp(1.05rem, 0.73vw + 0.88rem, 1.54rem);
+  --font-size-lg: clamp(1.19rem, 1.23vw + 0.9rem, 2.01rem);
+  --font-size-xl: clamp(1.33rem, 1.91vw + 0.89rem, 2.61rem);
+  --font-size-xxl: clamp(1.5rem, 2.84vw + 0.84rem, 3.39rem);
+
+  /* Font weights */
+  --font-normal: 400;
+  --font-bold: 700;
+  --font-extrabold: 800;
+
+  /* Colors */
+  --text-primary-orange: hsl(35, 77%, 62%);
+  --text-primary-red: hsl(5, 85%, 63%);
+  --text-neutral-gray-100: hsl(36, 100%, 99%);
+  --text-neutral-gray-200: hsl(233, 8%, 79%);
+  --text-neutral-blue-700: hsl(236, 13%, 42%);
+  --text-neutral-blue-800: hsl(240, 100%, 5%);
+}
