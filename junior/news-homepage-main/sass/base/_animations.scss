@@ -1,0 +1,37 @@
+.animationTextTopBottom {
+  animation: animationTextTopBottom 1000ms forwards;
+}
+
+@keyframes animationTextTopBottom {
+  0% {
+    transform: translateY(-20%);
+  }
+
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+.showFromLeft {
+  // animation-delay: 1000ms;
+  animation-name: showFromLeft;
+  animation-duration: 1000ms;
+  animation-direction: forwards;
+  // animation: showFromLeft 1000ms forwards;
+}
+
+@keyframes showFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%);
+  }
+
+  75% {
+    opacity: 0.8;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}

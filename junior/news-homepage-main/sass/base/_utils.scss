@@ -1,13 +1,17 @@
 .wrapper {
   // max-width: calc(var(--max-width-page, 60rem) + 1rem);
   // margin-inline: clamp(1rem, 1rem + 6vw, 20rem);
-  max-width: 60rem;
+  max-width: var(--max-width-page);
   padding-inline: 1.33rem;
   margin-inline: auto;
 }
 
 .logo {
   align-self: center;
+}
+
+.flow > * + * {
+  margin-top: .4em;
 }
 
 .menu-open,
@@ -26,9 +30,38 @@
   display: block;
 }
 
+.grid {
+  display: grid;
+  gap: var(--gap, 1em);
+}
+
 .flex {
   display: flex;
+  gap: var(--gap, 1em);
 }
+
+.flex-col {
+  flex-direction: column;
+}
+
+.justify-self-start {
+  justify-self: start;
+}
+
+.justify-self-center {
+  justify-content: center;
+}
+
+.align-self-start {
+  align-self: start;
+}
+
+.align-self-center {
+  align-self: center;
+}
+
+
+
 
 .text-primary-orange {
   color: var(--text-primary-orange);
