@@ -1,0 +1,61 @@
+:root {
+  /* Colors */
+  --color-primary-cyan: hsl(158, 36%, 37%);
+  --color-primary-cream: hsl(30, 38%, 92%);
+  --color-neutral-blue-dark: hsl(212, 21%, 14%);
+  --color-neutral-blue-light: hsl(228, 12%, 48%);
+  --color-neutral-white: hsl(0, 0%, 100%);
+
+  /* Font Settings*/
+  --font-family-serif: "Fraunces", serif;
+  --font-family-sans-serif: "Montserrat", sans-serif;
+
+  --font-size-sm: clamp(0.88rem, 0.47vw + 0.76rem, 1.19rem);
+  --font-size-base: clamp(0.98rem, 0.84vw + 0.79rem, 1.54rem);
+  --font-size-md: clamp(1.11rem, 1.35vw + 0.79rem, 2.01rem);
+  --font-size-lg: clamp(1.25rem, 2.05vw + 0.77rem, 2.61rem);
+  --font-size-xl: clamp(1.4rem, 2.99vw + 0.7rem, 3.39rem);
+  --font-size-xxl: clamp(1.58rem, 4.26vw + 0.58rem, 4.41rem);
+
+  --font-base: 400;
+  --font-bold: 500;
+  --font-extrabold: 700;
+}
+
+.text-primary-cyan {
+  color: var(--color-primary-cyan);
+}
+
+.text-primary-cream {
+  color: var(--color-primary-cream);  
+}
+.text-neutral-blue-dark {
+  color: var(--color-neutral-blue-dark);  
+}
+.text-neutral-blue-light {
+  color: var(--color-neutral-blue-light);  
+}
+.text-neutral-white {
+  color: var(--color-neutral-white);  
+}
+
+
+.bg-primary-cyan {
+  background-color: var(--color-primary-cyan);
+}
+
+.bg-primary-cream {
+  background-color: var(--color-primary-cream);  
+}
+
+.bg-neutral-blue-dark {
+  background-color: var(--color-neutral-blue-dark);  
+}
+
+.bg-neutral-blue-light {
+  background-color: var(--color-neutral-blue-light);  
+}
+
+.bg-neutral-white {
+  background-color: var(--color-neutral-white);  
+}

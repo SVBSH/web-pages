@@ -1,0 +1,16 @@
+.flex {
+  display: flex;
+  gap: var(--gap, 1rem)
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.block {
+  display: block;
+}

@@ -1,0 +1,100 @@
+.product {
+  max-width: min(70vw, 800px);
+  display: grid;
+  --gap-size-base: clamp(1rem, 1.13vw + 0.74rem, 1.75rem);
+  --product-border-radius-size: 10px;
+
+  &__img {
+    border-top-left-radius: var(--product-border-radius-size);
+    border-top-right-radius: var(--product-border-radius-size);
+    min-height: 100%;
+    object-fit: cover;
+  }
+
+  &__content {
+    display: grid;
+    align-content: center;
+    gap: var(--gap-size-base);
+    padding-block: 1.5em;
+    padding-inline: 1.125em;
+
+    border-bottom-left-radius: var(--product-border-radius-size);
+    border-bottom-right-radius: var(--product-border-radius-size);
+  }
+
+  &__type {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+  }
+
+  &__heading {
+    max-width: 14ch;
+  }
+
+  &__description {
+    max-width: 50ch;
+  }
+
+  &__price-container {
+  }
+
+  &__price {
+    font-size: var(--font-size-lg);
+    font-family: var(--font-family-serif);
+    font-weight: var(--font-extrabold);
+  }
+
+  &__price-discount {
+    font-size: var(--font-size-sm);
+    text-decoration: line-through;
+  }
+
+  &__btn {
+    display: grid;
+    justify-items: center;
+
+    cursor: pointer;
+    padding-block: 0.75em;
+    border-radius: var(--product-border-radius-size);
+    font-family: var(--font-family-sans-serif);
+    font-weight: var(--font-extrabold);
+    transition: opacity 150ms linear;
+    &:where(:hover, :focus-within) {
+      opacity: 0.7;
+    }
+  }
+
+  &__price-container {
+    line-height: 1;
+    --gap: var(--gap-size-base);
+  }
+
+  @media (min-width: 700px) {
+    grid-auto-flow: column;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr;
+
+    &__content {
+      padding-block: 2em;
+      padding-inline: 2.5em;
+
+      border-radius: 0;
+      border-top-right-radius: var(--product-border-radius-size);
+      border-bottom-right-radius: var(--product-border-radius-size);
+    }
+
+    &__img {
+      border-radius: 0;
+      border-top-left-radius: var(--product-border-radius-size);
+      border-bottom-left-radius: var(--product-border-radius-size);
+    }
+
+    &__description {
+      max-width: 30ch;
+    }
+
+    &__heading {
+      max-width: 10ch;
+    }
+  }
+}

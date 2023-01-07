@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&display=swap" rel="stylesheet"> 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="./css/main.css">
   <title>Frontend Mentor | Product preview card component</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
@@ -16,43 +16,30 @@
 </head>
 <body>
   <main class="main">
-    <div class="product-price">
-      <picture class="product-price__img-container">
-        <source media="(min-width:465px)" srcset="./images/image-product-desktop.jpg">
-        <img src="./images/image-product-mobile.jpg" alt="parfume" class="product-price__img">
+    <div class="product">
+      <picture class="product__img-container">
+        <source media="(min-width:700px)" srcset="./images/image-product-desktop.jpg">
+        <img src="./images/image-product-mobile.jpg" alt="parfume" class="product__img" draggable="false">
       </picture>
 
-      <div class="product-price__content">
-        <p class="product-price__type"></p>
-        <h1 class="product-price__heading"></h1>
-        <p class="product-price__description"></p>
-        
-        <div class="product__price-container">
-          <p class="product__price"></p>
-          <p class="product__price__discount"></p>
+      <div class="product__content | bg-neutral-white">
+        <p class="product__type | text-neutral-blue-light">Perfume</p>
+        <h1 class="product__heading">Gabrielle Essence Eau De Parfum</h1>
+        <p class="product__description | text-neutral-blue-light">A floral, solar and voluptuous interpretation composed by Olivier Polge, 
+          Perfumer-Creator for the House of CHANEL.</p>
+
+        <div class="product__price-container | flex flex-row items-center">
+          <p class="product__price | text-primary-cyan">$149.99</p>
+          <p class="product__price-discount | text-neutral-blue-light">$169.99</p>
         </div>
-        <button class="btn product-price__btn"></button>
+        <button class="btn product__btn | text-neutral-white bg-primary-cyan">Add to Cart</button>
       </div>
     </div>
 
   </main>
-
-  
-  Preview
-
-  Gabrielle Essence Eau De Parfum
-
-  A floral, solar and voluptuous interpretation composed by Olivier Polge, 
-  Perfumer-Creator for the House of CHANEL.
-
-  $149.99
-  $169.99
-
-  Add to product-price
-  
-  <div class="attribution">
+  <!-- <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
-  </div>
+  </div> -->
 </body>
 </html>
