@@ -3,6 +3,8 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 /* Remove default margin */
@@ -23,6 +25,16 @@ dd {
 ul,
 ol {
   list-style: none;
+}
+
+button {
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
+a {
+  color: inherit;
 }
 
 /* Set core root defaults */

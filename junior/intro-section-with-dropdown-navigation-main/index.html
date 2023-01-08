@@ -1,108 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="stylesheet" href="css/main.css">
-  <title>Frontend Mentor | Intro section with dropdown navigation</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&family=Fraunces:opsz,wght@9..144,700&display=swap" rel="stylesheet"> 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-  <header class="header">
-    <nav class="nav">
-      
-      <div class="nav-control">
-        <img src="./images/icon-menu.svg" alt="menu open">
-        <img src="./images/icon-close-menu.svg" alt="menu icon-close-menu">
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+    <title>Frontend Mentor | Intro section with dropdown navigation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&family=Fraunces:opsz,wght@9..144,700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="js/navigation.js" defer></script>
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <button class="nav-control | item-list-closed">
+        <img class="nav-control__img menu-open" src="./images/icon-menu.svg" alt="menu open" />
+        <img
+          class="nav-control__img menu-close"
+          src="./images/icon-close-menu.svg"
+          alt="menu icon-close-menu"
+        />
+      </button>
+      <nav class="nav" data-active="false" role="navigation">
+        <ul class="nav__list">
+          <li class="nav__item" data-menu-open="false">
+            <button class="nav__popup" aria-expanded="true">Features</button>
+            <ul class="nav__list">
+              <li class="nav__item">
+                <img src="" alt="" class="nav__icon" />
+                <a href="#" class="nav__link">Todo List</a>
+              </li>
+              <li class="nav__item">
+                <img src="" alt="" class="nav__icon" />
+                <a href="#" class="nav__link">Calendar</a>
+              </li>
+              <li class="nav__item">
+                <img src="" alt="" class="nav__icon" />
+                <a href="#" class="nav__link">Reminders</a>
+              </li>
+              <li class="nav__item">
+                <img src="" alt="" class="nav__icon" />
+                <a href="#" class="nav__link">Planning</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav__item" data-menu-open="false">
+            <button class="nav__popup" aria-expanded="true">Company</button>
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a href="#" class="nav__link">History</a>
+              </li>
+              <li class="nav__item">
+                <a href="#" class="nav__link">Our Team</a>
+              </li>
+              <li class="nav__item">
+                <a href="#" class="nav__link">Blog</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Careers</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">About</a>
+          </li>
+        </ul>
+        <div class="login-control">
+          <button class="btn">Login</button>
+          <button class="btn">Register</button>
+        </div>
+      </nav>
+    </header>
+    <main class="main">
+      <div class="content">
+        <h1 class="content__heading">Make remote work</h1>
+        <p class="conent__text">
+          Get your team in sync, no matter your location. Streamline processes,
+          create team rituals, and watch productivity soar.
+        </p>
+        <button class="content__btn">Learn more</button>
       </div>
-
-      <ul class="nav__list">
-        <li class="nav__item" data-menu-open="false">
-          <button class="nav__popup">Features</button>
-          <ul class="nav__list">
-            <li class="nav__item">
-              <img src="" alt="" class="nav__icon">
-              <a href="#" class="nav__link">Todo List</a>
-            </li>
-            <li class="nav__item">
-              <img src="" alt="" class="nav__icon">
-              <a href="#" class="nav__link">Calendar</a>
-            </li>
-            <li class="nav__item">
-              <img src="" alt="" class="nav__icon">
-              <a href="#" class="nav__link">Reminders</a>
-            </li>
-            <li class="nav__item">
-              <img src="" alt="" class="nav__icon">
-              <a href="#" class="nav__link">Planning</a>
-            </li>
-          </ul>
+      <ul class="sponzors">
+        <li class="sponzor">
+          <img src="" alt="" class="" />
         </li>
-        <li class="nav__item" data-menu-open="false">
-          <button class="nav__popup">Company</button>
-          <ul class="nav__list">
-            <li class="nav__item">
-              <a href="#" class="nav__link">History</a>
-            </li>
-            <li class="nav__item">
-              <a href="#" class="nav__link">Our Team</a>
-            </li>
-            <li class="nav__item">
-              <a href="#" class="nav__link">Blog</a>
-            </li>
-          </ul>          
+        <li class="sponzor">
+          <img src="" alt="" class="" />
         </li>
-        <li class="nav__item">
-          <a href="#" class="nav__link">Careers</a>
+        <li class="sponzor">
+          <img src="" alt="" class="" />
         </li>
-        <li class="nav__item">
-          <a href="#" class="nav__link">About</a>
+        <li class="sponzor">
+          <img src="" alt="" class="" />
         </li>
       </ul>
-    </nav>
+    </main>
 
-    <div class="login-control">
-      <button class="btn">Login</button>
-      <button class="btn">Register</button>
-    </div>
-  </header>
-  <!-- <main class="main">
-    <div class="content">
-      <h1 class="content__heading">Make remote work</h1>
-      <p class="conent__text">
-        Get your team in sync, no matter your location. Streamline processes, 
-create team rituals, and watch productivity soar.
-      </p>
-      <button class="content__btn">Learn more</button>
-    </div>
-    <ul class="sponzors">
-      <li class="sponzor">
-        <img src="" alt="" class="">
-      </li>
-      <li class="sponzor">
-        <img src="" alt="" class="">
-      </li>
-      <li class="sponzor">
-        <img src="" alt="" class="">
-      </li>
-      <li class="sponzor">
-        <img src="" alt="" class="">
-      </li>
-    </ul>
-  </main> -->
-
-  <!-- <div class="attribution">
+    <!-- <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
   </div> -->
-</body>
+  </body>
 </html>
