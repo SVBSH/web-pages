@@ -1,4 +1,13 @@
 .header {
   --header-padding-size: 2em;
   padding: var(--header-padding-size);
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 3rem;
+  flex: 1;
+  .logo {
+
+  }  
 }

@@ -1,7 +1,6 @@
 .header {
   padding-block: 2em;
   max-width: 100%;
-  overflow-x: hidden;
   display: flex;
   justify-content: space-between;
 
@@ -65,6 +64,10 @@
 
   padding-inline: 1.75em;
   transition: transform 1s ease;
+
+  &-wrapper {
+    overflow-x: hidden;
+  }
 
   &__list {
     display: flex;

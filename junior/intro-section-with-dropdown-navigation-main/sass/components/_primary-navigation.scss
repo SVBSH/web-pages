@@ -1,7 +1,7 @@
 .nav {
   min-width: min(300px, 60vw);
   position: absolute;
-  inset: 0 auto 0 0;
+  inset: 0 0 0 auto;
 
   padding: var(--header-padding-size, 2em);
   padding-top: 7em;
@@ -9,7 +9,7 @@
   background: white;
 
   transition: transform 300ms linear;
-  transform: translateX(-100%);
+  transform: translateX(100%);
 
   &-control {
     cursor: pointer;
@@ -22,6 +22,13 @@
 
   &__list:not(&__list:first-child) {
     padding-left: 3em;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.125em;
+    padding-block: 1em;
   }
 
   &__item {
@@ -53,13 +60,13 @@
 /* primary-nav toggle control */
 .nav {
   &[data-active="true"] {
-    box-shadow: 0 0 0 100vw hsl(0 0 0 / 0.9);
+    box-shadow: 0 0 0 100vw hsl(0 0 0 / 0.8);
 
     transform: translateX(0%);
   }
 
   &[data-active="false"] {
-    transform: translateX(-100%);
+    transform: translateX(100%);
   }
 
   @media (min-width: 700px) {
@@ -149,8 +156,8 @@
 
 /* Navigation Submenu popup button control */
 .item-list-closed {
-  & > ul {
-    display: none;
+  & > .nav__list {
+    display: none !important;
   }
 
   & > .menu-close {
@@ -167,11 +174,6 @@
   flex-direction: column;
   gap: 1rem;
   padding-top: 1rem;
-
-  & > * {
-    border: 1px solid red;
-    padding-block: 1rem;
-  }
 
   @media (min-width: 700px) {
     flex-direction: row;

@@ -1,3 +1,19 @@
 .visible {
   display: block;
 }
+
+.btn {
+  padding-block: .5em;
+  padding-inline: 2em;
+  cursor: pointer;;
+}
+
+.btn-register {
+  color: var(--color-neutral-gray);
+  border: 2px solid var(--color-neutral-gray) !important;
+  border-radius: 12px;
+  
+  &:hover {
+    border-color: var(--color-neutral-black);
+  }
+}

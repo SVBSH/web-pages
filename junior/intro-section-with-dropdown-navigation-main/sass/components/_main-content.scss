@@ -1,0 +1,25 @@
+.main {
+  display: grid;
+  gap: 3rem;
+}
+
+.hero-img {
+  max-width: 500px;
+}
+
+.hero-img-container {
+  grid-row: 1;
+}
+
+.content {
+  grid-row: 2;
+  display: grid;
+  gap: 1.25rem;
+  text-align: center;
+
+  &__text {
+    color: var(--color-neutral-gray);
+    margin-inline: auto;
+    max-width: 35ch;
+  }
+}

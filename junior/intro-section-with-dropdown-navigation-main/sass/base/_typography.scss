@@ -1,5 +1,7 @@
 h1 {
   line-height: 1;
-  font-size: var(--font-size-xl);
+  --font-size-xxl: clamp(1.88rem, 5.85vw + 0.5rem, 5.63rem);
+  font-size: var(--font-size-xxl);
 }
+
 
