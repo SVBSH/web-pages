@@ -3,9 +3,11 @@
 
   &__headline {
     --size: 2.5px;
-    max-width: 600px;
     padding: 0.75em 0.75em;
-    margin: 6rem auto;
+    line-height: 1;
+    
+    margin-block: 2rem;
+    margin-inline: auto;
     outline: var(--size) solid var(--clr-primary-50);
     outline-offset: calc(var(--size) * -2);
 
@@ -68,13 +70,9 @@
 
     &__headline {
       display: inline-block;
-      font-family: var(--ff-josefin);
-      font-weight: var(--fw-300);
-      margin: 0 auto;
-      color: var(--clr-primary-50);
-      text-transform: uppercase;
-      line-height: 1;
-      font-size: clamp(2rem, 2.5vw, 2.5rem);
+      margin-inline: 0;
+      font-size: clamp(2rem, 5.5vw, 4.5rem);
+
     }
 
     &__body {
@@ -86,12 +84,6 @@
 
     &__info {
       flex-direction: row;
-    }
-
-    &__headline {
-
-      font-size: clamp(2rem, 5.5vw, 4.5rem);
-      text-align: left;
     }
 
     &__text {
@@ -175,15 +167,14 @@
   &__figure {
     position: relative;
     margin: 0;
-    
     :hover {
-      opacity: 0.8;
-      transition: opacity 150ms linear;
+      transition: transform 200ms ease-out;
+      transform: scale(1.02);
     }
 
     &:hover figcaption {
-      transition: color 150ms linear;
-      color: var(--clr-primary-900);
+      // transition: color 150ms linear;
+      // color: var(--clr-primary-900);
     }
   }
 

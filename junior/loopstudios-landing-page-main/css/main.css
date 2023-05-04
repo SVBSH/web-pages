@@ -186,7 +186,6 @@ header .container {
   .menu-toggle {
     display: none;
   }
-
   .main-nav {
     position: relative;
     height: auto;
@@ -195,22 +194,18 @@ header .container {
     -webkit-clip-path: initial;
             clip-path: initial;
   }
-
   .main-nav__list {
     flex-direction: row;
     gap: 1rem;
   }
-
   .main-c {
     justify-content: space-between;
     gap: 1rem;
     flex-direction: row;
   }
-
   .main-nav__item {
     padding: 0;
   }
-
   .main-nav__link {
     font-size: 1.55rem;
     text-transform: capitalize;
@@ -226,9 +221,10 @@ header .container {
 }
 .main__headline {
   --size: 2.5px;
-  max-width: 600px;
   padding: 0.75em 0.75em;
-  margin: 6rem auto;
+  line-height: 1;
+  margin-block: 2rem;
+  margin-inline: auto;
   outline: var(--size) solid var(--clr-primary-50);
   outline-offset: calc(var(--size) * -2);
   font-family: var(--ff-josefin);
@@ -284,13 +280,8 @@ header .container {
   }
   .main__headline {
     display: inline-block;
-    font-family: var(--ff-josefin);
-    font-weight: var(--fw-300);
-    margin: 0 auto;
-    color: var(--clr-primary-50);
-    text-transform: uppercase;
-    line-height: 1;
-    font-size: clamp(2rem, 2.5vw, 2.5rem);
+    margin-inline: 0;
+    font-size: clamp(2rem, 5.5vw, 4.5rem);
   }
   .main__body {
     text-align: left;
@@ -300,10 +291,6 @@ header .container {
   }
   .main__info {
     flex-direction: row;
-  }
-  .main__headline {
-    font-size: clamp(2rem, 5.5vw, 4.5rem);
-    text-align: left;
   }
   .main__text {
     padding: 0;
@@ -372,12 +359,8 @@ header .container {
   margin: 0;
 }
 .product__figure :hover {
-  opacity: 0.8;
-  transition: opacity 150ms linear;
-}
-.product__figure:hover figcaption {
-  transition: color 150ms linear;
-  color: var(--clr-primary-900);
+  transition: transform 200ms ease-out;
+  transform: scale(1.02);
 }
 .product__caption {
   position: absolute;
