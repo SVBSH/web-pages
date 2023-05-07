@@ -9,12 +9,12 @@
         line-height: 1.1;
         font-size: 2.5rem;
         font-weight: var(--fw-lg);
-
         margin-bottom: 1.5rem;
     }
 
     &__text {
         max-width: 30ch;
+        margin: auto;
         color: var(--clr-secondary-200);
     }
 
@@ -23,5 +23,9 @@
         justify-self: end;
         text-align: left;
         margin: 0;
+
+        &__text {
+            margin: 0;
+        }
     }
 }

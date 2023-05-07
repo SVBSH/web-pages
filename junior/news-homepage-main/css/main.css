@@ -437,6 +437,7 @@ body {
 .main {
   display: grid;
   grid-template-areas: "hero" "news" "articles";
+  overflow: hidden;
 }
 .main .hero {
   grid-area: hero;

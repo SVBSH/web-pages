@@ -2,8 +2,9 @@
   grid-area: rating;
   text-align: center;
 
+
   &__card {
-    max-width: 500px;
+    max-width: 300px;
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -11,11 +12,15 @@
     padding: 1.125em 0.5em;
     background: var(--clr-secondary-100);
     border-radius: var(--bdr);
-    margin: 1rem 0;
 
     @media (min-width: 800px) {
       flex-direction: row;
       padding: 1.5em 1em;
+      max-width: 500px;
+    }
+
+    & + & {
+      margin-top: 1rem;
     }
   }
 

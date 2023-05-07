@@ -39,6 +39,9 @@ body {
       "rating"
       "review";
     gap: 4rem;
+    min-height: 100vh;
+    align-content: center;
+    justify-items: center;
 
     font-size: 0.938rem;
     font-family: var(--ff);
@@ -50,7 +53,9 @@ body {
 
 
     @media (min-width: 800px) {
+      justify-items: start;
       margin-top: 6.5rem;
+      margin-block: auto;
       grid-template-columns: 1fr 1.5fr;
       grid-template-areas: 
         "main rating"
